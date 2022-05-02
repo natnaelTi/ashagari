@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Organisation;
 
 class User extends Authenticatable
 {
@@ -18,9 +19,11 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'firstname',
+        'lastname',
         'email',
         'password',
+        'filepath'
     ];
 
     /**
@@ -41,4 +44,17 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Get the organisation related to this user(administration)
+     * i.e. in this case the CEO
+     * 
+     * @var obj<User>
+     * 
+     * @return obj<Organisation>
+     */
+    public function organisation()
+    {
+        return $this->belongsTo(Organisation::class);
+    }
 }

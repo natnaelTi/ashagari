@@ -1,13 +1,13 @@
 <!-- Search Bar Inc -->
 <section class="search-and-user">
-    <form>
+    <!-- <form>
         <input type="search" placeholder="search ...">
         <button type="submit" aria-label="submit form">
             <svg aria-hidden="true">
                 <use xlink:href="#search"></use>
             </svg>
         </button>
-    </form>
+    </form> -->
     <div class="admin-profile">
         <span class="greeting">Hello Admin</span>
         <div class="notifications">

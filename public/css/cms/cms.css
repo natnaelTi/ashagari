@@ -3,14 +3,14 @@
 /* RESET RULES
     –––––––––––––––––––––––––––––––––––––––––––––––––– */
 :root {
-  --page-header-bgColor: #242e42;
-  --page-header-bgColor-hover: #1d2636;
-  --page-header-txtColor: #dde9f8;
-  --page-header-headingColor: #7889a4;
-  --page-header-width: 220px;
-  --page-content-bgColor: #f0f1f6;
-  --page-content-txtColor: #171616;
-  --page-content-blockColor: #fff;
+  --cms-page-header-bgColor: #242e42;
+  --cms-page-header-bgColor-hover: #1d2636;
+  --cms-page-header-txtColor: #dde9f8;
+  --cms-page-header-headingColor: #7889a4;
+  --cms-page-header-width: 220px;
+  --cms-page-content-bgColor: #f0f1f6;
+  --cms-page-content-txtColor: #171616;
+  --cms-page-content-blockColor: #fff;
   --white: #fff;
   --black: #333;
   --blue: #00b9eb;
@@ -75,7 +75,7 @@ body {
 
 /* HEADER STYLES
     –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.page-header {
+.cms-page-header {
   position: fixed;
   top: 0;
   left: 0;
@@ -83,23 +83,23 @@ body {
   bottom: 0;
   overflow: auto;
   padding-top: 20px;
-  width: var(--page-header-width);
-  color: var(--page-header-txtColor);
-  background: var(--page-header-bgColor);
+  width: var(--cms-page-header-width);
+  color: var(--cms-page-header-txtColor);
+  background: var(--cms-page-header-bgColor);
 }
 
 /*In case you prefer an absolutely positioned header that covers the full page height, add these styles*/
 /*body {
     position: relative;
     }
-    .page-header {
+    .cms-page-header {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     }*/
 /*remove these styles*/
-/*.page-header {
+/*.cms-page-header {
     position: fixed;
     top: 0;
     left: 0;
@@ -107,118 +107,116 @@ body {
     bottom: 0;
     overflow: auto;
     }*/
-.page-header nav {
+.cms-page-header nav {
   display: flex;
   flex-direction: column;
   min-height: 100%;
 }
 
-.page-header .logo {
+.cms-page-header .logo {
   display: block;
   margin: 0 15px;
 }
 
-.page-header .logo svg {
+.cms-page-header .logo svg {
   max-width: 120px;
   fill: var(--white);
 }
 
-.page-header .toggle-mob-menu {
+.cms-page-header .toggle-mob-menu {
   display: none;
   margin-left: 5px;
   padding: 4px;
-  background: var(--page-content-blockColor);
+  background: var(--cms-page-content-blockColor);
   border-radius: var(--border-radius);
 }
 
-.page-header .toggle-mob-menu svg {
+.cms-page-header .toggle-mob-menu svg {
   fill: var(--black);
   transition: transform 0.2s;
 }
 
-.page-header .admin-menu {
+.cms-page-header .admin-menu {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   margin-top: 35px;
 }
 
-.page-header .admin-menu li:nth-last-child(2) {
+.cms-page-header .admin-menu li:nth-last-child(2) {
   margin-bottom: 35px;
 }
 
-.page-header .admin-menu li:last-child {
+.cms-page-header .admin-menu li:last-child {
   margin-top: auto;
   margin-bottom: 20px;
 }
 
-.page-header .admin-menu li > * {
+.cms-page-header .admin-menu li > * {
   width: 100%;
   padding: 12px 15px;
 }
 
-.page-header .admin-menu .switcher {
+.cms-page-header .admin-menu .switcher {
   display: inline-block;
   width: auto;
 }
 
-.page-header .admin-menu .menu-heading h3 {
+.cms-page-header .admin-menu .menu-heading h3 {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 12px;
   margin-top: 12px;
-  color: var(--page-header-headingColor);
+  color: var(--cms-page-header-headingColor);
 }
 
-.page-header .admin-menu svg {
+.cms-page-header .admin-menu svg {
   width: 20px;
   height: 20px;
-  fill: var(--page-header-txtColor);
+  fill: var(--cms-page-header-txtColor);
   margin-right: 10px;
 }
 
-.page-header .admin-menu a,
-.page-header .admin-menu button {
+.cms-page-header .admin-menu a,
+.cms-page-header .admin-menu button {
   display: flex;
   align-items: center;
   font-size: 0.9rem;
 }
 
-.page-header .admin-menu a:hover,
-.page-header .admin-menu a:focus,
-.page-header .admin-menu button:hover,
-.page-header .admin-menu button:focus {
-  background: var(--page-header-bgColor-hover);
+.cms-page-header .admin-menu a:hover,
+.cms-page-header .admin-menu a:focus,
+.cms-page-header .admin-menu button:hover,
+.cms-page-header .admin-menu button:focus {
+  background: var(--cms-page-header-bgColor-hover);
   color: var(--blue);
   outline: none;
 }
 
-.page-header .admin-menu a:hover svg,
-.page-header .admin-menu a:focus svg,
-.page-header .admin-menu button:hover svg,
-.page-header .admin-menu button:focus svg {
+.cms-page-header .admin-menu a:hover svg,
+.cms-page-header .admin-menu a:focus svg,
+.cms-page-header .admin-menu button:hover svg,
+.cms-page-header .admin-menu button:focus svg {
   fill: var(--blue);
 }
 
 /* PAGE CONTENT STYLES
     –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.page-content {
+.cms-page-content {
   position: relative;
-  left: var(--page-header-width);
-  width: calc(100% - var(--page-header-width));
+  left: var(--cms-page-header-width);
+  width: calc(100% - var(--cms-page-header-width));
   min-height: 100vh;
   padding: 30px;
-  color: var(--page-content-txtColor);
-  background: var(--page-content-bgColor);
+  color: var(--cms-page-content-txtColor);
+  background: var(--cms-page-content-bgColor);
 }
 
 .search-and-user {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-column-gap: 50px;
-  align-items: center;
-  background: var(--page-content-bgColor);
-  margin-bottom: 30px;
+  display: block;
+  position: relative;
+  margin: 0 0 30px 0;
+  right: 0px;
 }
 
 .search-and-user form {
@@ -230,28 +228,28 @@ body {
   height: 50px;
   font-size: 1.5rem;
   padding-left: 15px;
-  background: var(--page-content-blockColor);
+  background: var(--cms-page-content-blockColor);
   color: var(--white);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
 }
 
 .search-and-user ::-moz-placeholder {
-  color: var(--page-content-txtColor);
+  color: var(--cms-page-content-txtColor);
 }
 
 .search-and-user :-ms-input-placeholder {
-  color: var(--page-content-txtColor);
+  color: var(--cms-page-content-txtColor);
 }
 
 .search-and-user ::placeholder {
-  color: var(--page-content-txtColor);
+  color: var(--cms-page-content-txtColor);
 }
 
 .search-and-user form svg {
   width: 26px;
   height: 26px;
-  fill: var(--page-content-txtColor);
+  fill: var(--cms-page-content-txtColor);
 }
 
 .search-and-user form button {
@@ -294,84 +292,84 @@ body {
   background: var(--red);
 }
 
-.page-content .grid {
+.cms-page-content .cms-page-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px;
 }
 
-.page-content .grid > article {
+.cms-page-content .cms-page-grid > article {
   display: flex;
   height: 300px;
-  background: var(--page-content-blockColor);
+  background: var(--cms-page-content-blockColor);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
 }
 
-.page-content .grid > article:first-child,
-.page-content .grid > article:last-child {
+.cms-page-content .cms-page-grid > article:first-child,
+.cms-page-content .cms-page-grid > article:last-child {
   grid-column: 1/-1;
 }
 
 /* MQ RULES
     –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media screen and (max-width: 767px) {
-  .page-header,
-.page-content {
+  .cms-page-header,
+.cms-page-content {
     position: static;
     width: 100%;
   }
 
-  .page-header {
+  .cms-page-header {
     padding: 10px;
   }
 
-  .page-header nav {
+  .cms-page-header nav {
     flex-direction: row;
   }
 
-  .page-header .logo {
+  .cms-page-header .logo {
     margin: 0;
   }
 
-  .page-header .logo svg {
+  .cms-page-header .logo svg {
     width: 83px;
     height: 35px;
   }
 
-  .page-header .toggle-mob-menu {
+  .cms-page-header .toggle-mob-menu {
     display: block;
   }
 
-  .page-header .admin-menu {
+  .cms-page-header .admin-menu {
     position: absolute;
     left: 98px;
     top: 57px;
     margin-top: 0;
     z-index: 2;
     border-radius: var(--border-radius);
-    background: var(--page-header-bgColor);
+    background: var(--cms-page-header-bgColor);
     visibility: hidden;
     opacity: 0;
     transform: scale(0.95);
     transition: all 0.2s;
   }
 
-  .page-header .admin-menu li:nth-last-child(2) {
+  .cms-page-header .admin-menu li:nth-last-child(2) {
     margin-bottom: 12px;
   }
 
-  .page-header .admin-menu li:last-child button,
+  .cms-page-header .admin-menu li:last-child button,
 .search-and-user .admin-profile .greeting {
     display: none;
   }
 
-  .page-content {
+  .cms-page-content {
     min-height: 0;
     padding: 10px;
   }
 
-  .page-content .grid {
+  .cms-page-content .cms-page-grid {
     grid-gap: 10px;
   }
 
@@ -401,7 +399,7 @@ body {
   }
 }
 @media screen and (max-width: 400px) {
-  .page-content .grid > article {
+  .cms-page-content .cms-page-grid > article {
     grid-column: 1/-1;
   }
 }
@@ -411,36 +409,36 @@ body {
   transform: rotate(180deg);
 }
 
-.mob-menu-opened .page-header .admin-menu {
+.mob-menu-opened .cms-page-header .admin-menu {
   transform: scale(1);
   visibility: visible;
   opacity: 1;
 }
 
 @media screen and (min-width: 768px) {
-  .collapsed .page-header {
+  .collapsed .cms-page-header {
     width: 40px;
   }
 
-  .collapsed .page-header .admin-menu li > * {
+  .collapsed .cms-page-header .admin-menu li > * {
     padding: 10px;
   }
 
-  .collapsed .page-header .logo,
-.collapsed .page-header .admin-menu span,
-.collapsed .page-header .admin-menu .menu-heading {
+  .collapsed .cms-page-header .logo,
+.collapsed .cms-page-header .admin-menu span,
+.collapsed .cms-page-header .admin-menu .menu-heading {
     display: none;
   }
 
-  .collapsed .page-header .admin-menu svg {
+  .collapsed .cms-page-header .admin-menu svg {
     margin-right: 0;
   }
 
-  .collapsed .page-header .collapse-btn svg {
+  .collapsed .cms-page-header .collapse-btn svg {
     transform: rotate(180deg);
   }
 
-  .collapsed .page-content {
+  .collapsed .cms-page-content {
     left: 40px;
     width: calc(100% - 40px);
   }
@@ -516,26 +514,26 @@ body {
 /* LIGHT MODE STYLES
     –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .light-mode {
-  --page-header-bgColor: #f1efec;
-  --page-header-bgColor-hover: #b9e4e0;
-  --page-header-txtColor: #2c303a;
-  --page-header-headingColor: #979595;
-  --page-content-bgColor: #fff;
+  --cms-page-header-bgColor: #f1efec;
+  --cms-page-header-bgColor-hover: #b9e4e0;
+  --cms-page-header-txtColor: #2c303a;
+  --cms-page-header-headingColor: #979595;
+  --cms-page-content-bgColor: #fff;
   --box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.25);
 }
 
-.light-mode .page-header .admin-menu a:hover,
-.light-mode .page-header .admin-menu a:focus,
-.light-mode .page-header .admin-menu button:hover,
-.light-mode .page-header .admin-menu button:focus {
+.light-mode .cms-page-header .admin-menu a:hover,
+.light-mode .cms-page-header .admin-menu a:focus,
+.light-mode .cms-page-header .admin-menu button:hover,
+.light-mode .cms-page-header .admin-menu button:focus {
   color: var(--black);
 }
 
-.light-mode .page-header .logo svg,
-.light-mode .page-header .admin-menu a:hover svg,
-.light-mode .page-header .admin-menu a:focus svg,
-.light-mode .page-header .admin-menu button:hover svg,
-.light-mode .page-header .admin-menu button:focus svg {
+.light-mode .cms-page-header .logo svg,
+.light-mode .cms-page-header .admin-menu a:hover svg,
+.light-mode .cms-page-header .admin-menu a:focus svg,
+.light-mode .cms-page-header .admin-menu button:hover svg,
+.light-mode .cms-page-header .admin-menu button:focus svg {
   fill: var(--black);
 }
 

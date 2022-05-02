@@ -215,12 +215,11 @@ body {
 }
 
 .search-and-user {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-column-gap: 50px;
-  align-items: center;
-  background: var(--cms-page-content-bgColor);
-  margin-bottom: 30px;
+  display: block;
+  position: relative;
+  margin: 0 0 30px 0;
+  right: 0px;
+
 }
 
 .search-and-user form {
