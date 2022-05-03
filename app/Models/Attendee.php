@@ -21,7 +21,9 @@ class Attendee extends Model
         'name' => 'string',
         'email' => 'string',
         'phone_number' => 'string',
-        'event_id' => 'string'
+        'event_id' => 'string',
+        'transaction_id' => 'string',
+        'confirmed' => 'boolean'
     ];
 
     /**

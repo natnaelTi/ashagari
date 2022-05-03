@@ -18,6 +18,8 @@ class CreateAttendeesTable extends Migration
             $table->string('name');
             $table->string('email')->default('noemail.attendee@ashagari.com');
             $table->string('phone_number');
+            $table->string('transaction_id')->default('AS-NONE');
+            $table->boolean('confirmed')->default(false);
             $table->unsignedBigInteger('event_id');
             $table->timestamps();
 

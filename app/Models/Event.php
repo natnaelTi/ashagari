@@ -25,7 +25,8 @@ class Event extends Model
         'reg_end' => 'date',
         'seats' => 'integer',
         'location' => 'string',
-        'filepath' => 'string'
+        'filepath' => 'string',
+        'price' => 'string'
     ];
 
     /**

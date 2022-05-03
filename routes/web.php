@@ -16,25 +16,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/login', [AuthController::class, 'prompt'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 
+Route::get('/register/{event_id}', [AttendeeController::class, 'create'])->middleware('guest')->name('cms_create_attendee');
+Route::post('/store_attendee', [AttendeeController::class, 'store'])->middleware('guest')->name('cms_store_attendee');
+
 Auth::routes();
-
-// Route::get('/dashboard', function () {
-//     return view('cms.dashboard');
-// })->name('dashboard');
-
-// Route::get('/view_org', function () {
-//     return view('cms.org.profile');
-// })->name('view_org');
-
-// Route::get('/list_events', function () {
-//     return view('cms.event.list');
-// })->name('list_events');
 
 Route::get('/dashboard', [AuthController::class, 'dashboard'])->middleware('auth')->name('dashboard');
 
-Route::get('/list_events', [EventController::class, 'index'])->middleware('auth')->name('list_events');
-Route::get('/create_event', [EventController::class, 'create'])->middleware('auth')->name('create_event');
-Route::post('/store_event', [EventController::class, 'store'])->middleware('auth')->name('store_event');
-Route::get('/edit_event/{id}', [EventController::class, 'edit'])->middleware('auth')->name('edit_event');
-Route::post('/update_event/{id}', [EventController::class, 'update'])->middleware('auth')->name('update_event');
-Route::get('/delete_event/{id}', [EventController::class, 'destroy'])->middleware('auth')->name('delete_event');
+Route::get('/cms_list_events', [EventController::class, 'index'])->middleware('auth')->name('cms_list_events');
+Route::get('/cms_create_event', [EventController::class, 'create'])->middleware('auth')->name('cms_create_event');
+Route::post('/cms_store_event', [EventController::class, 'store'])->middleware('auth')->name('cms_store_event');
+Route::get('/cms_edit_event/{event_id}', [EventController::class, 'edit'])->middleware('auth')->name('cms_edit_event');
+Route::post('/cms_update_event/{event_id}', [EventController::class, 'update'])->middleware('auth')->name('cms_update_event');
+Route::get('/cms_delete_event/{event_id}', [EventController::class, 'destroy'])->middleware('auth')->name('cms_delete_event');
+
+Route::get('/cms_list_attendees/{event_id}', [AttendeeController::class, 'index'])->middleware('auth')->name('cms_list_attendees');
+Route::post('/cms_confirm_attendee/{attendee_id}/{event_id}', [AttendeeController::class, 'confirm'])->middleware('auth')->name('cms_confirm_attendee');
+Route::post('/cms_delete_attendee/{attendee_id}', [AttendeeController::class, 'destroy'])->middleware('auth')->name('cms_delete_attendee');

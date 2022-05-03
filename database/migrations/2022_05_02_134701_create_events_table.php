@@ -23,6 +23,7 @@ class CreateEventsTable extends Migration
             $table->integer('seats')->default(0);
             $table->string('location');
             $table->string('filepath')->default('no_cover.png');
+            $table->string('price')->default(0);
             $table->timestamps();
         });
     }

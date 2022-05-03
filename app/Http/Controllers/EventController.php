@@ -37,20 +37,25 @@ class EventController extends Controller
             'end_date' => ['required', 'date'],
             'reg_end' => ['required', 'date'],
             'seats' => ['numeric'],
-            'location' => ['required']
+            'location' => ['required'],
+            'price' => ['numeric']
         ]);
 
         $event = new Event();
         $event->title = $i_event['title'];
+        
         if($request->has('description')){
             $event->description = $i_event['description'];
         }
+        
         $event->start_date = $i_event['start_date'];
         $event->end_date = $i_event['end_date'];
         $event->reg_end = $i_event['reg_end'];
+        
         if($request->has('seats')){
             $event->seats = $i_event['seats'];
         }
+        
         $event->location = $i_event['location'];
 
         if($request->has('filepath')){
@@ -58,10 +63,15 @@ class EventController extends Controller
             $request->filepath->move(public_path("events/{{$i_event['title']}}"), $fp);
             $event->filepath = $fp;
         }
+
+        if($request->has('price')){
+            $event->price = $i_event['price'];
+        }
+
         $stat = $event->save();
 
         if($stat){
-            return redirect()->route('list_events')->with('success', 'Event has been successfully recorded.');
+            return redirect()->route('cms_list_events')->with('success', 'Event has been successfully recorded.');
         }
         else{
             return redirect()->back()->with('errors', ['Process Aborted', 'Event failed to be recorded']);
@@ -96,15 +106,19 @@ class EventController extends Controller
         $event = Event::find($id);
         if($event){
             $event->title = $i_event['title'];
+            
             if($request->has('description')){
                 $event->description = $i_event['description'];
             }
+            
             $event->start_date = $i_event['start_date'];
             $event->end_date = $i_event['end_date'];
             $event->reg_end = $i_event['reg_end'];
+            
             if($request->has('seats')){
                 $event->seats = $i_event['seats'];
             }
+            
             $event->location = $i_event['location'];
 
             if($request->has('filepath')){
@@ -112,10 +126,15 @@ class EventController extends Controller
                 $request->filepath->move(public_path("events/{{$i_event['title']}}"), $fp);
                 $event->filepath = $fp;
             }
+
+            if($request->has('price')){
+                $event->price = $i_event['price'];
+            }
+
             $stat = $event->save();
 
             if($stat){
-                return redirect()->route('list_events')->with('success', 'Event has been successfully updated.');
+                return redirect()->route('cms_list_events')->with('success', 'Event has been successfully updated.');
             }
             else{
                 return redirect()->back()->with('errors', ['Process Aborted', 'Event failed to be updated']);
@@ -129,9 +148,10 @@ class EventController extends Controller
     public function destroy($id)
     {
         $event = Event::find($id);
-
         if($event){
+            $attendees = Attendee::where('event_id', $event->id)->get();
             $event->delete();
+            return redirect()->back()->with('success', 'Event has been successfully removed.');
         }
         else{
             return redirect()->back()->with('errors', ['Process Aborted', 'Oops! The event you are looking for seems to not be in record.']);
