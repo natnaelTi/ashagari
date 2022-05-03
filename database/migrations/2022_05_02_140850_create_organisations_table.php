@@ -19,13 +19,13 @@ class CreateOrganisationsTable extends Migration
             $table->longText('bio');
             $table->string('year');
             $table->string('primary_phone');
-            $table->string('secondary_phone');
-            $table->string('tertiary_phone');
+            $table->string('secondary_phone')->nullable();
+            $table->string('tertiary_phone')->nullable();
             $table->string('primary_email');
-            $table->string('secondary_email');
+            $table->string('secondary_email')->nullable();
             $table->string('location');
             $table->string('filepath');
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');

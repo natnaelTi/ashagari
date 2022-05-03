@@ -16,7 +16,7 @@ class CreateEventsTable extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->longText('description')->default('No description for this event is recorded.');
+            $table->longText('description')->nullable();
             $table->date('start_date');
             $table->date('end_date');
             $table->date('reg_end');

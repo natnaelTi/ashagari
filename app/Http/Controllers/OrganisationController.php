@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Organisation;
+use App\Models\User;
 
 class OrganisationController extends Controller
 {
@@ -45,9 +48,9 @@ class OrganisationController extends Controller
             'name' => ['required', 'string'],
             'bio' => ['required', 'string'],
             'year' => ['required', 'numeric'],
-            'primary_phonenumber' => ['required', 'string', 'unique:organisations'],
-            'secondary_phonenumber' => ['string', 'unique:organisations'],
-            'teritary_phonenumber' => ['string', 'unique:organisations'],
+            'primary_phone' => ['required', 'string', 'unique:organisations'],
+            'secondary_phone' => ['string', 'unique:organisations'],
+            'teritary_phone' => ['string', 'unique:organisations'],
             'primary_email' => ['required', 'string', 'unique:organisations'],
             'secondary_email' => ['string', 'unique:organisations'],
             'location' => ['required', 'string'],
@@ -65,14 +68,14 @@ class OrganisationController extends Controller
             $org->name = $i_org['name'];
             $org->bio = $i_org['bio'];
             $org->year = $i_org['year'];
-            $org->primary_phonenumber = $i_org['primary_phonenumber'];
+            $org->primary_phone = $i_org['primary_phone'];
             
-            if($request->has('secondary_phonenumber')){
-                $org->secondary_phonenumber = $i_org['secondary_phonenumber'];
+            if($request->has('secondary_phone')){
+                $org->secondary_phone = $i_org['secondary_phone'];
             }
 
-            if($request->has('tertiary_phonenumber')){
-                $org->tertiary_phonenumber = $i_org['tertiary_phonenumber'];
+            if($request->has('tertiary_phone')){
+                $org->tertiary_phone = $i_org['tertiary_phone'];
             }
 
             $org->primary_email = $i_org['primary_email'];

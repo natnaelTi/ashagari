@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Attendee;
+use App\Models\Event;
+use Carbon\Carbon;
 
 class AttendeeController extends Controller
 {

@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('filepath')->default('no_profile.png');
             $table->unsignedBigInteger('organisation_id');
+            $table->string('role')->nullable();
             $table->rememberToken();
             $table->timestamps();
 
