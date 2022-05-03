@@ -21,8 +21,11 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('filepath')->default('no_profile.png');
+            $table->unsignedBigInteger('organisation_id');
             $table->rememberToken();
             $table->timestamps();
+
+            $table->foreign('organisation_id')->references('id')->on('organisations')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

@@ -10,7 +10,7 @@ class EventController extends Controller
     //
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except('show');
     }
 
     //
@@ -78,16 +78,38 @@ class EventController extends Controller
         }
     }
 
+    public function show($id)
+    {
+        $event = Event::find($id);
+
+        if($event){
+            if(Auth::check()){
+                return view('cms.events.show', [
+                    'event' => $event
+                ]);
+            }
+            else{
+                return view('guest.events.show', [
+                    'event' => $event
+                ]);
+            }
+        }
+        else{
+            return redirect()->back()->with('errors', ['Process Aborted', 'Oops! The event you are looking for does not seem to be in record.']);
+        }
+    }
+
     public function edit($id)
     {
         $event = Event::find($id);
+
         if($event){
             return view('cms.events.create', [
                 'event' => $event
             ]);
         }
         else{
-            return redirect()->back()->with('errors', ['Process Aborted', 'Oops! The event you are looking for seems to not be in record.']);
+            return redirect()->back()->with('errors', ['Process Aborted', 'Oops! The event you are looking for does not seem to be in record.']);
         }
     }
 
