@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 
 class AuthController extends Controller
 {
@@ -29,12 +30,12 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
  
-            return redirect()->intended('dashboard');
+            return redirect()->intended('dashboard')->with('success', 'You have successfully signed into the portal. Wish you all the best ...');
         }
  
         return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
-        ])->onlyInput('email');
+            'errors' => ['Process Aborted','The provided credentials do not match our records.'],
+        ]);
     }
 
     public function dashboard()

@@ -24,7 +24,7 @@
         </li>
         
         <li>
-            <a href="{{ route('list_events') }}">
+            <a href="{{ route('cms_list_events') }}">
                 <svg>
                     <use xlink:href="#trends"></use>
                 </svg>
@@ -33,12 +33,28 @@
         </li>
 
         <li>
-            <a href="{{ route('view_org') }}">
+            <a href="{{ route('cms_show_organisation', ['1']) }}">
                 <svg>
                     <use xlink:href="#users"></use>
                 </svg>
                 <span>Organisation</span>
             </a>
+        </li>
+
+        <li class="menu-heading">
+            <h3>Settings</h3>
+        </li>
+
+        <li>
+            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                <svg>
+                    <use xlink:href="#logout"></use>
+                </svg>
+                <span>Logout</span>
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
         </li>
         <!-- <li>
             <a href="#0">
@@ -62,17 +78,6 @@
                     <use xlink:href="#appearance"></use>
                 </svg>
                 <span>Appearance</span>
-            </a>
-        </li> -->
-        <!-- <li class="menu-heading">
-            <h3>Settings</h3>
-        </li> -->
-        <!-- <li>
-            <a href="#0">
-                <svg>
-                    <use xlink:href="#settings"></use>
-                </svg>
-                <span>Settings</span>
             </a>
         </li> -->
         <!-- <li>

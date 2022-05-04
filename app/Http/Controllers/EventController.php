@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Event;
 use App\Models\Attendee;
+use Illuminate\Support\Facades\Route;
 
 class EventController extends Controller
 {
@@ -18,9 +19,9 @@ class EventController extends Controller
     //
     public function index()
     {
-        $events = Event::all()->orderBy('end_date', 'desc')->paginate(15);
+        $events = Event::latest()->orderBy('end_date', 'desc')->paginate(15);
         
-        return view('cms.events.list', [
+        return view('cms.event.list', [
             'events' => $events
         ]);
     }

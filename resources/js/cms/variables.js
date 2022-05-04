@@ -63,3 +63,10 @@ switchInput.addEventListener("input", function () {
         localStorage.setItem("dark-mode", "true");
     }
 });
+
+/* CLOSE ALERT BOXES */
+$(".close").click(function () {
+    $(this)
+        .parent(".alert")
+        .fadeOut();
+});

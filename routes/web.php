@@ -2,6 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\AttendeeController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\OrganisationController;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +19,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/', [PageController::class, 'index']);
+Route::get('/about', [PageController::class, 'about'])->name('about');
+Route::get('/event', [PageController::class, 'event'])->name('event');
 
 Route::get('/login', [AuthController::class, 'prompt'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
@@ -40,3 +51,7 @@ Route::get('/cms_show_organisation/{org_id}', [OrganisationController::class, 's
 Route::get('/cms_edit_organisation/{org_id}', [OrganisationController::class, 'edit'])->middleware('auth')->name('cms_edit_organisation');
 Route::post('/cms_update_organisation/{org_id}', [OrganisationController::class, 'update'])->middleware('auth')->name('cms_update_organisation');
 Route::post('/cms_delete_organisation/{org_id}', [OrganisationController::class, 'destroy'])->middleware('auth')->name('cms_delete_organisation');
+
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -24,6 +24,8 @@
 
 <body>
 
+    @include('cms.inc.message')
+
     @yield('content')
 
     <!-- Scripts -->

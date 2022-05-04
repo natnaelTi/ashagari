@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Organisation;
 use App\Models\User;
+use Illuminate\Support\Facades\Route;
 
 class OrganisationController extends Controller
 {
@@ -21,7 +22,7 @@ class OrganisationController extends Controller
         $admin = Auth::user();
         $organisation = Organisation::find($id);
 
-        return view('cms.organisations.view', [
+        return view('cms.org.view', [
             'organisation' => $organisation,
             'admin' => $admin
         ]);

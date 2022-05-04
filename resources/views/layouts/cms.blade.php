@@ -10,7 +10,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ __('Dashboard') }}{{ __(' | CMS | Ashagari Charitable Organisation') }}</title>
+    <title>{{ $name ?? __('Portal') ?? '' }}{{ __(' | CMS | Ashagari Charitable Organisation') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/cms/cms.css') }}" rel="stylesheet">
@@ -57,6 +57,9 @@
                         d="M70 23.9c-4.1 0-7.4-3.3-7.4-7.4s3.3-7.4 7.4-7.4c.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1-2.8 0-5.1 2.3-5.1 5.1s2.3 5.1 5.1 5.1 5.1-2.3 5.1-5.1c0-.6.5-1.1 1.101-1.1.6 0 1.1.5 1.1 1.1.099 4.2-3.201 7.5-7.301 7.5z" />
                 </g>
             </g>
+        </symbol>
+        <symbol id="logout" viewBox="0 0 16 16">
+            <path d="M96 480h64C177.7 480 192 465.7 192 448S177.7 416 160 416H96c-17.67 0-32-14.33-32-32V128c0-17.67 14.33-32 32-32h64C177.7 96 192 81.67 192 64S177.7 32 160 32H96C42.98 32 0 74.98 0 128v256C0 437 42.98 480 96 480zM504.8 238.5l-144.1-136c-6.975-6.578-17.2-8.375-26-4.594c-8.803 3.797-14.51 12.47-14.51 22.05l-.0918 72l-128-.001c-17.69 0-32.02 14.33-32.02 32v64c0 17.67 14.34 32 32.02 32l128 .001l.0918 71.1c0 9.578 5.707 18.25 14.51 22.05c8.803 3.781 19.03 1.984 26-4.594l144.1-136C514.4 264.4 514.4 247.6 504.8 238.5z"/>
         </symbol>
         <symbol id="down" viewBox="0 0 16 16">
             <polygon points="3.81 4.38 8 8.57 12.19 4.38 13.71 5.91 8 11.62 2.29 5.91 3.81 4.38" />
@@ -130,6 +133,10 @@
 
         @include('cms.inc.searchbar')
 
+        <div class="cms-message">
+            @include('cms.inc.message')
+        </div>
+        
         <section class="cms-page-grid">
 
             @yield('content')
