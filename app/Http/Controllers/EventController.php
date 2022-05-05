@@ -28,7 +28,7 @@ class EventController extends Controller
 
     public function create()
     {
-        return view('cms.events.create');
+        return view('cms.event.create');
     }
 
     public function store(Request $request)
@@ -108,7 +108,8 @@ class EventController extends Controller
 
         if($event){
             return view('cms.events.create', [
-                'event' => $event
+                'event' => $event,
+                'route' => route('cms_update_event')
             ]);
         }
         else{

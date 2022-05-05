@@ -8,6 +8,7 @@ const switchLabel = document.querySelector(".switch label");
 const switchLabelText = switchLabel.querySelector("span:last-child");
 const collapsedClass = "collapsed";
 const lightModeClass = "light-mode";
+const upload = document.querySelector(".file-input");
 
 /*TOGGLE HEADER STATE*/
 collapseBtn.addEventListener("click", function () {
@@ -69,4 +70,14 @@ $(".close").click(function () {
     $(this)
         .parent(".alert")
         .fadeOut();
+});
+
+/* PREVIEW IMAGE UPLOAD */
+upload.addEventListener("input", function showPreview(event) {
+    if (event.target.files.length > 0) {
+        var src = URL.createObjectURL(event.target.files[0]);
+        var preview = document.getElementById("filepath-preview");
+        preview.src = src;
+        preview.style.display = "block";
+    }
 });
