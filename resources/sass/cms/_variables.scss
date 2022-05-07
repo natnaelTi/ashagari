@@ -47,9 +47,9 @@ button {
   cursor: pointer;
 }
 
-input {
-  -webkit-appearance: none;
-}
+// input {
+//   -webkit-appearance: none;
+// }
 
 [type="checkbox"] {
   position: absolute;
@@ -154,7 +154,7 @@ body {
   margin-bottom: 20px;
 }
 
-.cms-page-header .admin-menu li>* {
+.cms-page-header .admin-menu li > * {
   width: 100%;
   padding: 12px 15px;
 }
@@ -299,7 +299,7 @@ body {
   grid-gap: 30px;
 }
 
-.cms-page-content .cms-page-grid>article {
+.cms-page-content .cms-page-grid > article {
   display: flex;
   height: 300px;
   background: var(--cms-page-content-blockColor);
@@ -307,15 +307,14 @@ body {
   box-shadow: var(--box-shadow);
 }
 
-.cms-page-content .cms-page-grid>article:first-child,
-.cms-page-content .cms-page-grid>article:last-child {
+.cms-page-content .cms-page-grid > article:first-child,
+.cms-page-content .cms-page-grid > article:last-child {
   grid-column: 1 / -1;
 }
 
 /* MQ RULES
     –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media screen and (max-width: 767px) {
-
   .cms-page-header,
   .cms-page-content {
     position: static;
@@ -402,7 +401,7 @@ body {
 }
 
 @media screen and (max-width: 400px) {
-  .cms-page-content .cms-page-grid>article {
+  .cms-page-content .cms-page-grid > article {
     grid-column: 1 / -1;
   }
 }
@@ -424,7 +423,7 @@ body {
     width: 40px;
   }
 
-  .collapsed .cms-page-header .admin-menu li>* {
+  .collapsed .cms-page-header .admin-menu li > * {
     padding: 10px;
   }
 
@@ -495,19 +494,19 @@ body {
   box-shadow: 0 0 4px 2px #ffdb1a;
 }
 
-.switch [type="checkbox"]:checked+label span:first-child {
+.switch [type="checkbox"]:checked + label span:first-child {
   background: var(--switch-bgDarkModeColor);
 }
 
-.switch [type="checkbox"]:focus+label span:first-child {
+.switch [type="checkbox"]:focus + label span:first-child {
   box-shadow: 0 3px 5px rgba(255, 255, 255, 0.25);
 }
 
-.switch [type="checkbox"]:checked+label span:first-child::before {
+.switch [type="checkbox"]:checked + label span:first-child::before {
   transform: translateX(24px);
 }
 
-.switch [type="checkbox"]:checked+label span:first-child::after {
+.switch [type="checkbox"]:checked + label span:first-child::after {
   left: 12px;
   width: 15px;
   height: 15px;
@@ -542,7 +541,7 @@ body {
   fill: var(--black);
 }
 
-.light-mode .switch [type="checkbox"]:focus+label span:first-child {
+.light-mode .switch [type="checkbox"]:focus + label span:first-child {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
 }
 
@@ -603,7 +602,7 @@ body {
   $accentColor: darken($bgColor, 50);
 
   .#{$name} {
-    background-color:#{$bgColor};
+    background-color: #{$bgColor};
     border-left: 5px solid $accentColor;
 
     .close {
@@ -627,112 +626,6 @@ body {
   padding: 5px 10px !important;
 }
 
-.cms-event__card {
-  position: relative !important;
-  width: 75% !important;
-  left: auto !important;
-  right: auto !important;
-  justify-self: center !important;
-  text-align: center !important;
-  margin: 10px auto !important;
-  padding: 10px 20px !important;
-  background-color: #ffffff !important;
-  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px !important;
-
-  .card-header {
-    padding: 15px 10px !important;
-    font-size: 17px !important;
-  }
-}
-
-.cms-event__button {
-  align-items: center;
-  appearance: none;
-  background-color: #FCFCFD;
-  border-radius: 4px;
-  border-width: 0;
-  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-  box-sizing: border-box;
-  color: #36395A;
-  cursor: pointer;
-  display: inline-flex;
-  height: 48px;
-  justify-content: center;
-  line-height: 1;
-  list-style: none;
-  overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  text-align: left;
-  text-decoration: none;
-  transition: box-shadow .15s, transform .15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  will-change: box-shadow, transform;
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-.cms-event__button:focus {
-  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-}
-
-.cms-event__button:hover {
-  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-  transform: translateY(-2px);
-}
-
-.cms-event__button:active {
-  box-shadow: #D6D6E7 0 3px 7px inset;
-  transform: translateY(2px);
-}
-
-.cms-form {
-  display: block !important;
-  position: relative !important;
-  width: 100% !important;
-}
-
-.cms-form__field {
-  width: inherit !important;
-  margin: 5px !important;
-  // padding: 8px 4px;
-}
-
-.cms-form__label {
-  display: flex !important;
-  color: rgb(100, 100, 102) !important;
-  text-transform: uppercase !important;
-  font-size: 12px !important;
-  font-weight: 500 !important;
-}
-
-.cms-form__input {
-  display: flex !important;
-  border-radius: 3px !important;
-  border-bottom: 1px solid #959597 !important;
-  border-top: 0 !important;
-  border-right: 0 !important;
-  border-left: 0 !important;
-}
-
-.cms-form__input::placeholder {
-  font-size: 12px !important;
-  opacity: .4 !important;
-}
-
-.cms-input__caption {
-  display: flex !important;
-  width: 90% !important;
-  text-transform: lowercase !important;
-  text-align: left !important;
-  font-size: 8px !important;
-  font-weight: 300 !important;
-}
-
 .info {
   color: rgb(35, 56, 153);
 }
@@ -748,9 +641,10 @@ body {
 .cms-input__file label {
   display: block;
   width: fit-content;
-  height: 45px;
+  //   height: 45px;
   // margin-left: 25%;
-  line-height: 50px;
+  padding: 10px 25px;
+  //   line-height: 50px;
   text-align: center;
   background: #181f41;
 
@@ -767,3 +661,101 @@ body {
   display: none;
   margin: 30px 5px;
 }
+
+.cms-event-form {
+    max-width: 65vw;
+    padding: 10px 20px;
+    background: #ffffff;
+    margin: 10px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+  }
+  .cms-event-form fieldset {
+    border: none;
+  }
+  .cms-event-form legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+  }
+  .cms-event-form label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  .cms-event-form input[type="text"],
+  .cms-event-form input[type="date"],
+  .cms-event-form input[type="datetime"],
+  .cms-event-form input[type="email"],
+  .cms-event-form input[type="number"],
+  .cms-event-form input[type="search"],
+  .cms-event-form input[type="time"],
+  .cms-event-form input[type="url"],
+  .cms-event-form textarea,
+  .cms-event-form select {
+    background: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    margin: 0;
+    outline: 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: #f0f0f0;
+    color: #3d414b;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    margin-bottom: 30px;
+  }
+  .cms-event-form input[type="text"]:focus,
+  .cms-event-form input[type="date"]:focus,
+  .cms-event-form input[type="datetime"]:focus,
+  .cms-event-form input[type="email"]:focus,
+  .cms-event-form input[type="number"]:focus,
+  .cms-event-form input[type="search"]:focus,
+  .cms-event-form input[type="time"]:focus,
+  .cms-event-form input[type="url"]:focus,
+  .cms-event-form textarea:focus,
+  .cms-event-form select:focus {
+    background: #f0f0f0;
+  }
+  .cms-event-form select {
+    -webkit-appearance: menulist-button;
+    height: auto;
+  }
+  .cms-event-form .number {
+    background: #1abc9c;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+    border-radius: 15px 15px 15px 0px;
+  }
+
+  .cms-event-form input[type="submit"],
+  .cms-event-form input[type="button"] {
+    position: relative;
+    display: block;
+    padding: 19px 39px 18px 39px;
+    color: #fff;
+    margin: 0 auto;
+    background: #1abc9c;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 100%;
+    border: 1px solid #16a085;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+  }
+  .cms-event-form input[type="submit"]:hover,
+  .cms-event-form input[type="button"]:hover {
+    background: #109177;
+  }

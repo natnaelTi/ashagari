@@ -20,7 +20,7 @@ class EventController extends Controller
     public function index()
     {
         $events = Event::latest()->orderBy('end_date', 'desc')->paginate(15);
-        
+
         return view('cms.event.list', [
             'events' => $events
         ]);
@@ -39,26 +39,29 @@ class EventController extends Controller
             'start_date' => ['required', 'date'],
             'end_date' => ['required', 'date'],
             'reg_end' => ['required', 'date'],
-            'seats' => ['numeric'],
+            // 'seats' => ['numeric'],
             'location' => ['required'],
-            'price' => ['numeric']
+            // 'price' => ['numeric']
         ]);
 
         $event = new Event();
         $event->title = $i_event['title'];
-        
+
         if($request->has('description')){
             $event->description = $i_event['description'];
         }
-        
+        else{
+            $event->description = 'No further details provided for this event.';
+        }
+
         $event->start_date = $i_event['start_date'];
         $event->end_date = $i_event['end_date'];
         $event->reg_end = $i_event['reg_end'];
-        
-        if($request->has('seats')){
+
+        if($request->input('seats')){
             $event->seats = $i_event['seats'];
         }
-        
+
         $event->location = $i_event['location'];
 
         if($request->has('filepath')){
@@ -67,10 +70,10 @@ class EventController extends Controller
             $event->filepath = $fp;
         }
 
-        if($request->has('price')){
+        if($request->input('price')){
             $event->price = $i_event['price'];
         }
-
+// dd($event);
         $stat = $event->save();
 
         if($stat){
@@ -132,19 +135,19 @@ class EventController extends Controller
         $event = Event::find($id);
         if($event){
             $event->title = $i_event['title'];
-            
+
             if($request->has('description')){
                 $event->description = $i_event['description'];
             }
-            
+
             $event->start_date = $i_event['start_date'];
             $event->end_date = $i_event['end_date'];
             $event->reg_end = $i_event['reg_end'];
-            
+
             if($request->has('seats')){
                 $event->seats = $i_event['seats'];
             }
-            
+
             $event->location = $i_event['location'];
 
             if($request->has('filepath')){

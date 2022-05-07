@@ -136,12 +136,12 @@
         <div class="cms-message">
             @include('cms.inc.message')
         </div>
-        
-        <section class="cms-page-grid">
+
+        {{-- <section class="cms-page-grid"> --}}
 
             @yield('content')
 
-        </section>
+        {{-- </section> --}}
 
         @include('cms.inc.footer')
 

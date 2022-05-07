@@ -24,13 +24,13 @@
                             <tr data-toggle="collapse" id="row{{$event->id}}" data-target=".row{{$event->id}}">
                                 <td>{{ $event->title }}</td>
                                 <td>{{ $event->location }}</td>
-                                
+
                                 @if($event->seats > 0)
                                     <td>{{ $event->seats }}</td>
                                 @else
                                     <td>Unlimited</td>
                                 @endif
-                                
+
                                 @if($event->price > 0)
                                     <td>{{ $event->price }} ETB</td>
                                 @else
@@ -48,7 +48,7 @@
                                     <p>{{ $event->description }}</p>
                                     <p>Start Date: <span>{{ $event->start_date }}</span></p>
                                     <p>End Date: <span>{{ $event->end_date }}</span></p>
-                                    <p>Registration Due: <span>{{ $event->$reg_end }}</span></p>
+                                    <p>Registration Due: <span>{{ $event->reg_end }}</span></p>
                                 </div>
                             </tr>
                         @endforeach
