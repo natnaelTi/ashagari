@@ -2,64 +2,79 @@
 
 @section('content')
     <!-- Yield Page Content -->
-    @if(count($events) > 0)
+    @if (count($events) > 0)
         <article>
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h2>Events List</h2>
                 </div>
-                <table class="table table-responsive table-hover">
-                    <thead>
-                        <tr>
-                            <th>Title</th>
-                            <th>Location</th>
-                            <th>Seats</th>
-                            <th>Price</th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($events as $event)
-                            <tr data-toggle="collapse" id="row{{$event->id}}" data-target=".row{{$event->id}}">
-                                <td>{{ $event->title }}</td>
-                                <td>{{ $event->location }}</td>
-
-                                @if($event->seats > 0)
-                                    <td>{{ $event->seats }}</td>
-                                @else
-                                    <td>Unlimited</td>
-                                @endif
-
-                                @if($event->price > 0)
-                                    <td>{{ $event->price }} ETB</td>
-                                @else
-                                    <td>Free</td>
-                                @endif
-
-                                <td>Edit</td>
-                                <td>Delete</td>
-                                <td>
-                                    <a type="button" class="btn btn-default btn-sm">Expand</a>
-                                </td>
+                <div class="table-wrap">
+                    <table class="table myaccordion table-hover" id="accordion">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Title</th>
+                                <th>Location</th>
+                                <th>Seats</th>
+                                <th>Price</th>
+                                <th>&nbsp;</th>
+                                <th>&nbsp;</th>
+                                <th>&nbsp;</th>
                             </tr>
-                            <tr class="collapse row{{$event->id}}">
-                                <div class="cms-table__collapse">
-                                    <p>{{ $event->description }}</p>
-                                    <p>Start Date: <span>{{ $event->start_date }}</span></p>
-                                    <p>End Date: <span>{{ $event->end_date }}</span></p>
-                                    <p>Registration Due: <span>{{ $event->reg_end }}</span></p>
-                                </div>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            @foreach ($events as $key => $event)
+                                <tr data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                    aria-controls="collapseOne">
+                                    <th scope="row">{{ $key + 1 }}</th>
+                                    <td>{{ $event->title }}</td>
+                                    <td>{{ $event->location }}</td>
+
+                                    @if ($event->seats > 0)
+                                        <td>{{ $event->seats }}</td>
+                                    @else
+                                        <td>Unlimited</td>
+                                    @endif
+
+                                    @if ($event->price > 0)
+                                        <td>{{ $event->price }} ETB</td>
+                                    @else
+                                        <td>Free</td>
+                                    @endif
+
+                                    <td>
+                                        <a href="{{ route('cms_edit_event', [$event->id]) }}">
+                                            <i class="fas fa-edit edit" aria-hidden="true"></i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="{{ route('cms_delete_event', [$event->id]) }}">
+                                            <i class="fas fa-trash delete" aria-hidden="true"></i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <i class="fa" aria-hidden="true"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" id="collapseOne" class="collapse show acc" data-parent="#accordion">
+                                        @if ($event->description)
+                                            <p>{{ $event->description }}</p>
+                                        @else
+                                            <p>No description added to this event.</p>
+                                        @endif
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </article>
     @else
         <div class="card cms-event__card">
             <div class="card-header text-center">
-                    There are no events in record yet ... Care to add one?
+                There are no events in record yet ... Care to add one?
             </div>
             <div class="card-body">
                 <a type="button" class="cms-event__button" href="{{ route('cms_create_event') }}">Create Event</a>

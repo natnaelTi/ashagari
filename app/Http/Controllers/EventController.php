@@ -110,9 +110,9 @@ class EventController extends Controller
         $event = Event::find($id);
 
         if($event){
-            return view('cms.events.create', [
+            return view('cms.event.create', [
                 'event' => $event,
-                'route' => route('cms_update_event')
+                'route' => route('cms_update_event', $event->id)
             ]);
         }
         else{
