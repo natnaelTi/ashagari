@@ -137,7 +137,7 @@
             @include('cms.inc.message')
         </div>
         
-        <section class="cms-page-grid">
+        <section>
 
             @yield('content')
 

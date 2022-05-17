@@ -2,13 +2,15 @@
 
 @section('content')
     <!-- Yield Page Content -->
-    <article></article>
-    <article></article>
-    <article></article>
-    <article></article>
-    <article></article>
-    <article></article>
-    <article></article>
-    <article></article>
+    <div class="cms-page-grid">
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+    </div>
     <!-- End Yield Page Content -->
 @endsection

@@ -39,15 +39,13 @@ class EventController extends Controller
             'start_date' => ['required', 'date'],
             'end_date' => ['required', 'date'],
             'reg_end' => ['required', 'date'],
-            'seats' => ['numeric'],
-            'location' => ['required'],
-            'price' => ['numeric']
+            'location' => ['required']
         ]);
 
         $event = new Event();
         $event->title = $i_event['title'];
         
-        if($request->has('description')){
+        if($request->has('description') && $request->input('description') != null){
             $event->description = $i_event['description'];
         }
         
@@ -55,19 +53,19 @@ class EventController extends Controller
         $event->end_date = $i_event['end_date'];
         $event->reg_end = $i_event['reg_end'];
         
-        if($request->has('seats')){
+        if($request->has('seats') && $request->input('seats') != null){
             $event->seats = $i_event['seats'];
         }
         
         $event->location = $i_event['location'];
 
-        if($request->has('filepath')){
+        if($request->has('filepath') && $request->input('filepath') != null){
             $fp = $i_event['title'] . '.' . 'poster' . '.' . time() . '.' . $request->filepath->extension();
             $request->filepath->move(public_path("events/{{$i_event['title']}}"), $fp);
             $event->filepath = $fp;
         }
 
-        if($request->has('price')){
+        if($request->has('price') && $request->input('price') != null){
             $event->price = $i_event['price'];
         }
 
@@ -107,9 +105,9 @@ class EventController extends Controller
         $event = Event::find($id);
 
         if($event){
-            return view('cms.events.create', [
+            return view('cms.event.create', [
                 'event' => $event,
-                'route' => route('cms_update_event')
+                'route' => route('cms_update_event', [$event->id])
             ]);
         }
         else{
