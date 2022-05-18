@@ -20,7 +20,7 @@ class EventController extends Controller
     public function index()
     {
         $events = Event::latest()->orderBy('end_date', 'desc')->paginate(15);
-        
+
         return view('cms.event.list', [
             'events' => $events
         ]);
@@ -48,7 +48,10 @@ class EventController extends Controller
         if($request->has('description') && $request->input('description') != null){
             $event->description = $i_event['description'];
         }
-        
+        else{
+            $event->description = 'No further details provided for this event.';
+        }
+
         $event->start_date = $i_event['start_date'];
         $event->end_date = $i_event['end_date'];
         $event->reg_end = $i_event['reg_end'];
@@ -56,7 +59,7 @@ class EventController extends Controller
         if($request->has('seats') && $request->input('seats') != null){
             $event->seats = $i_event['seats'];
         }
-        
+
         $event->location = $i_event['location'];
 
         if($request->has('filepath') && $request->input('filepath') != null){
@@ -68,7 +71,7 @@ class EventController extends Controller
         if($request->has('price') && $request->input('price') != null){
             $event->price = $i_event['price'];
         }
-
+// dd($event);
         $stat = $event->save();
 
         if($stat){
@@ -130,19 +133,19 @@ class EventController extends Controller
         $event = Event::find($id);
         if($event){
             $event->title = $i_event['title'];
-            
+
             if($request->has('description')){
                 $event->description = $i_event['description'];
             }
-            
+
             $event->start_date = $i_event['start_date'];
             $event->end_date = $i_event['end_date'];
             $event->reg_end = $i_event['reg_end'];
-            
+
             if($request->has('seats')){
                 $event->seats = $i_event['seats'];
             }
-            
+
             $event->location = $i_event['location'];
 
             if($request->has('filepath')){

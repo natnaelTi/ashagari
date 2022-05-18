@@ -34,12 +34,12 @@ class OrganisationController extends Controller
         $organisation = Organisation::find($id);
 
         if($organisation){
-            return view('cms.organisations.edit', [
+            return view('cms.org.profile', [
                 'organisation' => $organisation
             ]);
         }
         else{
-            return redirect()->back()->with('errors', ['Process Aborted', 'Oops! The organisation you are looking does not seem to be in record.']); 
+            return redirect()->back()->with('errors', ['Process Aborted', 'Oops! The organisation you are looking does not seem to be in record.']);
         }
     }
 
@@ -70,7 +70,7 @@ class OrganisationController extends Controller
             $org->bio = $i_org['bio'];
             $org->year = $i_org['year'];
             $org->primary_phone = $i_org['primary_phone'];
-            
+
             if($request->has('secondary_phone')){
                 $org->secondary_phone = $i_org['secondary_phone'];
             }
@@ -80,13 +80,13 @@ class OrganisationController extends Controller
             }
 
             $org->primary_email = $i_org['primary_email'];
-            
+
             if($request->has('secondary_email')){
                 $org->secondary_phonenumber = $i_org['secondary_email'];
             }
 
             $org->location = $i_org['location'];
-            
+
             if($ceo){
                 $org->user_id = $ceo->id;
             }
@@ -94,8 +94,14 @@ class OrganisationController extends Controller
                 $org->user_id = Auth::id();
             }
 
+            if($request->has('filepath')){
+                $fp = $i_org['name'] . '.' . 'logo' . '.' . time() . '.' . $request->filepath->extension();
+                $request->filepath->move(public_path("organisations/{{$i_org['name']}}"), $fp);
+                $org->filepath = $fp;
+            }
+
             $stat = $org->save();
-            
+
             if($stat){
                 return redirect()->route('cms_show_organisation')->with('success', 'Organisation has been successfully updated.');
             }

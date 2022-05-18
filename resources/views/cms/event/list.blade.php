@@ -77,7 +77,7 @@
     @else
         <div class="card cms-event__card">
             <div class="card-header text-center">
-                    There are no events in record yet ... Care to add one?
+                There are no events in record yet ... Care to add one?
             </div>
             <div class="card-body">
                 <a type="button" class="cms-event__button" href="{{ route('cms_create_event') }}">Create Event</a>

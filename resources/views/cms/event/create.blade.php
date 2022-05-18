@@ -32,6 +32,34 @@
                             </div>
                         </div>
                     </div>
+                </div> --}}
+    {{-- </div>
+        </div> --}}
+
+    <div class="cms-event-form">
+        <form method="POST" name="event_form" id="event_form" action="{{ $route ?? route('cms_store_event') }}" enctype="multipart/form-data" class="cms-form">
+            @csrf
+            <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+
+            <fieldset>
+                <legend><span class="number">1</span> Basic Information</legend>
+                <input type="text" name="title" id="title" class="cms-form__input" placeholder="event title ..."  value="{{ old('title') ?? $event['title'] ?? '' }}" required/>
+                <input type="text" name="location" id="location" class="cms-form__input" placeholder="event location ..."  value="{{ old('location') ?? $event['location'] ?? '' }}" required/>
+
+                <textarea type="text" name="description" id="description" class="cms-form__input" placeholder="event brief ..."  value="{{ old('description') ?? $event['description'] ?? '' }}">{{ old('description') ?? $event['description'] ?? '' }}</textarea>
+                <div style="display: inline-flex !important; width: 100% !important;">
+                    <span style="padding: 0 1em 0 0 !important;">
+                        <label for="start_date">Opening Date</label>
+                        <input type="date" name="start_date" id="start_date" class="cms-form__input" placeholder="event opening date ..."  value="{{ old('start_date') ?? $event['start_date'] ?? '' }}" required/>
+                    </span>
+                    <span style="padding: 0 1em 0 1em !important;">
+                        <label for="end_date">Closing Date</label>
+                        <input type="date" name="end_date" id="end_date" class="cms-form__input" placeholder="event closing date ..."  value="{{ old('end_date') ?? $event['end_date'] ?? '' }}" required/>
+                    </span>
+                    <span style="padding: 0 0 0 1em !important;">
+                        <label for="reg_end">Registration Due</label>
+                        <input type="date" name="reg_end" id="reg_end" class="cms-form__input" placeholder="event registration date ..."  value="{{ old('reg_end') ?? $event['reg_end'] ?? '' }}" required/>
+                    </span>
                 </div>
 
                 <div class="form-group">
