@@ -1,0 +1,402 @@
+/*------------ Common --------------*/
+* {
+    box-sizing: border-box !important;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: auto;
+}
+
+body {
+    color: #666666;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.80857;
+    font-weight: normal;
+}
+
+a {
+    color: #3A3333;
+    text-decoration: none !important;
+    outline: none !important;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: 0;
+    font-weight: normal;
+    position: relative;
+    padding: 0;
+    font-weight: normal;
+    line-height: normal;
+    color: #111111;
+    margin: 0
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 16px
+}
+
+h5 {
+    font-size: 14px
+}
+
+h6 {
+    font-size: 13px
+}
+
+*,
+*::after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: #212121;
+    text-decoration: none !important;
+    opacity: 1
+}
+
+button:focus {
+    outline: none;
+}
+
+ul,
+li,
+ol {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+p {
+    margin: 0px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+a {
+    color: #222222;
+    text-decoration: none;
+    outline: none !important;
+}
+
+a,
+.btn {
+    text-decoration: none !important;
+    outline: none !important;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+:focus {
+    outline: 0;
+}
+
+.btn-custom {
+    margin-top: 20px;
+    background-color: transparent !important;
+    border: 2px solid #ddd;
+    padding: 12px 40px;
+    font-size: 16px;
+}
+
+.lead {
+    font-size: 18px;
+    line-height: 30px;
+    color: #767676;
+    margin: 0;
+    padding: 0;
+}
+
+.form-control:focus {
+    border-color: #ffffff !important;
+    box-shadow: 0 0 0 .2rem rgba(255, 255, 255, .25);
+}
+
+.navbar-form input {
+    border: none !important;
+}
+
+.badge {
+    font-weight: 500;
+}
+
+blockquote {
+    margin: 20px 0 20px;
+    padding: 30px;
+}
+
+button {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.full {
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+/*------------ End Common --------------*/
+
+/*------------ Navbar --------------*/
+.navigation.navbar {
+    float: right;
+    padding-top: 32px !important;
+    padding: 0;
+}
+
+.navigation.navbar-dark .navbar-nav .nav-link {
+    padding: 0px 27px;
+    color: #02A791;
+    font-size: 17px;
+    line-height: 20px;
+}
+
+.navigation.navbar-dark .navbar-nav .nav-link:focus,
+.navigation.navbar-dark .navbar-nav .nav-link:hover {
+    color: #fff;
+}
+
+.navigation.navbar-dark .navbar-nav .active>.nav-link,
+.navigation.navbar-dark .navbar-nav .nav-link.active,
+.navigation.navbar-dark .navbar-nav .nav-link.show,
+.navigation.navbar-dark .navbar-nav .show>.nav-link {
+    color: #fff;
+}
+
+.navbar-expand-md .navbar-nav {
+    padding-right: 10px;
+}
+
+.header {
+    width: 100%;
+    padding: 15px 30px 0px 30px;
+    position: absolute;
+    z-index: 999;
+}
+
+/*------------ End Navbar --------------*/
+
+/*------------ Hero Section ------------*/
+.banner_main::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -221px;
+    height: 762px;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+}
+
+.core_value_bg {
+    position: relative;
+    // background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(2, 167, 145, 0.73)),
+    //     url('../images/home/bg-3.jpg');
+    background-repeat: no-repeat;
+    min-height: 720px;
+    background-size: cover !important;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.reg_banner_main {
+    position: relative;
+    // background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(2, 167, 145, 0.73)),
+    //     url('../images/bg/bg-3.jpg');
+    background-repeat: no-repeat;
+    min-height: 720px;
+    background-size: cover !important;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+}
+
+.upcoming_banner_main {
+    position: relative;
+    // background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(2, 167, 145, 0.73)),
+    //     url('../images/events/event_poster.jpg');
+    background-repeat: no-repeat;
+    min-height: 820px;
+    background-size: cover !important;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+}
+
+.contact_banner {
+    position: relative;
+    // background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(2, 167, 145, 0.73)),
+    //     url('../images/home/bg-2.JPG');
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+}
+
+// Text Properties
+//------------------
+
+.text-bg {
+    text-align: center;
+}
+
+.text-bg h1 {
+    color: #fff;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.text-bg h1 span {
+    color: #02A791;
+}
+
+.text-bg p {
+    font-size: 15px;
+    color: #fff;
+    line-height: 28px;
+    font-weight: 300;
+    padding-bottom: 50px;
+    padding-right: 25px;
+    padding-left: 25px;
+    text-align: center;
+    display: block;
+}
+
+.banner_img figure {
+    margin: 0;
+}
+
+// Carousel Banner
+
+.banner_Carousel {
+    margin: 200px -100px 0px -130px;
+    z-index: 9999;
+}
+
+.banner_Carousel .carousel-caption {
+    position: inherit;
+    padding: 0;
+}
+
+.banner_Carousel .carousel-indicators {
+    bottom: -50px;
+}
+
+.banner_Carousel .carousel-indicators li {
+    width: 22px;
+    height: 22px;
+    border-radius: 20px;
+    background: #ffff00;
+}
+
+.banner_Carousel .carousel-indicators li.active {
+    background: #ffffff;
+}
+
+#carousel .carousel-item.boat {
+    background-image: linear-gradient(to bottom, rgba(213, 255, 249, 0.15), rgba(2, 167, 145, 0.73)), url("../images/home/bg-1.jpg");
+}
+
+#carousel .carousel-item.sea {
+    background-image: linear-gradient(to bottom, rgba(213, 255, 249, 0.15), rgba(2, 167, 145, 0.73)), url("/images/about/4.jpg");
+}
+
+#carousel .carousel-item.river {
+    background-image: linear-gradient(to bottom, rgba(213, 255, 249, 0.15), rgba(2, 167, 145, 0.73)), url("/images/about/3.jpg");
+}
+
+#carousel .carousel-item {
+    height: 100vh;
+    width: 100%;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+}
+
+#carousel .carousel-inner .carousel-item {
+    transition: -webkit-transform 2s ease;
+    transition: transform 2s ease;
+    transition: transform 2s ease, -webkit-transform 2s ease;
+}
+
+#carousel .carousel-item .caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    color: white;
+    animation-duration: 1s;
+    animation-delay: 2s;
+}
+
+#carousel .caption h2 {
+    animation-duration: 1s;
+    animation-delay: 2s;
+}
+
+#carousel .caption p {
+    animation-duration: 1s;
+    animation-delay: 2.2s;
+}
+
+#carousel .caption a {
+    animation-duration: 1s;
+    animation-delay: 2.4s;
+}
+
+.hero_btn {
+    margin-bottom: 15px;
+
+}
+/*------------ End Hero Section ------------*/
