@@ -1,10 +1,5 @@
-<div class="lds-roller">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+<!----------- Preloader ----------->
+<div class="loader_bg">
+    <div class="loader"><img src="{{ asset('images/loading.gif') }}" alt="#" /></div>
 </div>
+<!----------- End Preloader ----------->

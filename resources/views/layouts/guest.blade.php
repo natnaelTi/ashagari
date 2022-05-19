@@ -1,35 +1,44 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- CSRF Token -->
+   <meta name="csrf-token" content="{{ csrf_token() }}">
+   <!-- mobile metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <title>Ashagari</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- bootstrap css -->
+   <link rel="stylesheet" href="{{ asset('css/guest_temp/bootstrap.min.css') }}">
 
-    <link rel="icon" type="image/png" href="{{ asset('img/icon/favicon.ico') }}">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+   <!--infinite-slider-->
 
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ $name ?? '' }}{{ __(' | Ashagari Charitable Organisation') }}</title>
-
-    <!-- Styles -->
-    <link href="{{ asset('css/cms/guest.css') }}" rel="stylesheet">
-
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="{{ asset('css/guest_temp/infinite-slider.css') }}">
+   <!-- style css -->
+   <link rel="stylesheet" href="{{ asset('css/guest_temp/style.css') }}">
+   <!-- Responsive-->
+   <link rel="stylesheet" href="{{ asset('css/guest_temp/responsive.css') }}">
+   <!-- fevicon -->
+   <link rel="icon" href="{{ asset('logo.svg') }}" type="image/gif" />
+   <!-- Scrollbar Custom CSS -->
+   <link rel="stylesheet" href="{{ asset('css/guest_temp/jquery.mCustomScrollbar.min.css') }}">
+   
+   <script src="https://kit.fontawesome.com/7837a43023.js" crossorigin="anonymous"></script>
 </head>
+<!-- body -->
 
 <body class="main-layout">
+
     <!-- Page Load Spinner -->
 
-    @include('guest.inc.loader')
+    {{-- @include('guest.inc.loader') --}}
 
     <!-- End Page Load Spinner -->
 
@@ -44,11 +53,11 @@
 
 
     <!-- Message Display -->
-    <div class="message">
+    {{-- <div class="message">
 
         @include('guest.inc.message')
     
-    </div>
+    </div> --}}
     <!-- End Message Dispplay -->
 
 
@@ -66,7 +75,13 @@
     <!-- End Footer -->
 
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/cms/cms.js') }}"></script>
+    <!-- Javascript files-->
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/popper.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('js/jquery-3.0.0.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+    <script src="{{ asset('js/custom.js') }}"></script>
 </body>
+
 </html>
