@@ -28,7 +28,7 @@
                             <a class="nav-link" href="about.html">About</a>
                          </li>
                          <li class="nav-item ">
-                            <a class="nav-link" href="Upcoming.html"> Events</a>
+                            <a class="nav-link" href="Upcoming.html">Conferences</a>
                          </li>
 
                       </ul>
