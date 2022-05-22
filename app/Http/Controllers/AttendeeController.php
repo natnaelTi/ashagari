@@ -37,7 +37,7 @@ class AttendeeController extends Controller
         if($event && $event->reg_end >= Carbon::today()){
             if($event->reg_end >= Carbon::today()){
                 if($attendees && $event->seats > count('attendees')){
-                    return view('cms.attendee.rsvp', [
+                    return view('guest.event.register', [
                         'name' => $name,
                         'event' => $event
                     ]);   
@@ -58,9 +58,13 @@ class AttendeeController extends Controller
     public function store(Request $request)
     {
         $i_attend = $request->validate([
-            'name' => ['required', 'string'],
-            'email' => ['string'],
-            'phone_number' => ['required', 'string'],
+            'firstname' => ['required', 'string'],
+            'lastname' => ['required', 'string'],
+            'phone_number' => ['required', 'regex:/^([0-9\s\-\+\(\)]*)$/', 'min:10'],
+            'email' => ['email'],
+            'occupation' => ['required', 'string'],
+            'age' => ['required'],
+            'comment' => ['string'],
             'transaction_id' => ['string'],
             'event_id' => ['required', 'string'],
         ]);
@@ -72,13 +76,20 @@ class AttendeeController extends Controller
         if($p_attend == null && $event){
             if($event->price > 0 && $request->has('transaction_id')){
                 $attendee = new Attendee();
-                $attendee->name = $i_attend['name'];
+                $attendee->firstname = $i_attend['firstname'];
+                $attendee->lastname = $i_attend['lastname'];
+                $attendee->phone_number = $i_attend['phone_number'];
 
                 if($request->has('email')){
                     $attendee->email = $i_attend['email'];
                 }
+                $attendee->occupation = $i_attend['occupation'];
+                $attendee->age_group = $i_attend['age'];
+                
+                if($request->has('comment')){
+                    $attendee->comment = $i_attend['comment'];
+                }
 
-                $attendee->phone_number = $i_attend['phone_number'];
                 $attendee->transaction_id = $i_attend['transaction_id'];
                 $attendee->event_id = $event->id;
                 
@@ -92,14 +103,20 @@ class AttendeeController extends Controller
                 }
             }
             else if($event->price == 0){
-                $attendee = new Attendee();
-                $attendee->name = $i_attend['name'];
+                $attendee->firstname = $i_attend['firstname'];
+                $attendee->lastname = $i_attend['lastname'];
+                $attendee->phone_number = $i_attend['phone_number'];
 
                 if($request->has('email')){
                     $attendee->email = $i_attend['email'];
                 }
+                $attendee->occupation = $i_attend['occupation'];
+                $attendee->age_group = $i_attend['age'];
+                
+                if($request->has('comment')){
+                    $attendee->comment = $i_attend['comment'];
+                }
 
-                $attendee->phone_number = $i_attend['phone_number'];
                 $attendee->event_id = $event->id;
                 
                 $stat = $attendee->save();

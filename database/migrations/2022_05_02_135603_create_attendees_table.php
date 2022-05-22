@@ -15,9 +15,13 @@ class CreateAttendeesTable extends Migration
     {
         Schema::create('attendees', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('firstname');
+            $table->string('lastname');
             $table->string('email')->default('noemail.attendee@ashagari.com');
             $table->string('phone_number');
+            $table->string('occupation');
+            $table->string('age_group');
+            $table->string('comment');
             $table->string('transaction_id')->default('AS-NONE');
             $table->boolean('confirmed')->default(false);
             $table->unsignedBigInteger('event_id');

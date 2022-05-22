@@ -18,9 +18,13 @@ class Attendee extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'name' => 'string',
+        'firstname' => 'string',
+        'lastname' => 'string',
         'email' => 'string',
         'phone_number' => 'string',
+        'occupation' => 'string',
+        'age_group' => 'string',
+        'comment' => 'string',
         'event_id' => 'string',
         'transaction_id' => 'string',
         'confirmed' => 'boolean'
