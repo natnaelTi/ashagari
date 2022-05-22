@@ -293,12 +293,12 @@
                   <h2>Latest Post</h2>
                </div>
 
-               {{-- <h6 class="titlepage p-5" style="font-weight: 200 !important; text-transform: lowercase !important;">No
-                  blogs have been posted yet</h6> --}}
+               <h6 class="titlepage p-5" style="font-weight: 200 !important; text-transform: lowercase !important;">No
+                  blogs have been posted yet</h6>
             </div>
          </div>
 
-         <div class="row">
+         {{-- <div class="row">
                <div class="col-lg-4 mb-4 mt-n10px ">
                   <div class="card d-inline-flex  shadow p-3 mb-5 bg-white rounded   scm-card" >
                         <img class="card-img-top-post" src="/images/Event2.jpg" style="width: 125%;" alt="">
@@ -379,7 +379,7 @@
                         </div>
                   </div>
                </div>
-            </div>
+         </div> --}}
       </div>
    </div>
    <!----------- End Social Media Section ----------->

@@ -22,13 +22,13 @@
                    <div class="collapse navbar-collapse" id="navbarsExample04">
                       <ul class="navbar-nav mr-auto">
                          <li class="nav-item active">
-                            <a class="nav-link" href="index.html"> Home </a>
+                            <a class="nav-link" href="{{ route('index') }}">Home</a>
                          </li>
                          <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link" href="{{ route('about') }}">About</a>
                          </li>
                          <li class="nav-item ">
-                            <a class="nav-link" href="Upcoming.html">Conferences</a>
+                            <a class="nav-link" href="{{ route('event') }}">Conferences</a>
                          </li>
 
                       </ul>
