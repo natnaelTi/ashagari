@@ -11,20 +11,22 @@ use Illuminate\Support\Facades\Route;
 class AttendeeController extends Controller
 {
     //
-    public function __construct()
-    {
-        $this->middleware('auth')->only(['index', 'confirm']);
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth')->only(['index', 'confirm']);
+    // }
 
     //
     public function index($id)
     {
         $name = Route::currentRouteName();
         $attendees = Attendee::where('event_id', $id)->orderBy('created_at', 'desc')->get();
+        $event = Event::find($id);
 
         return view('cms.attendees.list', [
             'name' => $name,
-            'attendees' => $attendees
+            'attendees' => $attendees,
+            'event' => $event
         ]);
     }
 
@@ -36,14 +38,14 @@ class AttendeeController extends Controller
 
         if($event && $event->reg_end >= Carbon::today()){
             if($event->reg_end >= Carbon::today()){
-                if($attendees && $event->seats > count('attendees')){
+                if($attendees && $event->seats > count($attendees)){
                     return view('guest.event.register', [
                         'name' => $name,
                         'event' => $event
-                    ]);   
+                    ]);
                 }
                 else {
-                    return redirect()->back()->with('name', $name)->with('errors', ['Process Aborted', 'Oops! The event you are looking to register for is fully booked.']);    
+                    return redirect()->back()->with('name', $name)->with('errors', ['Process Aborted', 'Oops! The event you are looking to register for is fully booked.']);
                 }
             }
             else{
@@ -69,13 +71,13 @@ class AttendeeController extends Controller
             'event_id' => ['required', 'string'],
         ]);
 
-        $p_attend = $Attendee::where('name', $i_attend['name'])->where('phone_number', $i_attend['phone_number'])->where('event_id', $i_attend['event_id'])->get();
+        $p_attend = Attendee::where('name', $i_attend['name'])->where('phone_number', $i_attend['phone_number'])->where('event_id', $i_attend['event_id'])->get();
         $event = Event::find($i_attend['event_id']);
         $name = Route::currentRouteName();
 
         if($p_attend == null && $event){
+            $attendee = new Attendee();
             if($event->price > 0 && $request->has('transaction_id')){
-                $attendee = new Attendee();
                 $attendee->firstname = $i_attend['firstname'];
                 $attendee->lastname = $i_attend['lastname'];
                 $attendee->phone_number = $i_attend['phone_number'];
@@ -85,14 +87,14 @@ class AttendeeController extends Controller
                 }
                 $attendee->occupation = $i_attend['occupation'];
                 $attendee->age_group = $i_attend['age'];
-                
+
                 if($request->has('comment')){
                     $attendee->comment = $i_attend['comment'];
                 }
 
                 $attendee->transaction_id = $i_attend['transaction_id'];
                 $attendee->event_id = $event->id;
-                
+
                 $stat = $attendee->save();
 
                 if($stat){
@@ -112,13 +114,13 @@ class AttendeeController extends Controller
                 }
                 $attendee->occupation = $i_attend['occupation'];
                 $attendee->age_group = $i_attend['age'];
-                
+
                 if($request->has('comment')){
                     $attendee->comment = $i_attend['comment'];
                 }
 
                 $attendee->event_id = $event->id;
-                
+
                 $stat = $attendee->save();
 
                 if($stat){
@@ -146,7 +148,7 @@ class AttendeeController extends Controller
             if($event){
                 $attendee->confirmed = true;
                 $stat = $attendee->save();
-    
+
                 if($stat){
                     return redirect()->route('list_attendees', $event->id)->with('name', $name)->with('success', '{{$attendee->name}} has been successfully confirmed.');
                 }
@@ -155,7 +157,7 @@ class AttendeeController extends Controller
                 }
             }
             else{
-                return redirect()->back()->with('name', $name)->with('errors', ['Process Aborted', 'There is no event recorded matching to the one you are looking for. How did you find it?']);                
+                return redirect()->back()->with('name', $name)->with('errors', ['Process Aborted', 'There is no event recorded matching to the one you are looking for. How did you find it?']);
             }
         }
         else{
@@ -166,6 +168,7 @@ class AttendeeController extends Controller
     public function destroy($id)
     {
         $attendee = Attendee::find($id);
+        $name = Route::currentRouteName();
 
         if($attendee){
             $attendee->delete();

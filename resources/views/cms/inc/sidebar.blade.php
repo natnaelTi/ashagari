@@ -1,9 +1,7 @@
 <!-- Side Bar Inc -->
 <nav>
-    <a href="#0" aria-label="forecastr logo" class="logo">
-        <svg width="140" height="49">
-            <use xlink:href="#logo"></use>
-        </svg>
+    <a href="" aria-label="forecastr logo" class="logo">
+        <img src="{{ asset('logo.svg') }}" width="140"/>
     </a>
     <button class="toggle-mob-menu" aria-expanded="false" aria-label="open menu">
         <svg width="20" height="20" aria-hidden="true">
@@ -22,7 +20,7 @@
                 <span>Dashboard</span>
             </a>
         </li>
-        
+
         <li>
             <a href="{{ route('cms_list_events') }}">
                 <svg>

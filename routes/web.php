@@ -24,13 +24,17 @@ Route::get('/', [PageController::class, 'index'])->name('index');
 Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/event', [PageController::class, 'event'])->name('event');
 
+Route::get('/youth', [PageController::class, 'youth'])->name('strategy_youth');
+Route::get('/women', [PageController::class, 'women'])->name('strategy_women');
+Route::get('/leader', [PageController::class, 'leaders'])->name('strategy_leader');
+
 Route::get('/login', [AuthController::class, 'prompt'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 Route::get('/show_event/{event_id}', [EventController::class, 'show'])->name('show_event');
 
-Route::get('/register/{event_id}', [AttendeeController::class, 'create'])->middleware('guest')->name('cms_create_attendee');
-Route::post('/store_attendee', [AttendeeController::class, 'store'])->middleware('guest')->name('cms_store_attendee');
+Route::get('/rsvp/{event_id}', [PageController::class, 'rsvp'])->middleware('guest')->name('rsvp');
+Route::post('/store_attendee', [PageController::class, 'register'])->middleware('guest')->name('store_rsvp');
 
 Auth::routes();
 

@@ -6,7 +6,7 @@
         <div class="container mt-5">
             <div class="d-flex justify-content-center row">
                 <div class="col-md-10">
-                    <div class="rounded">
+                    <div class="">
                         <div class="table-responsive table-borderless">
                             <table class="table">
                                 <thead>
@@ -27,13 +27,13 @@
                                             <td>{{ $key + 1 }}</td>
                                             <td>{{ $event->title }}</td>
                                             <td>{{ $event->location }}</td>
-                                            
+
                                             @if($event->seats > 0)
                                                 <td>{{ $event->seats }}</td>
                                             @else
                                                 <td>Unlimited</td>
                                             @endif
-                                            
+
                                             @if($event->price > 0)
                                                 <td>{{ $event->price }} ETB</td>
                                             @else
@@ -46,7 +46,9 @@
                                             <td class="text-center">
                                                 <a href="{{ route('cms_delete_event', [$event->id]) }}" type="button" class="btn btn-danger">Delete</a>
                                             </td>
-                                            <td class="table-elipse" data-toggle="collapse" data-target="#demo"><i class="fa fa-ellipsis-h text-black-50"></i></td>
+                                            <td class="table-elipse" data-toggle="collapse" data-target="#demo">
+                                                <a href="{{ route('cms_list_attendees', [$event->id]) }}" type="button" class="btn btn-outline-primary">Attendees</a>
+                                            </td>
                                         </tr>
 
                                         <tr id="demo" class="collapse cell-1 row-child">
@@ -54,7 +56,7 @@
                                             <td colspan="7">
                                                 Brief: <br/>
                                                 <p class="description">{{ $event->description }}</p>
-                                                
+
                                                 <div class="event_date">Opening Date: {{ $event->start_date }}</div>
                                                 <div class="event_date">Closing Date: {{ $event->end_date }}</div>
 
@@ -64,7 +66,7 @@
 
                                                 {{-- @endif --}}
                                             </td>
-                                            
+
                                         </tr>
                                     @endforeach
                                 </tbody>
@@ -72,6 +74,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="row w-25">
+                <a type="button" class="cms-event__button btn btn-outline-primary" href="{{ route('cms_create_event') }}">Create Event</a>
             </div>
         </div>
     @else

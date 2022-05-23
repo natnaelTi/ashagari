@@ -53,11 +53,11 @@
 
 
     <!-- Message Display -->
-    {{-- <div class="message">
+    <div class="message">
 
         @include('guest.inc.message')
-    
-    </div> --}}
+
+    </div>
     <!-- End Message Dispplay -->
 
 

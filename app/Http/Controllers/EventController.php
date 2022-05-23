@@ -13,10 +13,19 @@ class EventController extends Controller
     //
     public function __construct()
     {
-        $this->middleware('auth')->except('show');
+        $this->middleware('auth')->except(['show', 'list']);
     }
 
     //
+
+    public function list()
+    {
+        $l_event = Event::latest()->orderBy('start_date', 'desc')->first();
+        $events = Event::latest()->orderBy('end_date', 'desc')->paginate(15);
+
+        return view('guest.event', ['events' => $events, 'l_event' => $l_event]);
+    }
+
     public function index()
     {
         $events = Event::latest()->orderBy('end_date', 'desc')->paginate(15);
@@ -35,7 +44,7 @@ class EventController extends Controller
     {
         $i_event = $request->validate([
             'title' => ['required', 'unique:events', 'max:120'],
-            'description' => ['max:300'],
+            'description' => ['max:750'],
             'start_date' => ['required', 'date'],
             'end_date' => ['required', 'date'],
             'reg_end' => ['required', 'date'],
@@ -44,7 +53,7 @@ class EventController extends Controller
 
         $event = new Event();
         $event->title = $i_event['title'];
-        
+
         if($request->has('description') && $request->input('description') != null){
             $event->description = $i_event['description'];
         }
@@ -55,21 +64,21 @@ class EventController extends Controller
         $event->start_date = $i_event['start_date'];
         $event->end_date = $i_event['end_date'];
         $event->reg_end = $i_event['reg_end'];
-        
+
         if($request->has('seats') && $request->input('seats') != null){
-            $event->seats = $i_event['seats'];
+            $event->seats = $request->input('seats');
         }
 
         $event->location = $i_event['location'];
 
         if($request->has('filepath') && $request->input('filepath') != null){
-            $fp = $i_event['title'] . '.' . 'poster' . '.' . time() . '.' . $request->filepath->extension();
-            $request->filepath->move(public_path("events/{{$i_event['title']}}"), $fp);
+            $fp = $request->input('title') . '.' . 'poster' . '.' . time() . '.' . $request->filepath->extension();
+            $request->filepath->move(public_path("events/{$request->input('title')}"), $fp);
             $event->filepath = $fp;
         }
 
         if($request->has('price') && $request->input('price') != null){
-            $event->price = $i_event['price'];
+            $event->price = $request->input('price');
         }
 // dd($event);
         $stat = $event->save();
@@ -121,12 +130,11 @@ class EventController extends Controller
     public function update(Request $request, $id)
     {
         $i_event = $request->validate([
-            'title' => ['required', 'unique:events', 'max:120'],
-            'description' => ['max:300'],
+            'title' => ['required', 'max:120'],
+            'description' => ['max:750'],
             'start_date' => ['required', 'date'],
             'end_date' => ['required', 'date'],
             'reg_end' => ['required', 'date'],
-            'seats' => ['numeric'],
             'location' => ['required']
         ]);
 
@@ -143,19 +151,19 @@ class EventController extends Controller
             $event->reg_end = $i_event['reg_end'];
 
             if($request->has('seats')){
-                $event->seats = $i_event['seats'];
+                $event->seats = $request->input('seats');
             }
 
             $event->location = $i_event['location'];
 
             if($request->has('filepath')){
-                $fp = $i_event['title'] . '.' . 'poster' . '.' . time() . '.' . $request->filepath->extension();
-                $request->filepath->move(public_path("events/{{$i_event['title']}}"), $fp);
+                $fp = $request->input('title') . '.' . 'poster' . '.' . time() . '.' . $request->filepath->extension();
+                $request->filepath->move(public_path("events/{$request->input('title')}"), $fp);
                 $event->filepath = $fp;
             }
 
             if($request->has('price')){
-                $event->price = $i_event['price'];
+                $event->price = $request->input('price');
             }
 
             $stat = $event->save();

@@ -1,9 +1,9 @@
 <!-- Footer Inc -->
 <footer class="page-footer">
-    <span>made by </span>
-    <a href="https://georgemartsoukos.com/" target="_blank">
-        <img width="24" height="24" src="https://assets.codepen.io/162656/george-martsoukos-small-logo.svg"
-            alt="George Martsoukos logo">
+    <span>MADE WITH <i class="fa fa-heart-o"></i> BY </span>
+    <a href="https://www.earaldtradinget.com" target="_blank">
+        <img width="70" src="{{ asset('earald.png') }}"
+            alt="Earald Trading and ICT Technologies PLC.">
     </a>
 </footer>
 <!-- End Footer Inc -->

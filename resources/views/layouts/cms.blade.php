@@ -10,7 +10,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ $name ?? __('Portal') ?? '' }}{{ __(' | CMS | Ashagari Charitable Organisation') }}</title>
+    <title>{{ __('Portal') ?? '' }}{{ __(' | CMS | Ashagari Charitable Organisation') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/cms/cms.css') }}" rel="stylesheet">
@@ -138,7 +138,7 @@
         <div class="cms-message">
             @include('cms.inc.message')
         </div>
-        
+
         <section>
 
             @yield('content')
