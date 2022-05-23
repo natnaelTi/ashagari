@@ -25,6 +25,7 @@ class Attendee extends Model
         'occupation' => 'string',
         'age_group' => 'string',
         'comment' => 'string',
+        'reference' => 'string',
         'event_id' => 'string',
         'transaction_id' => 'string',
         'confirmed' => 'boolean'

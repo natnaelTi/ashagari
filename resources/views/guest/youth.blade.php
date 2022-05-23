@@ -13,7 +13,7 @@
                             <h1 class="mt-5 pt-5"><span
                                     style="font-size: 78px !important;color: white !important; padding-top: 15% !important">Ashagari
                                     Youth</span> </h1>
-                            <p class="mt-2" style="font-weight: 300 !important;font-size: 25px !important;">Build
+                            <p class="mt-2" style="font-weight: 300 !important;font-size: 25px !important;">Building
                                 conscious,
                                 skilled and empowered youth community</p>
                         </div>
@@ -36,7 +36,7 @@
                             <a href="{{ route('strategy_youth') }}" class="stretched-link">
                                 <h1 class="card-title" style="font-weight: bold;">Ashagari Youth</h1>
                                 <p class="card-text">
-                                    Build conscious, skilled and empowered youth community
+                                    Building conscious, skilled and empowered youth community
                                 </p>
                             </a>
                         </div>

@@ -255,7 +255,7 @@ button {
 
 .navigation.navbar-dark .navbar-nav .nav-link {
     padding: 0px 27px;
-    color: #02A791;
+    color: #44ACA4;
     font-size: 17px;
     line-height: 20px;
 }
@@ -333,7 +333,7 @@ button {
 .core_value_bg {
     position: relative;
     /* background: url(../images/Bg_banner.jpg); */
-    background-image: linear-gradient(to bottom, rgba(13, 22, 22, 0.92), rgba(13, 22, 22, 0.99)),
+    background-image: linear-gradient(to bottom, rgba(48, 51, 51, 0.92), rgba(48, 51, 51, 0.92)),
         url('../../images/home/bg-3.jpg');
     background-repeat: no-repeat;
     color: white !important;
@@ -428,7 +428,7 @@ button {
 }
 
 .text-bg h1 span {
-    color: #02A791;
+    color: #44ACA4;
 }
 
 .text-bg p {
@@ -496,7 +496,7 @@ button {
 
 .Donate-btn-outline {
     font-size: 17px;
-    background-color: #02A79100;
+    background-color: #44ACA400;
     color: #fff;
     padding: 13px 0px;
     width: 100%;
@@ -520,7 +520,7 @@ button {
 
 .read_more {
     font-size: 17px;
-    background-color: #02A791;
+    background-color: #44ACA4;
     color: #fff;
     padding: 13px 0px;
     width: 100%;
@@ -847,7 +847,7 @@ a.video span {
 
 .footer {
     position: relative;
-    background: #02A791;
+    background: #44ACA4;
     padding-top: 95px;
 
 }
@@ -944,7 +944,7 @@ ul.social_icon li a {
     font-size: 25px;
     border-radius: 30px;
     margin: 0 3px;
-    color: #02A791;
+    color: #44ACA4;
 }
 
 ul.social_icon li a:hover {
@@ -1254,8 +1254,7 @@ ul.location_icon li a:hover {
 }
 
 .button {
-    background: #02A791;
-    ;
+    background: #44ACA4;
 }
 
 

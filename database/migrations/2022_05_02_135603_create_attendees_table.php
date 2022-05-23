@@ -22,6 +22,7 @@ class CreateAttendeesTable extends Migration
             $table->string('occupation');
             $table->string('age_group');
             $table->string('comment');
+            $table->string('reference');
             $table->string('transaction_id')->default('AS-NONE');
             $table->boolean('confirmed')->default(false);
             $table->unsignedBigInteger('event_id');

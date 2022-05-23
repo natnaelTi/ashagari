@@ -36,7 +36,7 @@
                             <a href="{{ route('strategy_youth') }}" class="stretched-link">
                                 <h1 class="card-title" style="font-weight: bold;">Ashagari Youth</h1>
                                 <p class="card-text">
-                                    Build conscious, skilled and empowered youth community
+                                    Building conscious, skilled and empowered youth community
                                 </p>
                             </a>
                         </div>

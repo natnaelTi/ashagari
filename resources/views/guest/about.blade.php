@@ -92,7 +92,7 @@
                         <a href="{{ route('strategy_youth') }}" class="stretched-link">
                             <h1 class="card-title" style="font-weight: bold;">Ashagari Youth</h1>
                             <p class="card-text">
-                                Build conscious, skilled and empowered youth community
+                                Building conscious, skilled and empowered youth community
                             </p>
                         </a>
                     </div>
@@ -135,7 +135,7 @@
        <div class="row d_flex">
           <div class="col-lg-7 col-md-6 col-sm-12">
              <div class="titlepage mx-auto my-5">
-                <h4>About Us</h4>
+                {{-- <h4>About Us</h4> --}}
                 <h2 style="text-align: left;">Who We Are</h2>
                 <p>
                    Ashagari Charitable Organization (ACO) is a non for profit organization founded and recognised as a
@@ -180,7 +180,7 @@
                    width: 100%; font-size: 28px !important;"></i>
                    <h1 class="card_title text-white">Passion & Care</h1>
                    <p class="card-text center text-white"
-                      style="font-weight: 300 !important; text-align: center !important; padding-top: 12px !important; text-transform: lowercase !important;">
+                      style="font-weight: 300 !important; text-align: center !important; padding-top: 12px !important; text-transform: capitalize !important;">
                       Respect the wellbeing and dignity of all those we will train and mentor
                    </p>
                 </div>
@@ -194,7 +194,7 @@
                    width: 100%; font-size: 28px !important;"></i>
                    <h1 class="card_title text-white">Accountability & Ethics</h1>
                    <p class="card-text center text-white"
-                      style="font-weight: 300 !important; text-align: center !important; padding-top: 12px !important; text-transform: lowercase !important;">
+                      style="font-weight: 300 !important; text-align: center !important; padding-top: 12px !important; text-transform: capitalize !important;">
                       Hold highest ethical standards in our workk and take responsibility for the consequence of
                       our action
                    </p>
@@ -209,7 +209,7 @@
                    width: 100%; font-size: 28px !important;"></i>
                    <h1 class="card_title text-white">Diversity</h1>
                    <p class="card-text center text-white"
-                      style="font-weight: 300 !important; text-align: center !important; padding-top: 12px !important; text-transform: lowercase !important;">
+                      style="font-weight: 300 !important; text-align: center !important; padding-top: 12px !important; text-transform: capitalize !important;">
                       Recognise and accomodate the uniqueness of our diverse population
                    </p>
                 </div>
@@ -223,7 +223,7 @@
                    width: 100%; font-size: 28px !important;"></i>
                    <h1 class="card_title text-white">Partneship & Collaboration</h1>
                    <p class="card-text center text-white"
-                      style="font-weight: 300 !important; text-align: center !important; padding-top: 12px !important; text-transform: lowercase !important;">
+                      style="font-weight: 300 !important; text-align: center !important; padding-top: 12px !important; text-transform: capitalize !important;">
                       Share responsibilities to integrate quality service for continous positive impact
                    </p>
                 </div>
@@ -277,7 +277,7 @@
              </div>
              <div class="card-body">
                 <h1 class=" font-weight-bold">Mr. Mekdela Mekuriya</h1>
-                <h3 class=" ">Board Member</h3>
+                <h3 class=" ">Chair Person</h3>
 
                 <div class="social-post text-left pt-4 ">
                    <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-2xs fa-facebook"
@@ -298,8 +298,8 @@
                 <img class="card-img-top-post" src="{{ asset('images/teams/3.png') }}" style="width: 125%;" alt="">
              </div>
              <div class="card-body">
-                <h1 class=" font-weight-bold">Mr. Seleshi</h1>
-                <h3 class=" ">Board Member</h3>
+                <h1 class=" font-weight-bold">Mr. Seleshi Kasaye</h1>
+                <h3 class=" ">Board Secretary</h3>
 
                 <div class="social-post text-left pt-4 ">
                    <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-2xs fa-facebook"
@@ -322,7 +322,7 @@
                 <img class="card-img-top-post" src="{{ asset('images/teams/4.png') }}" style="width: 125%;" alt="">
              </div>
              <div class="card-body">
-                <h1 class=" font-weight-bold">Mr. Behailu</h1>
+                <h1 class=" font-weight-bold">Mr. Behailu Shiferaw</h1>
                 <h3 class=" ">Board Member</h3>
 
                 <div class="social-post text-left pt-4 ">
@@ -344,7 +344,7 @@
                 <img class="card-img-top-post" src="{{ asset('images/teams/4.png') }}" style="width: 125%;" alt="">
              </div>
              <div class="card-body">
-                <h1 class=" font-weight-bold">Mrs. Seble</h1>
+                <h1 class=" font-weight-bold">Mrs. Seble Guangul</h1>
                 <h3 class=" ">Board Member</h3>
 
                 <div class="social-post text-left pt-4 ">
@@ -365,8 +365,8 @@
                 <img class="card-img-top-post" src="{{ asset('images/teams/4.png') }}" style="width: 125%;" alt="">
              </div>
              <div class="card-body">
-                <h1 class=" font-weight-bold">Mr. Asrat</h1>
-                <h3 class=" ">Board Member</h3>
+                <h1 class=" font-weight-bold">Mrs. Asrat Tilahun</h1>
+                <h3 class=" ">Vice Chairperson</h3>
 
                 <div class="social-post text-left pt-4 ">
                    <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-2xs fa-facebook"

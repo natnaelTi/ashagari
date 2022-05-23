@@ -62,7 +62,7 @@
                             <a href="{{ route('strategy_youth') }}" class="stretched-link">
                                 <h1 class="card-title" style="font-weight: bold;">Ashagari Youth</h1>
                                 <p class="card-text">
-                                    Build conscious, skilled and empowered youth community
+                                    Building conscious, skilled and empowered youth community
                                 </p>
                             </a>
                         </div>
@@ -110,27 +110,32 @@
 
         <div class="row mr-auto ml-auto py-5"
             style="width: 100% !important; justify-content: center !important; margin-right: auto !important; margin-left: auto !important; padding: 0 30px !important;">
-            @foreach ($events as $event)
-                <div class="col-lg-4 col-md-6 col-sm-12 mr-auto ml-auto">
-                    <div class="card e-card">
-                        <div class="card__header">
-                            <img src="{{ asset('events') }}/{{ $event->title }}/{{ $event->filepath }}" alt="{{ $event->title }}" class="card__image"
-                                width="600">
-                        </div>
-                        <div class="card__body">
-                            <h2>{{ $event->title }}</h2>
-                            <p style="height: 120px !important; overflow-y: scroll !important;">{{ $event->description }}</p>
-                        </div>
-                        <div class="card__footer">
-                            <div class="user">
-                                <a type="button" href="Upcoming.html" class="btn btn-success"
-                                    style="font-size: 12px !important; background-color: rgba(2, 167, 145, 1) !important;">Register
-                                    >></a>
+            @if (count($events) > 0)
+                @foreach ($events as $event)
+                    <div class="col-lg-4 col-md-6 col-sm-12 mr-auto ml-auto">
+                        <div class="card e-card">
+                            <div class="card__header">
+                                <img src="{{ asset('events') }}/{{ $event->title }}/{{ $event->filepath }}" alt="{{ $event->title }}" class="card__image"
+                                    width="600">
+                            </div>
+                            <div class="card__body">
+                                <h2>{{ $event->title }}</h2>
+                                <p style="height: 120px !important; overflow-y: scroll !important;">{{ $event->description }}</p>
+                            </div>
+                            <div class="card__footer">
+                                <div class="user">
+                                    <a type="button" href="Upcoming.html" class="btn btn-success"
+                                        style="font-size: 12px !important; background-color: rgba(2, 167, 145, 1) !important;">Register
+                                        >></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            @endforeach
+                @endforeach
+            @else
+                <small style="padding: 25px 0 60px 0 !important;">There are no upcoming activities for now. Please, check back in later.</small>
+            @endif
+
             {{-- <div class="col-lg-4 col-md-6 col-sm-12 mr-auto ml-auto">
                 <div class="card e-card">
                     <div class="card__header">
