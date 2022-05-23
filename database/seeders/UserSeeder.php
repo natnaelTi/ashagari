@@ -22,7 +22,7 @@ class UserSeeder extends Seeder
             'email' => 'admin@ashagari.org',
             'password' => Hash::make('admin.secret'),
             'filepath' => 'Admin.Ashagari.profile.png',
-            'organisation_id' => '1',
+            // 'organisation_id' => '1',
             'role' => 'admin'
         ]);
 
@@ -32,7 +32,7 @@ class UserSeeder extends Seeder
             'email' => 'mekdes2birhane@gmail.com',
             'password' => Hash::make('secret'),
             'filepath' => 'Mekdes.Gebrewold.profile.png',
-            'organisation_id' => '1',
+            // 'organisation_id' => '1',
             'role' => 'ceo'
         ]);
     }
