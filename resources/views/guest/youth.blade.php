@@ -4,7 +4,7 @@
     <!-- banner -->
 
     <section class="about-youth"
-        style="height: 100vh !important; background-image: linear-gradient(to bottom, rgba(213, 255, 249, 0.15), rgba(2, 167, 145, 0.73)), url('./images/youth.jpg'); background-size: cover !important;">
+        style="height: 100vh !important; background-image: linear-gradient(to bottom, rgba(213, 255, 249, 0.15), rgba(2, 167, 145, 0.73)), url('./images/youth.png'); background-size: cover !important;">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">

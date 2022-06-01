@@ -17,11 +17,11 @@
                       <div class="test_box">
                          <div class="text-bg">
                             <h1 class="animated fadeInLeft">Ashagari Youth</h1>
-                            <p class="animated fadeInRight">Ashagari created a platform for youth community (>75% of
+                            {{-- <p class="animated fadeInRight">Ashagari created a platform for youth community (>75% of
                                Ethiopian population) co come and learn, share experience and motivate. The platform is
                                in the form of edutainment which includes both education and entertainment which can
                                enhance the young people’s creativity, innovations critical thinking, problem solving
-                               and decision making ability.</p>
+                               and decision making ability.</p> --}}
                             <a class="Donate-btn-outline  shadow mb-5 hero_btn" href="#contact_section">Contact Us</a>
                          </div>
                       </div>
@@ -38,9 +38,9 @@
                       <div class="test_box">
                          <div class="text-bg">
                             <h1>Ashagari Women</h1>
-                            <p class="animated fadeInRight">Recognizing the women’s natural ability to solve problem
+                            {{-- <p class="animated fadeInRight">Recognizing the women’s natural ability to solve problem
                                and influence decision making, Ashagari women program created a platform to unleash
-                               women’s potential to influence their environment.</p>
+                               women’s potential to influence their environment.</p> --}}
                             <a class="Donate-btn-outline  shadow mb-5 hero_btn" href="#contact_section">Contact Us</a>
                          </div>
                       </div>
@@ -57,11 +57,11 @@
                       <div class="test_box">
                          <div class="text-bg">
                             <h1>Ashagari Leader</h1>
-                            <p>As we speak about globalization we are moving in to the fourth industrial revolution
+                            {{-- <p>As we speak about globalization we are moving in to the fourth industrial revolution
                                where we see a lot of change in social. Environmental, economic and political arena,
                                where leaders are expected to make an intent decision considering their environmental,
                                social and economical implications at the same value in dealing with local and global
-                               challenges in order to compete successfully and grow sustainably.</p>
+                               challenges in order to compete successfully and grow sustainably.</p> --}}
                             <a class="Donate-btn-outline  shadow mb-2 hero_btn" href="#contact_section">Contact Us</a>
                          </div>
                       </div>
@@ -444,8 +444,7 @@
                 </div>
                 <div class="col-md-6 d-flex align-items-stretch contact_banner">
                    <div class=" mx-auto my-4">
-                      <div class=" shadow p-3 m-5  rounded " style="border:3px solid
-                      rgb(255, 255, 255) ">
+                      <div class="p-3 m-5 rounded">
                          <div class="card-body card_spacing" style="background-size: contain !important;">
                             <h6 class="card-title card_title_spacing" style="font-size: 26px !important;">If an egg is
                                broken by an

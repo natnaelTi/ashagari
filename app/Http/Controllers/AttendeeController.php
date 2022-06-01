@@ -98,7 +98,7 @@ class AttendeeController extends Controller
                 $stat = $attendee->save();
 
                 if($stat){
-                    return redirect()->route('events')->with('name', $name)->with('success', 'You have successfully registered for the event. We will confrim you once we process your payment invoice. Thank you.');
+                    return redirect()->route('event')->with('name', $name)->with('success', 'You have successfully registered for the event. We will confrim you once we process your payment invoice. Thank you.');
                 }
                 else{
                     return redirect()->back()->with('name', $name)->with('errors', ['Process Aborted', 'Oops! Your registration for the event has not gone through successfully. Try again later.']);
@@ -124,7 +124,7 @@ class AttendeeController extends Controller
                 $stat = $attendee->save();
 
                 if($stat){
-                    return redirect()->route('events')->with('name', $name)->with('success', 'You have successfully registered for the event. We look forward to seeing you then. Thank you.');
+                    return redirect()->route('event')->with('name', $name)->with('success', 'You have successfully registered for the event. We look forward to seeing you then. Thank you.');
                 }
                 else{
                     return redirect()->back()->with('name', $name)->with('errors', ['Process Aborted', 'Oops! Your registration for the event has not gone through successfully. Try again later.']);

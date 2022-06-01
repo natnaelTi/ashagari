@@ -71,7 +71,7 @@ class EventController extends Controller
 
         $event->location = $i_event['location'];
 
-        if($request->has('filepath') && $request->input('filepath') != null){
+        if($request->has('filepath') && $request->has('filepath') != null){
             $fp = $request->input('title') . '.' . 'poster' . '.' . time() . '.' . $request->filepath->extension();
             $request->filepath->move(public_path("events/{$request->input('title')}"), $fp);
             $event->filepath = $fp;

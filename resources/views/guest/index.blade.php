@@ -51,6 +51,7 @@
         </div>
     </div>
     <!-- End Banner -->
+    
 
     <!-- Catalog Cards -->
     <div class="card_one catalog-cards">
@@ -124,7 +125,7 @@
                             </div>
                             <div class="card__footer">
                                 <div class="user">
-                                    <a type="button" href="Upcoming.html" class="btn btn-success"
+                                    <a type="button" href="{{ route('rsvp', [$event->id]) }}" class="btn btn-success"
                                         style="font-size: 12px !important; background-color: rgba(2, 167, 145, 1) !important;">Register
                                         >></a>
                                 </div>
@@ -261,15 +262,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-6">
-                        <a href="#"><img src="./images/clients/client3.png" class="img-fluid"
+                        <a href="#"><img src="./images/clients/client3.png" class="img-fluid" data-toggle="tooltip" data-placement="top" title="Ministry of Women and Social Affairs, FDRE"
                                 style="height: 120px !important;" alt="Ministry of Women and Social Affairs, FDRE"></a>
                     </div>
                     <div class="col-lg-4 col-md-4 col-6">
-                        <a href="#"><img src="./images/clients/client2.png" class="img-fluid"
+                        <a href="#"><img src="./images/clients/client2.png" class="img-fluid" data-toggle="tooltip" data-placement="top" title="Addis Ababa City Administration: Feeding Agency"
                                 style="height: 120px !important;" alt="Addis Ababa City Administration: Feeding Agency"></a>
                     </div>
                     <div class="col-lg-4 col-md-4 col-6">
-                        <a href="#"><img src="./images/clients/client9.png" class="img-fluid"
+                        <a href="#"><img src="./images/clients/client9.png" class="img-fluid" data-toggle="tooltip" data-placement="top" title="Ministry of Labor and Skills, FDRE"
                                 style="height: 120px !important;" alt="Ministry of Labor and Skills, FDRE"></a>
                     </div>
                 </div>
@@ -385,8 +386,7 @@
                         </div>
                         <div class="col-md-6 d-flex align-items-stretch contact_banner">
                             <div class=" mx-auto my-4">
-                                <div class=" shadow p-3 m-5  rounded " style="border:3px solid
-                                  rgb(255, 255, 255) ">
+                                <div class="p-3 m-5 rounded">
                                     <div class="card-body card_spacing" style="background-size: contain !important;">
                                         <h6 class="card-title card_title_spacing" style="font-size: 26px !important;">If an
                                             egg is

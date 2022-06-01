@@ -1344,7 +1344,7 @@ ul {
 }
 
 #carousel .carousel-item.boat {
-    background-image: linear-gradient(to bottom, rgba(213, 255, 249, 0.15), rgba(2, 167, 145, 0.73)), url("../../images/home/bg-1.jpg");
+    background-image: linear-gradient(to bottom, rgba(213, 255, 249, 0.15), rgba(2, 167, 145, 0.73));
 }
 
 #carousel .carousel-item.sea {
