@@ -4,8 +4,8 @@
        <section class="">
           <div class="row">
              <div class="col-md-3 col-lg-3 col-xl-3 mx-auto  ">
-                <img src="{{ asset('images/logo.svg') }}" width="60%" style="display: inline-block;"
-                   class="filter-green" />
+                <img src="{{ asset('images/logo.svg') }}" width="60%" style="display: block; text-align: center !important;"
+                   class="ml-auto mr-auto text-center filter-green" />
 
                 <div class="social-post text-center mx-auto my-4">
                    <a href="https://www.facebook.com/AshagariConsulting" class="btn btn-outline-light btn-sm mr-2"><i
@@ -24,19 +24,11 @@
 
              <hr class="w-100 clearfix d-md-none" />
 
-             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-5">
-             </div>
 
-             <hr class="w-100 clearfix d-md-none" />
-
-             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-5">
-             </div>
-
-             <hr class="w-100 clearfix d-md-none" />
 
              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-5">
                 <h6 class="text-uppercase mb-4 font-weight-bold text-white">Contact</h6>
-                <p><i class="fas fa fa-map-marker  " aria-hidden="true"></i> Addis Abeba, Bole, Friendship</p>
+                <p><i class="fas fa fa-map-marker  " aria-hidden="true"></i> Addis Ababa, Bole, Friendship</p>
 
                 <p><i class="fas fa fa-phone mr-3"></i> Office: +251 11 822 2332</p>
                 <p><i class="fas fa fa-phone mr-3"></i>Mobile: +251 95 592 9299</p>

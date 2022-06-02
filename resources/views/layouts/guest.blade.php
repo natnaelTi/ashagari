@@ -23,13 +23,13 @@
    <link rel="stylesheet" href="{{ asset('css/guest_temp/infinite-slider.css') }}">
    <!-- style css -->
    <link rel="stylesheet" href="{{ asset('css/guest_temp/style.css') }}">
+   <link rel="stylesheet" href="{{ asset('css/guest_temp/sliding.css') }}">
    <!-- Responsive-->
    <link rel="stylesheet" href="{{ asset('css/guest_temp/responsive.css') }}">
    <!-- fevicon -->
    <link rel="icon" href="{{ asset('logo.svg') }}" type="image/gif" />
    <!-- Scrollbar Custom CSS -->
    <link rel="stylesheet" href="{{ asset('css/guest_temp/jquery.mCustomScrollbar.min.css') }}">
-   {{-- <link href="{{ asset('css/guest/guest.css') }}" rel="stylesheet"> --}}
    <script src="https://kit.fontawesome.com/7837a43023.js" crossorigin="anonymous"></script>
 </head>
 <!-- body -->
@@ -82,6 +82,7 @@
     <script src="{{ asset('js/jquery-3.0.0.min.js') }}"></script>
     <script src="{{ asset('js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
 </body>
 
 </html>

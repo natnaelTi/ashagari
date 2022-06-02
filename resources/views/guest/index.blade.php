@@ -4,6 +4,49 @@
     <!----------- Hero Section ----------->
 
     <!-- Banner -->
+
+    <div class="container">
+        <div class="slider">
+            <div class="slide slide1">
+                <div class="caption">
+                    <div class="row align-items-center h-100">
+                                <div class="col-7 col-md-9 col-lg-7 col-xl-6">
+                                    <div class="test_box">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+            <div class="slide slide2">
+                <div class="caption">
+                    <h2>Slide2</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio corrupti nemo incidunt deserunt obcaecati vero dolor explicabo tempore, rem quas cum vitae magni dolores. Delectus voluptatem dicta quam assumenda est.</p>
+                </div>
+            </div>
+            <div class="slide slide3">
+                <div class="caption">
+                    <h2>Slide3</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio corrupti nemo incidunt deserunt obcaecati vero dolor explicabo tempore, rem quas cum vitae magni dolores. Delectus voluptatem dicta quam assumenda est.</p>
+                </div>
+            </div>
+            <div class="slide slide4">
+                <div class="caption">
+                    <h2>Slide4</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio corrupti nemo incidunt deserunt obcaecati vero dolor explicabo tempore, rem quas cum vitae magni dolores. Delectus voluptatem dicta quam assumenda est.</p>
+                </div>
+            </div>
+            <div class="slide slide1">
+                <div class="caption">
+                    <h2>Slide1</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio corrupti nemo incidunt deserunt obcaecati vero dolor explicabo tempore, rem quas cum vitae magni dolores. Delectus voluptatem dicta quam assumenda est.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- 
     <div id="carousel" class="carousel slide hero-slides   home-banner" data-ride="carousel">
         <div class="carousel-inner" role="listbox">
             <div class="carousel-item active boat   landing-hero-banner">
@@ -49,7 +92,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End Banner -->
 
     <!-- Catalog Cards -->
