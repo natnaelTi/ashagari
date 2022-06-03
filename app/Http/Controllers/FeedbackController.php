@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Feedback;
 
 class FeedbackController extends Controller
 {
@@ -13,7 +14,7 @@ class FeedbackController extends Controller
         $archived_feedbacks = Feedback::where('seen', true)->orderBy('id', 'desc')->paginate(15);
         return view('cms.feedback.list', [
             'newfbs' => $new_feedbacks, 
-            'archived_fbs' => $archived_feedbacks
+            'archivedfbs' => $archived_feedbacks
         ]);
     }
 
@@ -50,14 +51,19 @@ class FeedbackController extends Controller
         }
     }
 
-    public function accept($id)
+    public function change_status($id)
     {
         $feedback = Feedback::find($id);
-        $feedback->seen = true;
+        $feedback->seen = !$feedback->seen;
         $stat = $feedback->save();
 
         if($stat){
-            return back()->with('success', 'Success: Feedback has been successfully archived.');
+            if($feedback->seen){
+                return back()->with('success', 'Success: Feedback has been successfully archived.');
+            }
+            else{
+                return back()->with('success', 'Success: Feedback has been successfully returned.');
+            }
         }
         else{
             return back()->with('error', 'Error: Something went wrong. Feedback failed to be archived.');

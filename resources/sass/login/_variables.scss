@@ -8,7 +8,7 @@
 }
 
 body {
-  background-image: linear-gradient(245deg, #d8d7f78c, #8a7cf3d5), url('/img/bg/login.jpg');
+  background-image: linear-gradient(245deg, #44aca34b, #44ACA4d5), url('/img/bg/login.jpg');
   background-size: stretch;
 }
 
@@ -20,11 +20,11 @@ body {
 }
 
 .cms-login-screen {
-  background: linear-gradient(90deg, #5d54a4, #7c78b8);
+  background: linear-gradient(90deg, #44ACA4, #7ce4db);
   position: relative;
   height: 90vh;
   width: 360px;
-  box-shadow: 0px 0px 24px #5c5696;
+  box-shadow: 0px 0px 24px #1a4d48;
 }
 
 .cms-login-screen__content {
@@ -61,7 +61,7 @@ body {
 .cms-login-screen__background__shape2 {
   height: 220px;
   width: 220px;
-  background: #6c63ac;
+  background: #44ACA4;
   top: -172px;
   right: 0;
   border-radius: 32px;
@@ -70,7 +70,7 @@ body {
 .cms-login-screen__background__shape3 {
   height: 540px;
   width: 190px;
-  background: linear-gradient(270deg, #5d54a4, #6a679e);
+  background: linear-gradient(270deg, #44ACA4, #77eee4);
   top: -24px;
   right: 0;
   border-radius: 32px;
@@ -79,7 +79,7 @@ body {
 .cms-login-screen__background__shape4 {
   height: 400px;
   width: 200px;
-  background: #7e7bb9;
+  background: #449790;
   top: 420px;
   right: 50px;
   border-radius: 60px;
@@ -99,7 +99,7 @@ body {
 .cms-login__icon {
   position: absolute;
   top: 30px;
-  color: #7875b5;
+  color: #44ACA4;
   padding: 0 10px;
 }
 
@@ -118,7 +118,7 @@ body {
 .cms-login__input:focus,
 .cms-login__input:hover {
   outline: none;
-  border-bottom-color: #6a679e;
+  border-bottom-color: #20706a;
 }
 
 /* Toggle Checkbox Variables */
@@ -126,9 +126,9 @@ $toggle-indicator-size: 12px; // changing this number will resize the whole togg
 $track-height: $toggle-indicator-size + 6;
 $track-width: $toggle-indicator-size * 2.5;
 $highContrastModeSupport: solid 2px transparent;
-$mid: rgb(119, 100, 124);
+$mid: #44ACA4;
 $light: rgb(234, 227, 236);
-$dark: rgb(68, 57, 82);
+$dark: #244744;
 $track-border: $mid;
 $track-background: $light;
 $focus-ring: 0px 0px 0px 2px $dark;
@@ -236,8 +236,8 @@ $speed: 0.2s;
   display: flex;
   align-items: center;
   width: 100%;
-  color: #4c489d;
-  box-shadow: 0px 2px 2px #5c5696;
+  color: #44ACA4;
+  box-shadow: 0px 2px 2px #75e0d7;
   cursor: pointer;
   transition: 0.2s;
 }
@@ -245,7 +245,7 @@ $speed: 0.2s;
 .cms-login__submit:active,
 .cms-login__submit:focus,
 .cms-login__submit:hover {
-  background: #89889c;
+  background: #76e2d9;
   color: #fff;
   border: none;
   outline: none;
@@ -254,7 +254,7 @@ $speed: 0.2s;
 .cms-login-button__icon {
   font-size: 24px;
   margin-left: auto;
-  color: #7875b5;
+  color: #76e2d9;
   transition: 0.2s;
 }
 
@@ -290,7 +290,7 @@ $speed: 0.2s;
   padding: 20px 10px;
   color: #fff;
   text-decoration: none;
-  text-shadow: 0px 0px 8px #7875b5;
+  text-shadow: 0px 0px 8px #76e2d9;
 }
 
 .cms-login-social-login__icon:hover {

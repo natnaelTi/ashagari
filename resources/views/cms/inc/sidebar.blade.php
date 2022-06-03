@@ -31,11 +31,11 @@
         </li>
 
         <li>
-            <a href="{{ route('cms_show_organisation', ['1']) }}">
+            <a href="{{ route('cms_show_feedback') }}">
                 <svg>
                     <use xlink:href="#users"></use>
                 </svg>
-                <span>Organisation</span>
+                <span>Feedback</span>
             </a>
         </li>
 

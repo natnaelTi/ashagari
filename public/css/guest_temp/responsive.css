@@ -132,13 +132,15 @@
         color: #e5a124;
     }
     .navigation.navbar-dark .navbar-toggler {
-        border: inherit;
+        border: none;
         float: right;
         padding-top: 6px;
+        color: white !important;
     }
     .navigation.navbar-dark .navbar-toggler-icon {
-        background: url(../images/menu_icon.png);
+        background: url("{{asset('images/menu_icon.png')}}");
         background-repeat: no-repeat;
+        z-index: 0 !important;
     }
 }
 

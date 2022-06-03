@@ -26,9 +26,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-5 col-md-9 col-lg-5 col-xl-6">
-                                <div class="test_box">
-                                    <div class="text-bg">
+                            <div class="col-5 col-md-9 col-lg-5 col-xl-6 align-self-center" style="vertical-align: center !important;">
+                                <div class="test_box" style="vertical-align: center !important;">
+                                    <div class="text-bg" style="vertical-align: center !important;">
                                         <a class="read_more   about-btn hero-btn shadow p-3 mx-2" href="#about">Get To Know
                                             Us</a>
                                         <a class="Donate-btn-outline   contact-btn shadow p-3 mb-5 mx-2 hero_btn"
@@ -51,7 +51,6 @@
         </div>
     </div>
     <!-- End Banner -->
-    
 
     <!-- Catalog Cards -->
     <div class="card_one catalog-cards">
@@ -340,11 +339,12 @@
                                 <div id="form-message-success" class="mb-4">
                                     <!-- Your message was sent, thank you! -->
                                 </div>
-                                <form method="POST" id="contactForm" name="contactForm">
+                                <form method="POST" id="contactForm" name="contactForm" action="{{route('feedback')}}">
+                                    @csrf
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <input type="tel" class="form-control" name="Phone number" id="phone"
+                                                <input type="tel" class="form-control" name="phone" id="phone"
                                                     placeholder="Phone number">
                                             </div>
                                         </div>
@@ -356,13 +356,13 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" name="fname" id="fname"
+                                                <input type="text" class="form-control" name="firstname" id="fname"
                                                     placeholder="First Name">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" name="lname" id="lname"
+                                                <input type="text" class="form-control" name="lastname" id="lname"
                                                     placeholder="Last Name">
                                             </div>
                                         </div>

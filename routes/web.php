@@ -8,6 +8,8 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\OrganisationController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\FeedbackController;
+use App\Http\Controllers\MailingListController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +29,10 @@ Route::get('/event', [PageController::class, 'event'])->name('event');
 Route::get('/youth', [PageController::class, 'youth'])->name('strategy_youth');
 Route::get('/women', [PageController::class, 'women'])->name('strategy_women');
 Route::get('/leader', [PageController::class, 'leaders'])->name('strategy_leader');
+
+Route::post('/feedback', [FeedbackController::class, 'store'])->name('feedback');
+
+Route::post('/subscribe', [MailingListController::class, 'store'])->name('subscribe');
 
 Route::get('/login', [AuthController::class, 'prompt'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
@@ -55,6 +61,9 @@ Route::get('/cms_show_organisation/{org_id}', [OrganisationController::class, 's
 Route::get('/cms_edit_organisation/{org_id}', [OrganisationController::class, 'edit'])->middleware('auth')->name('cms_edit_organisation');
 Route::post('/cms_update_organisation/{org_id}', [OrganisationController::class, 'update'])->middleware('auth')->name('cms_update_organisation');
 Route::post('/cms_delete_organisation/{org_id}', [OrganisationController::class, 'destroy'])->middleware('auth')->name('cms_delete_organisation');
+
+Route::get('/cms_show_feedback', [FeedbackController::class, 'index'])->middleware('auth')->name('cms_show_feedback');
+Route::get('/cms_change_feedback_status/{id}', [FeedbackController::class, 'change_status'])->middleware('auth')->name('cms_change_feedback_status');
 
 // Auth::routes();
 

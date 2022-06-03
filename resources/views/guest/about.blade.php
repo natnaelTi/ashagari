@@ -387,81 +387,84 @@
 
  <!----------- Contact Section ----------->
  <div id="contact_section" class="contact_section bg-white">
-    <div class="row justify-content-center">
+   <div class="row justify-content-center">
        <div class=" col-md-12 contact_form">
-          <div class="wrapper">
-             <div class="row no-gutters">
-                <div class="col-md-6 d-flex align-items-center align-self-center">
-                   <div class="contact-wrap w-100 p-md-5 p-10">
-                      <h1 class="mb-4 font-weight-bold">Contact Us</h1>
-                      <div id="form-message-warning" class="mb-4"></div>
-                      <div id="form-message-success" class="mb-4">
-                         <!-- Your message was sent, thank you! -->
-                      </div>
-                      <form method="POST" id="contactForm" name="contactForm">
-                         <div class="row">
-                            <div class="col-md-6">
-                               <div class="form-group">
-                                  <input type="tel" class="form-control" name="Phone number" id="phone"
-                                     placeholder="Phone number">
-                               </div>
-                            </div>
-                            <div class="col-md-6">
-                               <div class="form-group">
-                                  <input type="email" class="form-control" name="email" id="email"
-                                     placeholder="Email">
-                               </div>
-                            </div>
-                            <div class="col-md-6">
-                               <div class="form-group">
-                                  <input type="text" class="form-control" name="fname" id="fname"
-                                     placeholder="First Name">
-                               </div>
-                            </div>
-                            <div class="col-md-6">
-                               <div class="form-group">
-                                  <input type="text" class="form-control" name="lname" id="lname"
-                                     placeholder="Last Name">
-                               </div>
-                            </div>
+           <div class="wrapper">
+               <div class="row no-gutters">
+                   <div class="col-md-6 d-flex align-items-center align-self-center">
+                       <div class="contact-wrap w-100 p-md-5 p-10">
+                           <h1 class="mb-4 font-weight-bold">Contact Us</h1>
+                           <div id="form-message-warning" class="mb-4"></div>
+                           <div id="form-message-success" class="mb-4">
+                               <!-- Your message was sent, thank you! -->
+                           </div>
+                           <form method="POST" id="contactForm" name="contactForm" action="{{route('feedback')}}">
+                               @csrf
+                               <div class="row">
+                                   <div class="col-md-6">
+                                       <div class="form-group">
+                                           <input type="tel" class="form-control" name="phone" id="phone"
+                                               placeholder="Phone number">
+                                       </div>
+                                   </div>
+                                   <div class="col-md-6">
+                                       <div class="form-group">
+                                           <input type="email" class="form-control" name="email" id="email"
+                                               placeholder="Email">
+                                       </div>
+                                   </div>
+                                   <div class="col-md-6">
+                                       <div class="form-group">
+                                           <input type="text" class="form-control" name="firstname" id="fname"
+                                               placeholder="First Name">
+                                       </div>
+                                   </div>
+                                   <div class="col-md-6">
+                                       <div class="form-group">
+                                           <input type="text" class="form-control" name="lastname" id="lname"
+                                               placeholder="Last Name">
+                                       </div>
+                                   </div>
 
-                            <div class="col-md-12">
-                               <div class="form-group">
-                                  <textarea name="message" class="form-control" id="message" cols="30" rows="7"
-                                     placeholder="Message"></textarea>
-                               </div>
-                            </div>
-                            <div class="col-md-12">
-                               <div class="form-group">
-                                  <input type="submit" value="Send Message" class="read_more shadow p-3 mb-5 btn">
+                                   <div class="col-md-12">
+                                       <div class="form-group">
+                                           <textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message"></textarea>
+                                       </div>
+                                   </div>
+                                   <div class="col-md-12">
+                                       <div class="form-group">
+                                           <input type="submit" value="Send Message"
+                                               class="read_more shadow p-3 mb-5 btn">
 
-                                  <div class="submitting"></div>
+                                           <div class="submitting"></div>
+                                       </div>
+                                   </div>
                                </div>
-                            </div>
-                         </div>
-                      </form>
+                           </form>
+                       </div>
                    </div>
-                </div>
-                <div class="col-md-6 d-flex align-items-stretch contact_banner">
-                   <div class=" mx-auto my-4">
-                      <div class="p-3 m-5 rounded">
-                         <div class="card-body card_spacing" style="background-size: contain !important;">
-                            <h6 class="card-title card_title_spacing" style="font-size: 26px !important;">If an egg is
-                               broken by an
-                               outside force, life ends. If broken
-                               by an inside force, life begins. Great things always begin from the inside.</h1>
+                   <div class="col-md-6 d-flex align-items-stretch contact_banner">
+                       <div class=" mx-auto my-4">
+                           <div class="p-3 m-5 rounded">
+                               <div class="card-body card_spacing" style="background-size: contain !important;">
+                                   <h6 class="card-title card_title_spacing" style="font-size: 26px !important;">If an
+                                       egg is
+                                       broken by an
+                                       outside force, life ends. If broken
+                                       by an inside force, life begins. Great things always begin from the inside.</h1>
 
-                               <p class="" style="color: whitesmoke; font-size: 24px; ; text-align: right; ">
-                                  Jim Kwik
-                               </p>
-                         </div>
-                      </div>
+                                       <p class=""
+                                           style="color: whitesmoke; font-size: 24px; ; text-align: right; ">
+                                           Jim Kwik
+                                       </p>
+                               </div>
+                           </div>
+                       </div>
                    </div>
-                </div>
-             </div>
-          </div>
+               </div>
+           </div>
        </div>
-    </div>
- </div>
- <!----------- End Contact Section ----------->
+   </div>
+</div>
+<!----------- End Contact Section ----------->
 @endsection

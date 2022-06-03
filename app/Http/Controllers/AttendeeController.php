@@ -178,4 +178,12 @@ class AttendeeController extends Controller
             return redirect()->back()->with('name', $name)->with('errors', ['Process Aborted', 'Oops! The attendee you are looking for does not seem to be in record.']);
         }
     }
+
+    public function export_verified($id)
+    {
+        $event = Event::find($id);
+
+        $verified_attendees = Attendee::where('event_id', $id)->where('verified', true)->get();
+        
+    }
 }

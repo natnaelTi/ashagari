@@ -7,7 +7,7 @@
 }
 
 body {
-  background-image: linear-gradient(245deg, rgba(216, 215, 247, 0.5490196078), rgba(138, 124, 243, 0.8352941176)), url("/img/bg/login.jpg");
+  background-image: linear-gradient(245deg, rgba(68, 172, 163, 0.2941176471), rgba(68, 172, 164, 0.8352941176)), url("/img/bg/login.jpg");
   background-size: stretch;
 }
 
@@ -19,11 +19,11 @@ body {
 }
 
 .cms-login-screen {
-  background: linear-gradient(90deg, #5d54a4, #7c78b8);
+  background: linear-gradient(90deg, #44ACA4, #7ce4db);
   position: relative;
   height: 90vh;
   width: 360px;
-  box-shadow: 0px 0px 24px #5c5696;
+  box-shadow: 0px 0px 24px #1a4d48;
 }
 
 .cms-login-screen__content {
@@ -60,7 +60,7 @@ body {
 .cms-login-screen__background__shape2 {
   height: 220px;
   width: 220px;
-  background: #6c63ac;
+  background: #44ACA4;
   top: -172px;
   right: 0;
   border-radius: 32px;
@@ -69,7 +69,7 @@ body {
 .cms-login-screen__background__shape3 {
   height: 540px;
   width: 190px;
-  background: linear-gradient(270deg, #5d54a4, #6a679e);
+  background: linear-gradient(270deg, #44ACA4, #77eee4);
   top: -24px;
   right: 0;
   border-radius: 32px;
@@ -78,7 +78,7 @@ body {
 .cms-login-screen__background__shape4 {
   height: 400px;
   width: 200px;
-  background: #7e7bb9;
+  background: #449790;
   top: 420px;
   right: 50px;
   border-radius: 60px;
@@ -98,7 +98,7 @@ body {
 .cms-login__icon {
   position: absolute;
   top: 30px;
-  color: #7875b5;
+  color: #44ACA4;
   padding: 0 10px;
 }
 
@@ -117,7 +117,7 @@ body {
 .cms-login__input:focus,
 .cms-login__input:hover {
   outline: none;
-  border-bottom-color: #6a679e;
+  border-bottom-color: #20706a;
 }
 
 /* Toggle Checkbox Variables */
@@ -127,7 +127,7 @@ body {
   display: flex;
   font-size: 10px;
   font-weight: 400;
-  color: rgb(119, 100, 124);
+  color: #44ACA4;
   text-transform: uppercase;
   margin-bottom: 16px;
 }
@@ -147,7 +147,7 @@ body {
 }
 .toggle__input:not([disabled]):active + .toggle-track, .toggle__input:not([disabled]):focus + .toggle-track {
   border: 1px solid transparent;
-  box-shadow: 0px 0px 0px 2px rgb(68, 57, 82);
+  box-shadow: 0px 0px 0px 2px #244744;
 }
 .toggle__input:disabled + .toggle-track {
   cursor: not-allowed;
@@ -156,7 +156,7 @@ body {
 
 .toggle-track {
   background: rgb(234, 227, 236);
-  border: 1px solid rgb(119, 100, 124);
+  border: 1px solid #44ACA4;
   border-radius: 100px;
   cursor: pointer;
   display: flex;
@@ -168,7 +168,7 @@ body {
 
 .toggle-indicator {
   align-items: center;
-  background: rgb(68, 57, 82);
+  background: #244744;
   border-radius: 12px;
   bottom: 2px;
   display: flex;
@@ -190,7 +190,7 @@ body {
 }
 
 .toggle__input:checked + .toggle-track .toggle-indicator {
-  background: rgb(68, 57, 82);
+  background: #244744;
   transform: translateX(12px);
 }
 .toggle__input:checked + .toggle-track .toggle-indicator .checkMark {
@@ -215,8 +215,8 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
-  color: #4c489d;
-  box-shadow: 0px 2px 2px #5c5696;
+  color: #44ACA4;
+  box-shadow: 0px 2px 2px #75e0d7;
   cursor: pointer;
   transition: 0.2s;
 }
@@ -224,7 +224,7 @@ body {
 .cms-login__submit:active,
 .cms-login__submit:focus,
 .cms-login__submit:hover {
-  background: #89889c;
+  background: #76e2d9;
   color: #fff;
   border: none;
   outline: none;
@@ -233,7 +233,7 @@ body {
 .cms-login-button__icon {
   font-size: 24px;
   margin-left: auto;
-  color: #7875b5;
+  color: #76e2d9;
   transition: 0.2s;
 }
 
@@ -269,7 +269,7 @@ body {
   padding: 20px 10px;
   color: #fff;
   text-decoration: none;
-  text-shadow: 0px 0px 8px #7875b5;
+  text-shadow: 0px 0px 8px #76e2d9;
 }
 
 .cms-login-social-login__icon:hover {
