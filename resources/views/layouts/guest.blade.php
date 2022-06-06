@@ -10,6 +10,8 @@
    <!-- mobile metas -->
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+   <meta name="google-site-verification" content="sSm16SD3RTk2vQBclPZY6W6QwIEb4As8YqPkf8IyIkc" />
    <!-- site metas -->
    <title>Ashagari</title>
    <meta name="keywords" content="ashagari, aco, ashagari charitable organisation, ashagari consultancy, ashagari_consultancy, social enterprise, social enterprise ethiopia, youth, youth development, women, women empowerment, development, self-help, conferences, events in addis, events in ethiopia, unhcr, usaid, sida, i need a job, i need help, i need to learn, i need support"/>
