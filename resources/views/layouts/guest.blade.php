@@ -12,9 +12,9 @@
    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
    <!-- site metas -->
    <title>Ashagari</title>
-   <meta name="keywords" content="">
-   <meta name="description" content="">
-   <meta name="author" content="">
+   <meta name="keywords" content="ashagari, aco, ashagari charitable organisation, ashagari consultancy, ashagari_consultancy, social enterprise, social enterprise ethiopia, youth, youth development, women, women empowerment, development, self-help, conferences, events in addis, events in ethiopia, unhcr, usaid, sida, i need a job, i need help, i need to learn, i need support"/>
+   <meta name="description" content="Ashagari Charitable Organization (ACO) is a non for profit organization founded and recognised as a Civil Society Organisation in Ethiopia We are mainly focused on Skill Development, Leadership Empowerment and Capacity Building of Youth, Woman and leaders to ultimately add substantial value and develop the social economy."/>
+   <meta name="author" content="Earald Trading and ICT Technologies, Ashagari Consultancy, Ashagari Charitable Organisation, Natnael Tilaye, Mekdes Gebrewold Hundura"/>
    <!-- bootstrap css -->
    <link rel="stylesheet" href="{{ asset('css/guest_temp/bootstrap.min.css') }}">
 

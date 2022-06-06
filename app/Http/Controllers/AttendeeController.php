@@ -7,6 +7,8 @@ use App\Models\Attendee;
 use App\Models\Event;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use PDF;
 
 class AttendeeController extends Controller
 {
@@ -20,11 +22,13 @@ class AttendeeController extends Controller
     public function index($id)
     {
         $name = Route::currentRouteName();
-        $attendees = Attendee::where('event_id', $id)->orderBy('created_at', 'desc')->get();
+        $new_registers = Attendee::where('event_id', $id)->where('confirmed', false)->orderBy('created_at', 'desc')->get();
+        $attendees = Attendee::where('event_id', $id)->where('confirmed', true)->orderBy('created_at', 'desc')->get();
         $event = Event::find($id);
 
         return view('cms.attendees.list', [
             'name' => $name,
+            'nrs' => $new_registers,
             'attendees' => $attendees,
             'event' => $event
         ]);
@@ -146,11 +150,11 @@ class AttendeeController extends Controller
 
         if($attendee){
             if($event){
-                $attendee->confirmed = true;
+                $attendee->confirmed = !$attendee->confirmed;
                 $stat = $attendee->save();
 
                 if($stat){
-                    return redirect()->route('list_attendees', $event->id)->with('name', $name)->with('success', '{{$attendee->name}} has been successfully confirmed.');
+                    return redirect()->route('cms_list_attendees', $event->id)->with('name', $name)->with('success', '{{$attendee->name}} has been successfully confirmed.');
                 }
                 else{
                     return redirect()->back()->with('name', $name)->with('errors', ['Process Aborted', '{{$attendee->name}} failed to get confirmed.']);
@@ -182,8 +186,20 @@ class AttendeeController extends Controller
     public function export_verified($id)
     {
         $event = Event::find($id);
-
-        $verified_attendees = Attendee::where('event_id', $id)->where('verified', true)->get();
-        
+        $verified_attendees = Attendee::where('event_id', $id)->where('confirmed', true)->get();
+        $today = Carbon::today()->format('d M Y');
+        $view = \View::make('cms.attendees.pdf', ['today' => $today, 'attendees' => $verified_attendees, 'event' => $event]);
+        $html_content =$view->render();
+        PDF::SetAuthor('Earald ERP - Ashagari Consultancy');
+        PDF::SetTitle("Verified Attendees - {{ $event->title }}");
+        PDF::SetSubject('A complete list of attendees verified to attend on call.');
+        PDF::SetPrintHeader(false);
+        PDF::SetPrintFooter(false);
+        PDF::SetMargins(10, PDF_MARGIN_TOP, 10);
+        PDF::AddPage('L', 'A4');
+        PDF::Write(0, Carbon::now()->format('d M Y (H:m:i)'), '', 0, 'L', true, 0, false, false, 0);
+        PDF::Write(0, Auth::user()->name, '', 0, 'L', true, 0, false, false, 0);
+        PDF::WriteHTML($html_content, true, false, true, false, '');
+        PDF::Output("Verified Attendees - {{ $event->title }}", 'I');
     }
 }

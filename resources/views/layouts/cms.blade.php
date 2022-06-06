@@ -143,7 +143,7 @@
 
             @yield('content')
 
-        {{-- </section> --}}
+        </section>
 
         @include('cms.inc.footer')
 

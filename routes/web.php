@@ -56,6 +56,7 @@ Route::get('/cms_delete_event/{event_id}', [EventController::class, 'destroy'])-
 Route::get('/cms_list_attendees/{event_id}', [AttendeeController::class, 'index'])->middleware('auth')->name('cms_list_attendees');
 Route::post('/cms_confirm_attendee/{attendee_id}/{event_id}', [AttendeeController::class, 'confirm'])->middleware('auth')->name('cms_confirm_attendee');
 Route::post('/cms_delete_attendee/{attendee_id}', [AttendeeController::class, 'destroy'])->middleware('auth')->name('cms_delete_attendee');
+Route::get('/cms_export_attendees/{event_id}', [AttendeeController::class, 'export_verified'])->middleware('auth')->name('cms_export_attendees');
 
 Route::get('/cms_show_organisation/{org_id}', [OrganisationController::class, 'show'])->middleware('auth')->name('cms_show_organisation');
 Route::get('/cms_edit_organisation/{org_id}', [OrganisationController::class, 'edit'])->middleware('auth')->name('cms_edit_organisation');

@@ -23,7 +23,7 @@
                                 </thead>
                                 <tbody class="table-body">
                                     @foreach($events as $key => $event)
-                                        <tr class="cell-1" data-toggle="collapse" data-target="#demo">
+                                        <tr class="cell-{{$key}}" data-toggle="collapse" data-target="#detail{{$key}}">
                                             <td>{{ $key + 1 }}</td>
                                             <td>{{ $event->title }}</td>
                                             <td>{{ $event->location }}</td>
@@ -51,7 +51,7 @@
                                             </td>
                                         </tr>
 
-                                        <tr id="demo" class="collapse cell-1 row-child">
+                                        <tr id="detail{{$key}}" class="collapse cell-1 row-child">
                                             <td class="text-center" colspan="1"><i class="fa fa-angle-up"></i></td>
                                             <td colspan="7">
                                                 Brief: <br/>
