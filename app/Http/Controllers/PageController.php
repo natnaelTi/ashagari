@@ -85,6 +85,11 @@ class PageController extends Controller
         return view('guest.leaders');
     }
 
+    public function gsc()
+    {
+        return view('guest.gsc');
+    }
+
     public function rsvp($id)
     {
         $event = Event::find($id);

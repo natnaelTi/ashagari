@@ -42,6 +42,8 @@ Route::get('/show_event/{event_id}', [EventController::class, 'show'])->name('sh
 Route::get('/rsvp/{event_id}', [PageController::class, 'rsvp'])->middleware('guest')->name('rsvp');
 Route::post('/store_attendee', [PageController::class, 'register'])->middleware('guest')->name('store_rsvp');
 
+Route::get('/gsc', [PageController::class, 'gsc'])->middleware('guest')->name('gsc');
+
 Auth::routes();
 
 Route::get('/dashboard', [AuthController::class, 'dashboard'])->middleware('auth')->name('dashboard');
