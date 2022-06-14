@@ -41,7 +41,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2 style="padding-bottom: 30px !important;">Upcoming Event</h2>
+                        <h2 style="margin-top: 70px !important; padding-bottom: 30px !important;">Upcoming Event</h2>
                         <!-- <h6 class="pt-5 mt-5" style="font-weight: 200 !important; text-transform: lowercase !important;">
                                No upcoming events in record yet</h6> -->
                         @if (count($events) > 0)
