@@ -1,16 +1,45 @@
 @extends('layouts.guest')
 
 @section('content')
+
+@if(!Session::get('success'))
+    <div id="simpleModal" class="modal" tabindex="-1" role="dialog" style="margin-top: 20vh !important;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" style="text-align: center !important;">Subscribe to Ashagari</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="{{route('subscribe')}}" method="POST" style="margin: 0 20px !important;">
+                    @csrf
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+                    <div class="modal-body">
+                        <div class="row">
+                            <label for="email">Subscribe to get updates on Ashagari right to your inbox.</label>
+                            <input type="email" name="email" id="email" class="form-control input" placeholder="myemail@host.com"/>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-secondary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+@endif
+
     <!----------- Hero Section ----------->
 
     <!-- Banner -->
     <div id="carousel" class="carousel slide hero-slides   home-banner" data-ride="carousel">
         <div class="carousel-inner" role="listbox">
             <div class="carousel-item active boat   landing-hero-banner">
-                <div class="container h-100 d-none d-md-block">
+                <div class="container h-100 d-md-block">
                     <div id="landing-header">
                         <div class="row align-items-center h-100">
-                            <div class="col-7 col-md-9 col-lg-7 col-xl-6">
+                            <div class="col-sm-12 col-md-12 col-lg-7 col-xl-6" style="text-align: center !important;">
                                 <div class="test_box">
                                     <div class="text-bg">
                                         <h1 class="" style="margin: 25vh 0 0 0 !important;"><span
@@ -19,20 +48,28 @@
                                                 and Development Company</span></h1>
                                         <p class="mt-5" style="font-weight: 300 !important;">Ashagari is an Amharic
                                             word meaning
-                                            <i>"the one who helps transform"</i>, and with this spirit of transformation we
+                                            <i id="info-cards">"the one who helps transform"</i>, and with this spirit of transformation we
                                             equip
                                             youth, women, and leaders to unleash their maximum potential
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-5 col-md-9 col-lg-5 col-xl-6 align-self-center" style="vertical-align: center !important;">
+                            <div class="col-sm-12 col-md-12 col-lg-5 col-xl-6 align-self-center" style="vertical-align: center !important;">
                                 <div class="test_box" style="vertical-align: center !important;">
                                     <div class="text-bg" style="vertical-align: center !important;">
-                                        <a class="read_more   about-btn hero-btn shadow p-3 mx-2" href="#about">Get To Know
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <a class="read_more   about-btn hero-btn shadow p-3 mx-2" href="#info-cards">Get To Know
                                             Us</a>
-                                        <a class="Donate-btn-outline   contact-btn shadow p-3 mb-5 mx-2 hero_btn"
+                                            </div>
+                                            <div class="col-6">
+                                                <a class="Donate-btn-outline   contact-btn shadow p-3 mb-5 mx-2 hero_btn"
                                             href="#contact_section">Contact</a>
+                                            </div>
+                                        </div>
+                                        
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -51,11 +88,11 @@
         </div>
     </div>
     <!-- End Banner -->
-
+    
     <!-- Catalog Cards -->
     <div class="card_one catalog-cards">
         <div class="container">
-            <div class="row ">
+            <div class="row">
                 <div class="col-lg-4 mb-4 margin_top_lil">
                     <div class="card d-inline-flex  shadow p-3 mb-5 bg-white rounded card_zoom">
                         <div class="card-body">
@@ -210,7 +247,7 @@
 
 
     <!----------- Counter Section ----------->
-    <section class="stat_bg wow fadeIn animated p-5 counter-section"
+    <section id="counter" class="stat_bg wow fadeIn animated p-5 counter-section"
         style="background-color: #090807; visibility: visible; animation-name: fadeIn;">
         <div class="container">
             <div class="row">
@@ -281,48 +318,48 @@
 
 
     <!----------- Social Media Section ----------->
-    <div class="juices   news-section" style="padding-bottom: 35px !important;">
-        <div class="container ">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="titlepage">
-                        <h4>Read Our</h4>
-                        <h2>Latest Post</h2>
-                    </div>
+    <!--<div class="juices   news-section" style="padding-bottom: 35px !important;">-->
+    <!--    <div class="container ">-->
+    <!--        <div class="row">-->
+    <!--            <div class="col-md-12">-->
+    <!--                <div class="titlepage">-->
+    <!--                    <h4>Read Our</h4>-->
+    <!--                    <h2>Latest Post</h2>-->
+    <!--                </div>-->
 
                     <!-- <h6 class="titlepage p-5" style="font-weight: 200 !important; text-transform: lowercase !important;">No
-                            blogs have been posted yet</h6> -->
+    <!--                        blogs have been posted yet</h6> -->-->
 
-                    <div class="row">
-                        <div class="col-lg-4 col-md-12 col-sm-12 text-center">
-                            <div class="card">
-                                <div class="card-header">
-                                    <p>facebook</p>
-                                </div>
-                            </div>
-                            <iframe
-                                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fashagarii%2Fposts%2F554961182652548&width=350&show_text=true&height=350&appId"
-                                width="350" height="197" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                                allowfullscreen="true"
-                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                        </div>
+    <!--                <div class="row">-->
+    <!--                    <div class="col-lg-4 col-md-12 col-sm-12 text-center">-->
+    <!--                        <div class="card">-->
+    <!--                            <div class="card-header">-->
+    <!--                                <p>facebook</p>-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <iframe-->
+    <!--                            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fashagarii%2Fposts%2F554961182652548&width=350&show_text=true&height=350&appId"-->
+    <!--                            width="350" height="197" style="border:none;overflow:hidden" scrolling="no" frameborder="0"-->
+    <!--                            allowfullscreen="true"-->
+    <!--                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>-->
+    <!--                    </div>-->
 
-                        <div class="col-lg-4 col-md-12 col-sm-12 text-center">
-                            <div class="card">
-                                <div class="card-header">
-                                    <p>youtube</p>
-                                </div>
-                            </div>
-                            <iframe width="350" height="197" src="https://www.youtube.com/embed/bfXBRkobnVk"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!--                    <div class="col-lg-4 col-md-12 col-sm-12 text-center">-->
+    <!--                        <div class="card">-->
+    <!--                            <div class="card-header">-->
+    <!--                                <p>youtube</p>-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <iframe width="350" height="197" src="https://www.youtube.com/embed/bfXBRkobnVk"-->
+    <!--                            title="YouTube video player" frameborder="0"-->
+    <!--                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"-->
+    <!--                            allowfullscreen></iframe>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</div>-->
     <!----------- End Social Media Section ----------->
 
 
@@ -408,4 +445,13 @@
         </div>
     </div>
     <!----------- End Contact Section ----------->
+    
+    <script type="text/javascript">
+    window.onload = function () {
+        OpenBootstrapPopup();
+    };
+    function OpenBootstrapPopup() {
+        $("#simpleModal").modal('show');
+    }
+</script>
 @endsection

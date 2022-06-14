@@ -13,7 +13,7 @@
                                 <h1>{{ $l_event->title }}</h1>
                                 <h4
                                     style="margin: 20px !important; padding-left: 6px !important; font-size: 28px !important; font-weight: 500 !important; color: white;">
-                                    {{ $l_event->start_date }}
+                                    {{ \Carbon\Carbon::parse($l_event->start_date)->format('d M Y') }}
                                 </h4>
                                 <h6 class="text-center"
                                     style="margin: 20px !important; padding-left: 6px !important; font-size: 22px !important; font-weight: 400 !important; color: white;">
@@ -21,7 +21,7 @@
                                 </h6>
                                 <!-- <p>English Seminar  will be distracted by the this week readable content of a page when looking at its layout. t</p> -->
                                 <a class="read_more shadow hero_btn p-3  "
-                                    href="{{ route('register', [$l_event->id]) }}">Register Now <i
+                                    href="{{ route('rsvp', [$l_event->id]) }}">Register Now <i
                                         class="fa fa-chevron-circle-right" aria-hidden="true"></i>
                                 </a>
                                 <!-- <a class="Donate-btn-outline  shadow p-3 mb-5" href="#contact_section">Contact Us</a> -->
@@ -67,7 +67,7 @@
                                                         </p>
                                                         <p style="font-size: 14px !important;">
                                                             <i class="fa fa-clock-o pr-2" aria-hidden="true"></i>
-                                                            {{ $event->start_date }}
+                                                            {{\Carbon\Carbon::parse($event->start_date)->format('d M Y')}}
                                                             <i class="fas fa fa-map-marker pl-3 pr-2 " aria-hidden="true"></i>
                                                             {{ $event->location }}
                                                         </p>

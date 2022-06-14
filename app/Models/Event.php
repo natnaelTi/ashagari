@@ -26,6 +26,11 @@ class Event extends Model
         'seats' => 'integer',
         'location' => 'string',
         'filepath' => 'string',
+        'gallery1' => 'string',
+        'gallery2' => 'string',
+        'gallery3' => 'string',
+        'gallery4' => 'string',
+        'gallery5' => 'string',
         'price' => 'string'
     ];
 

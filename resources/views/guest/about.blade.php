@@ -13,15 +13,10 @@
           <div class="container h-100 d-none d-md-block">
              <div class="row align-items-center h-100">
                 <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-                   <div class="caption animated fadeIn">
+                   <div class="caption animated fadeIn" style="background: none !important;">
                       <div class="test_box">
                          <div class="text-bg">
                             <h1 class="animated fadeInLeft">Ashagari Youth</h1>
-                            {{-- <p class="animated fadeInRight">Ashagari created a platform for youth community (>75% of
-                               Ethiopian population) co come and learn, share experience and motivate. The platform is
-                               in the form of edutainment which includes both education and entertainment which can
-                               enhance the young people’s creativity, innovations critical thinking, problem solving
-                               and decision making ability.</p> --}}
                             <a class="Donate-btn-outline  shadow mb-5 hero_btn" href="#contact_section">Contact Us</a>
                          </div>
                       </div>
@@ -34,13 +29,10 @@
           <div class="container h-100 d-none d-md-block">
              <div class="row align-items-center h-100">
                 <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-                   <div class="caption animated fadeIn">
+                   <div class="caption animated fadeIn" style="background: none !important;">
                       <div class="test_box">
                          <div class="text-bg">
                             <h1>Ashagari Women</h1>
-                            {{-- <p class="animated fadeInRight">Recognizing the women’s natural ability to solve problem
-                               and influence decision making, Ashagari women program created a platform to unleash
-                               women’s potential to influence their environment.</p> --}}
                             <a class="Donate-btn-outline  shadow mb-5 hero_btn" href="#contact_section">Contact Us</a>
                          </div>
                       </div>
@@ -53,15 +45,10 @@
           <div class="container h-100 d-none d-md-block">
              <div class="row align-items-center h-100">
                 <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-                   <div class="caption animated fadeIn">
+                   <div class="caption animated fadeIn" style="background: none !important;">
                       <div class="test_box">
                          <div class="text-bg">
                             <h1>Ashagari Leader</h1>
-                            {{-- <p>As we speak about globalization we are moving in to the fourth industrial revolution
-                               where we see a lot of change in social. Environmental, economic and political arena,
-                               where leaders are expected to make an intent decision considering their environmental,
-                               social and economical implications at the same value in dealing with local and global
-                               challenges in order to compete successfully and grow sustainably.</p> --}}
                             <a class="Donate-btn-outline  shadow mb-2 hero_btn" href="#contact_section">Contact Us</a>
                          </div>
                       </div>
@@ -234,156 +221,6 @@
  </section>
  <!----------- End Values Section ----------->
 
- <!-- Our Latest news -->
- <section class="juices" style="padding-bottom: 30px !important;">
-    <div class="container">
-       <div class="row">
-          <div class="col-lg-8 col-md-12 mx-auto ">
-             <div class="titlepage text-left">
-                <h4>Our Execlusive </h4>
-                <h2 class="">Expert Board</h2>
-                <p>Ashagari advocates transformation, and holding truth to that we are led by visionary, passionate
-                   and frank teams.</p>
-             </div>
-          </div>
-       </div>
-
-       <div class="row">
-          <div class="col-lg-4 mb-4 mt-n10px ">
-             <div class="card d-inline-flex  shadow mx-auto bg-white rounded">
-                <img class="card-img-top-post" src="{{ asset('images/teams/1.jpg') }}" style="width: 125%;" alt="">
-             </div>
-             <div class="card-body">
-                <h1 class=" font-weight-bold">Mrs. Mekdes Gebrewold</h1>
-                <h3 class=" ">Founder, CEO</h3>
-
-                <div class="social-post text-left pt-4 ">
-                   <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-2xs fa-facebook"
-                         aria-hidden="true"></i></a>
-                   <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-2xs fa-instagram"
-                         aria-hidden="true"></i></a>
-
-                   <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-2xs fa-linkedin"
-                         aria-hidden="true"></i></a>
-                   <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-xs fa-twitter"
-                         aria-hidden="true"></i></a>
-                </div>
-             </div>
-          </div>
-
-          <div class="col-lg-4 mb-4 mt-n10px ">
-             <div class="card d-inline-flex  shadow mx-auto bg-white rounded">
-                <img class="card-img-top-post" src="{{ asset('images/teams/2.png') }}" style="width: 125%;" alt="">
-             </div>
-             <div class="card-body">
-                <h1 class=" font-weight-bold">Mr. Mekdela Mekuriya</h1>
-                <h3 class=" ">Chair Person</h3>
-
-                <div class="social-post text-left pt-4 ">
-                   <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-2xs fa-facebook"
-                         aria-hidden="true"></i></a>
-                   <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-2xs fa-instagram"
-                         aria-hidden="true"></i></a>
-
-                   <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-2xs fa-linkedin"
-                         aria-hidden="true"></i></a>
-                   <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-xs fa-twitter"
-                         aria-hidden="true"></i></a>
-                </div>
-             </div>
-          </div>
-
-          <div class="col-lg-4 mb-4 mt-n10px ">
-             <div class="card d-inline-flex  shadow mx-auto bg-white rounded">
-                <img class="card-img-top-post" src="{{ asset('images/teams/3.png') }}" style="width: 125%;" alt="">
-             </div>
-             <div class="card-body">
-                <h1 class=" font-weight-bold">Mr. Seleshi Kasaye</h1>
-                <h3 class=" ">Board Secretary</h3>
-
-                <div class="social-post text-left pt-4 ">
-                   <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-2xs fa-facebook"
-                         aria-hidden="true"></i></a>
-                   <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-2xs fa-instagram"
-                         aria-hidden="true"></i></a>
-
-                   <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-2xs fa-linkedin"
-                         aria-hidden="true"></i></a>
-                   <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-xs fa-twitter"
-                         aria-hidden="true"></i></a>
-                </div>
-             </div>
-          </div>
-       </div>
-
-       <div class="row">
-          <div class="col-lg-4 mb-4 mt-n10px ">
-             <div class="card d-inline-flex  shadow mx-auto bg-white rounded">
-                <img class="card-img-top-post" src="{{ asset('images/teams/4.png') }}" style="width: 125%;" alt="">
-             </div>
-             <div class="card-body">
-                <h1 class=" font-weight-bold">Mr. Behailu Shiferaw</h1>
-                <h3 class=" ">Board Member</h3>
-
-                <div class="social-post text-left pt-4 ">
-                   <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-2xs fa-facebook"
-                         aria-hidden="true"></i></a>
-                   <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-2xs fa-instagram"
-                         aria-hidden="true"></i></a>
-
-                   <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-2xs fa-linkedin"
-                         aria-hidden="true"></i></a>
-                   <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-xs fa-twitter"
-                         aria-hidden="true"></i></a>
-                </div>
-             </div>
-          </div>
-
-          <div class="col-lg-4 mb-4 mt-n10px ">
-             <div class="card d-inline-flex  shadow mx-auto bg-white rounded">
-                <img class="card-img-top-post" src="{{ asset('images/teams/4.png') }}" style="width: 125%;" alt="">
-             </div>
-             <div class="card-body">
-                <h1 class=" font-weight-bold">Mrs. Seble Guangul</h1>
-                <h3 class=" ">Board Member</h3>
-
-                <div class="social-post text-left pt-4 ">
-                   <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-2xs fa-facebook"
-                         aria-hidden="true"></i></a>
-                   <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-2xs fa-instagram"
-                         aria-hidden="true"></i></a>
-                   <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-2xs fa-linkedin"
-                         aria-hidden="true"></i></a>
-                   <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-xs fa-twitter"
-                         aria-hidden="true"></i></a>
-                </div>
-             </div>
-          </div>
-
-          <div class="col-lg-4 mb-4 mt-n10px ">
-             <div class="card d-inline-flex  shadow mx-auto bg-white rounded">
-                <img class="card-img-top-post" src="{{ asset('images/teams/4.png') }}" style="width: 125%;" alt="">
-             </div>
-             <div class="card-body">
-                <h1 class=" font-weight-bold">Mrs. Asrat Tilahun</h1>
-                <h3 class=" ">Vice Chairperson</h3>
-
-                <div class="social-post text-left pt-4 ">
-                   <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-2xs fa-facebook"
-                         aria-hidden="true"></i></a>
-                   <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-2xs fa-instagram"
-                         aria-hidden="true"></i></a>
-                   <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-2xs fa-linkedin"
-                         aria-hidden="true"></i></a>
-                   <a href="#" class="btn btn-outline-secondary btn-sm mr-2"><i class="fa fa-xs fa-twitter"
-                         aria-hidden="true"></i></a>
-                </div>
-             </div>
-          </div>
-       </div>
-    </div>
- </section>
- <!-- end Our Juices  section -->
 
  <!----------- Contact Section ----------->
  <div id="contact_section" class="contact_section bg-white">

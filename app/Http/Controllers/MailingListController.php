@@ -10,6 +10,6 @@ class MailingListController extends Controller
 
     public function store(Request $request)
     {
-
+        return back()->with('success', 'You have been registered successfully!');
     }
 }

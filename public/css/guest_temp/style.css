@@ -1432,17 +1432,17 @@ ul {
 
 .about-youth {
     background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(2, 167, 145, 0.73)),
-        url('../../images/about/1.jpg') !important;
+        url('../../images/about/youth.jpg') !important;
 }
 
 .about-women {
     background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(2, 167, 145, 0.73)),
-        url('../../images/about/3.jpg') !important;
+        url('../../images/about/women.jpg') !important;
 }
 
 .about-leader {
     background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(2, 167, 145, 0.73)),
-        url('../../images/about/4.jpg') !important;
+        url('../../images/about/leaders.jpg') !important;
 }
 
 /* .value-button {
@@ -1625,6 +1625,14 @@ img {
     animation: imageAnimation 15s linear infinite;
 }
 
+@media(max-width:390px){
+    .slideshow li {
+        background-size: cover !important;
+        width: 100vw !important;
+        /*height: auto !important;*/
+    }
+}
+
 .slideshow li:nth-child(1) {
     background-image: linear-gradient(to bottom, rgba(213, 255, 249, 0.15), rgba(2, 167, 145, 0.73)), url("../../images/home/1.jpg");
 }
@@ -1689,4 +1697,63 @@ img {
 .preview-pane
 {
   margin-bottom:15px;
+}
+
+#overlay {
+position: fixed !important;
+top: 0 !important;
+left: 0 !important;
+width: 100% !important;
+height: 100% !important;
+background-color: #000 !important;
+filter:alpha(opacity=70) !important;
+-moz-opacity:0.7 !important;
+-khtml-opacity: 0.7 !important;
+opacity: 0.7 !important;
+z-index: 100 !important;
+display: none !important;
+}
+.cnt223 a{
+text-decoration: none !important;
+}
+.popup{
+width: 100% !important;
+margin: 0 auto !important;
+display: none !important;
+position: fixed !important;
+z-index: 101 !important;
+}
+.cnt223{
+min-width: 600px !important;
+width: 600px !important;
+min-height: 150px !important;
+margin: 100px auto !important;
+background: #f3f3f3 !important;
+position: relative !important;
+z-index: 103 !important;
+padding: 15px 35px !important;
+border-radius: 5px !important;
+box-shadow: 0 2px 5px #000 !important;
+}
+.cnt223 p{
+clear: both !important;
+    color: #555555 !important;
+    /* text-align: justify; */
+    font-size: 20px !important;
+    font-family: sans-serif !important;
+}
+.cnt223 p a{
+color: #d91900 !important;
+font-weight: bold !important;
+}
+.cnt223 .x{
+float: right !important;
+height: 35px !important;
+left: 22px !important;
+position: relative !important;
+top: -25px !important;
+width: 34px !important;
+}
+.cnt223 .x:hover{
+cursor: pointer !important;
 }

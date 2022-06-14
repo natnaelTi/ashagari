@@ -1,10 +1,50 @@
 @extends('layouts.guest')
 
+<style>
+    .img-con{
+        position: relative !important;
+        width: 100% !important;
+    }
+    .image{
+        opacity: 1 !important;
+        display: block !important;
+        width: auto !important;
+        height: 250px !important;
+        overflow: hidden !important;
+        transition: .5s ease !important;
+        backface-visibility: hidden !important;
+    }
+
+    .bottom{
+        transition: .5s ease !important;
+        opacity: 0 !important;
+        position: absolute !important;
+        bottom: 10% !important;
+        transform: translate(-50%, -50%) !important;
+        -ms-transform: translate(-50%, -50%) !important;
+        text-align: center !important;
+        vertical-align: bottom !important;
+    }
+
+    .img-con:hover .image{
+        opacity: 0.3 !important;
+    }
+
+    .img-con:hover .bottom{
+        opacity: 1 !important;
+    }
+    .text{
+        color: rgb(58, 58, 58) !important;
+        padding: 0 0 0 50px !important;
+        margin: 0 0 0 50px !important;
+    }
+</style>
+
 @section('content')
     <!-- banner -->
 
     <section class="about-women"
-        style="height: 100vh !important; background-image: linear-gradient(to bottom, rgba(213, 255, 249, 0.15), rgba(2, 167, 145, 0.73)), url('./images/women.jpg'); background-size: cover !important;">
+        style="height: 100vh !important; background-image: linear-gradient(to bottom, rgba(213, 255, 249, 0.15), rgba(2, 167, 145, 0.73)), url('./images/about/women.jpg') !important; background-size: cover !important;">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -95,6 +135,44 @@
                         </div>
                     </div>
                     <div class="col-md-2"></div>
+                </div>
+                <div class="bd-example" style="width: 60vw !important; margin-bottom: 45px !important; margin-left: auto !important; margin-right: auto !important;">
+                    <h2 style="font-weight: 700 !important; margin-bottom: 20px !important; text-align: center !important;">Previous Activities</h2>
+                    <div class="row align-items-end">
+                        <div class="col-lg-4 col-md-4 col-sm-12 p-2">
+                            <div class="img-con">
+                                <img src="{{asset('images/women/1.jpg')}}" class="image" alt="...">
+                                <div class="bottom">
+                                    <div class="text text-center" style="width: 100% !important;">
+                                        <h5 style="font-weight: 700 !important; font-size: 14px !important; color: rgb(58, 58, 58) !important; margin: 0 auto 0 20% !important;">Entoto Project</h5>
+                                        <p style="font-weight: 400 !important; font-size: 10px !important; color: rgb(58, 58, 58) !important; margin: 0 auto 0 20% !important;">Skills development training held on 2020</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 p-2">
+                            <div class="img-con" style="position: relative !important;">
+                                <img src="{{asset('images/women/2.jpg')}}" class="d-block w-full image" alt="...">
+                                <div class="bottom">
+                                    <div class="text text-center" style="width: 100% !important;">
+                                        <h5 style="font-weight: 700 !important; font-size: 14px !important; color: rgb(58, 58, 58) !important; margin: 0 auto 0 20% !important;">Job Creation Project</h5>
+                                        <p style="font-weight: 400 !important; font-size: 10px !important; color: rgb(58, 58, 58) !important; margin: 0 auto 0 20% !important;">Training program held on 2020</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 p-2">
+                            <div class="img-con" style="position: relative !important;">
+                                <img src="{{asset('images/women/3.jpg')}}" class="d-block w-full image" alt="...">
+                                <div class="bottom">
+                                    <div class="text text-center" style="width: 100% !important;">
+                                        <h5 style="font-weight: 700 !important; font-size: 14px !important; color: rgb(58, 58, 58) !important; margin: 0 auto 0 20% !important;">Addis Ketema SC Project</h5>
+                                        <p style="font-weight: 400 !important; font-size: 10px !important; color: rgb(58, 58, 58) !important; margin: 0 auto 0 20% !important;">Skills development training held on 2021</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

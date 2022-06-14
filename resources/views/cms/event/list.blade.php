@@ -49,6 +49,11 @@
                                             <td class="table-elipse" data-toggle="collapse" data-target="#demo">
                                                 <a href="{{ route('cms_list_attendees', [$event->id]) }}" type="button" class="btn btn-outline-primary">Attendees</a>
                                             </td>
+                                            @if($today->gt(\Carbon\Carbon::parse($event->end_date)))
+                                                <td class="text-center">
+                                                    <a href="{{ route('cms_archive_event', [$event->id]) }}" type="button" class="btn btn-outline-info">Archive</a>
+                                                </td>
+                                            @endif
                                         </tr>
 
                                         <tr id="detail{{$key}}" class="collapse cell-1 row-child">

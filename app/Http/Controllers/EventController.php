@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Event;
 use App\Models\Attendee;
 use Illuminate\Support\Facades\Route;
+use Carbon\Carbon;
 
 class EventController extends Controller
 {
@@ -20,18 +21,19 @@ class EventController extends Controller
 
     public function list()
     {
-        $l_event = Event::latest()->orderBy('start_date', 'desc')->first();
-        $events = Event::latest()->orderBy('end_date', 'desc')->paginate(15);
-
-        return view('guest.event', ['events' => $events, 'l_event' => $l_event]);
+        $events = Event::where('end_date', '<=', Carbon::now())->get();
+        
+        return view('guest.pe', ['pes' => $events]);
     }
 
     public function index()
     {
         $events = Event::latest()->orderBy('end_date', 'desc')->paginate(15);
+        $today = Carbon::today();
 
         return view('cms.event.list', [
-            'events' => $events
+            'events' => $events,
+            'today' => $today
         ]);
     }
 
@@ -94,6 +96,24 @@ class EventController extends Controller
     public function show($id)
     {
         $event = Event::find($id);
+        $cover = 'events/' . $event->title . '/' . $event->filepath;
+        $gallery = [];
+
+        if($event->gallery1 != 'no_pre.png'){
+            array_push($gallery, $event->gallery1);
+        }
+        if($event->gallery2 != 'no_pre.png'){
+            array_push($gallery, $event->gallery2);
+        }
+        if($event->gallery3 != 'no_pre.png'){
+            array_push($gallery, $event->gallery3);
+        }
+        if($event->gallery4 != 'no_pre.png'){
+            array_push($gallery, $event->gallery4);
+        }
+        if($event->gallery5 != 'no_pre.png'){
+            array_push($gallery, $event->gallery5);
+        }
 
         if($event){
             if(Auth::check()){
@@ -102,13 +122,75 @@ class EventController extends Controller
                 ]);
             }
             else{
-                return view('guest.events.show', [
-                    'event' => $event
+                return view('guest.detail', [
+                    'event' => $event,
+                    'cover' => $cover,
+                    'gallery' => $gallery
                 ]);
             }
         }
         else{
             return redirect()->back()->with('errors', ['Process Aborted', 'Oops! The event you are looking for does not seem to be in record.']);
+        }
+    }
+
+    public function archive($id)
+    {
+        $event = Event::find($id);
+        $ed = Carbon::parse($event->start_date);
+        if($ed->gte(Carbon::today())){
+            return back()->with('errors', ['Oops... ', 'This event has not been held yet. Comeback after {{$event->end_date}} to archive it.']);
+        }
+        else{
+            return view('cms.event.archive', ['event' => $event]);
+        }
+    }
+
+    public function store_archive(Request $request, $id)
+    {
+        $event = Event::find($id);
+
+        if($request->has('gallery1') && $request->has('gallery1') != null){
+            $g1 = $event->title . '.' . 'gallery.1' . '.' . time() . '.' . $request->gallery1->extension();
+            $request->gallery1->move(public_path("events/gallery/{$event->title}"), $g1);
+            $event->gallery1 = $g1;
+        }
+        
+        if($request->has('gallery2') && $request->has('gallery2') != null){
+            $g2 = $event->title . '.' . 'gallery.2' . '.' . time() . '.' . $request->gallery2->extension();
+            $request->gallery2->move(public_path("events/gallery/{$event->title}"), $g2);
+            $event->gallery2 = $g2;
+        }
+
+        if($request->has('gallery3') && $request->has('gallery3') != null){
+            $g3 = $event->title . '.' . 'gallery.3' . '.' . time() . '.' . $request->gallery3->extension();
+            $request->gallery3->move(public_path("events/gallery/{$event->title}"), $g3);
+            $event->gallery3 = $g3;
+        }
+
+        if($request->has('gallery4') && $request->has('gallery4') != null){
+            $g4 = $event->title . '.' . 'gallery.4' . '.' . time() . '.' . $request->gallery4->extension();
+            $request->gallery4->move(public_path("events/gallery/{$event->title}"), $g4);
+            $event->gallery4 = $g4;
+        }
+
+        if($request->has('gallery5') && $request->has('gallery5') != null){
+            $g5 = $event->title . '.' . 'gallery.5' . '.' . time() . '.' . $request->gallery5->extension();
+            $request->gallery5->move(public_path("events/gallery/{$event->title}"), $g5);
+            $event->gallery5 = $g5;
+        }
+
+        if($request->has('description') && $request->input('description') != null){
+            $event->description = $request->input('description');
+        }
+
+        $stat = $event->save();
+
+        if($stat){
+            return redirect()->route('cms_list_events')->with('success', 'Event has been successfully archived!');
+        }
+        else{
+            return redirect()->back()->with('errors', ['Process terminated with error. Please try again.']);
         }
     }
 

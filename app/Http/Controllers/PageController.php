@@ -49,8 +49,8 @@ class PageController extends Controller
         // $ongoing_events = Event::where('start_date', '<=', Carbon::today())->where('end_date', '<', Carbon::today())->orderBy('start_date', 'asc')->get();
         // $upcoming_events = Event::where('start_date', '>=', Carbon::today())->where('reg_end', '>=', Carbon::today())->orderBy('reg_end', 'asc')->get();
 
-        $l_event = Event::latest()->orderBy('start_date', 'desc')->first();
-        $events = Event::latest()->orderBy('end_date', 'desc')->paginate(15);
+        $l_event = Event::where('start_date', '>=', Carbon::today())->orderBy('start_date', 'desc')->first();
+        $events = Event::where('start_date', '>=', Carbon::today())->orderBy('end_date', 'desc')->get();
         if($organisation){
             return view('guest.event', ['events' => $events, 'l_event' => $l_event]);
         }
