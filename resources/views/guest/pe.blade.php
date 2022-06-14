@@ -18,7 +18,7 @@
                                             <div class="col-xl-4 col-lg-4 col-md-4"
                                                 style="border:0px solid #ddd; margin: 0 !important; padding: 0 !important;">
                                                 <img src="{{ asset('events') }}/{{ $event->title }}/{{ $event->filepath }}" alt="{{ $event->title }}" class="img-fluid"
-                                                    style="max-width: object-fit !important; max-height: 230px !important; size: cover !important;">
+                                                style="max-width: object-fit !important; height: 230px !important; size: cover !important; overflow: hidden !important;">
                                             </div>
 
                                             <div class="col-xl-6 col-lg-6 col-md-6" style="border:0px solid #ddd">
