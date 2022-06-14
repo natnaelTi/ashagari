@@ -116,18 +116,12 @@ class EventController extends Controller
         }
 
         if($event){
-            if(Auth::check()){
-                return view('cms.events.show', [
-                    'event' => $event
-                ]);
-            }
-            else{
+            
                 return view('guest.detail', [
                     'event' => $event,
                     'cover' => $cover,
                     'gallery' => $gallery
                 ]);
-            }
         }
         else{
             return redirect()->back()->with('errors', ['Process Aborted', 'Oops! The event you are looking for does not seem to be in record.']);
