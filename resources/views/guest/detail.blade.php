@@ -11,7 +11,7 @@
                     <div class="test_box" style="padding-top: 15% !important;">
                         <div class="text-bg">
                             <h1 class="mt-5 pt-5"><span
-                                    style="font-size: 78px !important;color: white !important; padding-top: 15% !important">{{$event->title}}</h1>
+                                    style="font-size: 78px !important;color: white !important; padding-top: 15% !important; width: 80vw !important;">{{$event->title}}</h1>
                             <p class="mt-2" style="font-weight: 300 !important;font-size: 25px !important;">Held on: {{\Carbon\Carbon::parse($event->start_date)->format('d M Y')}}</p>
                             <p class="mt-2" style="font-weight: 300 !important;font-size: 25px !important;"><i class="fas fa fa-map-marker pl-3 pr-2 " aria-hidden="true"></i> {{$event->location}}</p>
                         </div>
