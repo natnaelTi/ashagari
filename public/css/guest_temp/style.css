@@ -1622,7 +1622,7 @@ img {
     background-repeat: no-repeat;
     opacity: 0;
     z-index: 0;
-    animation: imageAnimation 15s linear infinite;
+    animation: imageAnimation 12s linear infinite;
 }
 
 @media(max-width:390px){
