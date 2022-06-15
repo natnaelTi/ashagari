@@ -8,17 +8,22 @@
                   class="filter-green" />
 
                <div class="social-post text-center">
-                  <a href="https://www.facebook.com/AshagariConsulting" class="btn btn-outline-light btn-sm mr-2 px-3"><i
-                        class="fa fa-2xs fa-facebook" aria-hidden="true"></i></a>
+                  <a href="https://www.facebook.com/AshagariConsulting" class="btn btn-outline-light btn-sm mr-2 px-3" style="padding: 5px 7px !important;">
+                     <i class="fa fa-2xs fa-facebook" aria-hidden="true" style="margin: 10px 10px !important;"></i>
+                  </a>
                   
                   <a href="https://www.youtube.com/channel/UCAtySlaYpbdJoyG8P1ncp2Q/sub?1"
-                     class="btn btn-outline-light btn-sm mr-2 px-3"><i class="fa fa-2xs fa-youtube-play"
-                        aria-hidden="true"></i></a>
-                  <a href="https://www.linkedin.com/in/ashagari-mekdes" class="btn btn-outline-light btn-sm mr-2 px-3"><i
-                        class="fa fa-2xs fa-linkedin" aria-hidden="true"></i></a>
-                  <a href="https://t.me/ashagari" class="btn btn-outline-light btn-sm mr-2 px-3"><i
-                        class="fa fa-xs fa-telegram" aria-hidden="true"></i></a>
-
+                     class="btn btn-outline-light btn-sm mr-2 px-3" style="padding: 5px 7px !important;">
+                     <i class="fa fa-2xs fa-youtube-play" aria-hidden="true" style="margin: 10px 10px !important;"></i>
+                  </a>
+                  
+                  <a href="https://www.linkedin.com/in/ashagari-mekdes" class="btn btn-outline-light btn-sm mr-2 px-3" style="padding: 5px 7px !important;">
+                     <i class="fa fa-2xs fa-linkedin" aria-hidden="true" style="margin: 10px 10px !important;"></i>
+                  </a>
+                  
+                  <a href="https://t.me/ashagari" class="btn btn-outline-light btn-sm mr-2 px-3" style="padding: 5px 7px !important;">
+                     <i class="fa fa-xs fa-telegram" aria-hidden="true" style="margin: 10px 10px !important;"></i>
+                  </a>
                </div>
             </div>
 
