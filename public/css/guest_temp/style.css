@@ -301,7 +301,7 @@ button {
 .banner_main {
     position: relative;
     /* background: url(../images/Bg_banner.jpg); */
-    background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(2, 167, 145, 0.73)),
+    background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(19, 37, 35, 0.73)),
         url('../../images/bg/bg-1.jpg');
 
     background-repeat: no-repeat;
@@ -317,7 +317,7 @@ button {
 .banner_main_static {
     position: relative;
     /* background: url(../images/Bg_banner.jpg); */
-    background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(2, 167, 145, 0.73)),
+    background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(19, 37, 35, 0.73)),
         url('../../images/bg/bg-4.jpg');
 
     background-repeat: no-repeat;
@@ -350,7 +350,7 @@ button {
      position: relative;
      background: url(../images/bg/black_bg_pattern.jpg);
 
-     background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(2, 167, 145, 0.73)),
+     background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(19, 37, 35, 0.73)),
           url('../images/bg/bg-4.jpg');
 
      background-repeat: no-repeat;
@@ -367,7 +367,7 @@ button {
 .reg_banner_main {
     position: relative;
     /* background: url(../images/Bg_banner.jpg); */
-    background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(2, 167, 145, 0.73)),
+    background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(19, 37, 35, 0.73)),
         url('../../images/bg/bg-3.jpg');
 
     background-repeat: no-repeat;
@@ -383,7 +383,7 @@ button {
 .upcoming_banner_main {
     position: relative;
     /* background: url(../images/Bg_banner.jpg); */
-    background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(2, 167, 145, 0.73)),
+    background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(19, 37, 35, 0.73)),
         url('../../images/events/event_poster.jpg');
 
     background-repeat: no-repeat;
@@ -401,7 +401,7 @@ button {
 .contact_banner {
     position: relative;
     /* background: url(../images/Bg_banner.jpg); */
-    background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(2, 167, 145, 0.73)),
+    background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(19, 37, 35, 0.73)),
         url('../../images/home/bg-2.JPG');
 
     background-repeat: no-repeat;
@@ -513,7 +513,7 @@ button {
 }
 
 .Donate-btn-outline:hover {
-    background: #ffa30f;
+    background: #292724;
     color: #fff;
     transition: ease-in all 0.5s;
 }
@@ -534,7 +534,7 @@ button {
 }
 
 .read_more:hover {
-    background: #ffa30f;
+    background: #292724;
     color: #fff;
     transition: ease-in all 0.5s;
 }
@@ -1344,15 +1344,15 @@ ul {
 }
 
 #carousel .carousel-item.boat {
-    background-image: linear-gradient(to bottom, rgba(213, 255, 249, 0.15), rgba(2, 167, 145, 0.73));
+    background-image: linear-gradient(to bottom, rgba(213, 255, 249, 0.15), rgba(19, 37, 35, 0.73));
 }
 
 #carousel .carousel-item.sea {
-    background-image: linear-gradient(to bottom, rgba(213, 255, 249, 0.15), rgba(2, 167, 145, 0.73)), url("../../images/about/4.jpg");
+    background-image: linear-gradient(to bottom, rgba(213, 255, 249, 0.15), rgba(19, 37, 35, 0.73)), url("../../images/about/4.jpg");
 }
 
 #carousel .carousel-item.river {
-    background-image: linear-gradient(to bottom, rgba(213, 255, 249, 0.15), rgba(2, 167, 145, 0.73)), url("../../images/about/3.jpg");
+    background-image: linear-gradient(to bottom, rgba(213, 255, 249, 0.15), rgba(19, 37, 35, 0.73)), url("../../images/about/3.jpg");
 }
 
 #carousel .carousel-item {
@@ -1431,17 +1431,17 @@ ul {
 }
 
 .about-youth {
-    background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(2, 167, 145, 0.73)),
+    background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(19, 37, 35, 0.73)),
         url('../../images/about/youth.jpg') !important;
 }
 
 .about-women {
-    background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(2, 167, 145, 0.73)),
+    background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(19, 37, 35, 0.73)),
         url('../../images/about/women.jpg') !important;
 }
 
 .about-leader {
-    background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(2, 167, 145, 0.73)),
+    background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(19, 37, 35, 0.73)),
         url('../../images/about/leaders.jpg') !important;
 }
 
@@ -1633,27 +1633,36 @@ img {
     }
 }
 
+.value-card {
+    box-shadow: none !important;
+}
+
+.value-card:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.76) !important;
+}
+
 .slideshow li:nth-child(1) {
-    background-image: linear-gradient(to bottom, rgba(213, 255, 249, 0.15), rgba(2, 167, 145, 0.73)), url("../../images/home/1.jpg");
+    background-image: linear-gradient(to bottom, rgba(30, 46, 44, 0.329), rgba(19, 37, 35, 0.73)), url("../../images/home/1.jpg");
+    /* translate: scale-x(); */
 }
 
 .slideshow li:nth-child(2) {
-    background-image: linear-gradient(to bottom, rgba(213, 255, 249, 0.15), rgba(2, 167, 145, 0.73)), url("../../images/home/3.jpg");
+    background-image: linear-gradient(to bottom, rgba(30, 46, 44, 0.329), rgba(19, 37, 35, 0.73)), url("../../images/home/3.jpg");
     animation-delay: 3s;
 }
 
 .slideshow li:nth-child(3) {
-    background-image: linear-gradient(to bottom, rgba(213, 255, 249, 0.15), rgba(2, 167, 145, 0.73)), url("../../images/home/4.jpg");
+    background-image: linear-gradient(to bottom, rgba(30, 46, 44, 0.329), rgba(19, 37, 35, 0.73)), url("../../images/home/4.jpg");
     animation-delay: 6s;
 }
 
 .slideshow li:nth-child(4) {
-    background-image: linear-gradient(to bottom, rgba(213, 255, 249, 0.15), rgba(2, 167, 145, 0.73)), url("../../images/home/5.jpg");
+    background-image: linear-gradient(to bottom, rgba(30, 46, 44, 0.329), rgba(19, 37, 35, 0.73)), url("../../images/home/5.jpg");
     animation-delay: 9s;
 }
 
 /* .slideshow li:nth-child(5) {
-    background-image: linear-gradient(to bottom, rgba(213, 255, 249, 0.15), rgba(2, 167, 145, 0.73)), url("../../images/home/6.jpg");
+    background-image: linear-gradient(to bottom, rgba(213, 255, 249, 0.15), rgba(19, 37, 35, 0.73)), url("../../images/home/6.jpg");
     animation-delay: 12s;
 } */
 

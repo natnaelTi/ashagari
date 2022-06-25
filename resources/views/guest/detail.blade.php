@@ -1,34 +1,10 @@
 @extends('layouts.guest')
 
 @section('content')
-    <!-- banner -->
-
-    <section class="about-youth"
-        style="height: 100vh !important; background-image: linear-gradient(to bottom, rgba(213, 255, 249, 0.15), rgba(2, 167, 145, 0.73)), url('{{asset('events/'.$event->title.'/'.$event->filepath)}}') !important; background-size: cover !important;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="test_box" style="padding-top: 15% !important;">
-                        <div class="text-bg">
-                            <h1 class="mt-5 pt-5"><span
-                                    style="font-size: 52px !important;color: white !important; padding-top: 15% !important; width: 80vw !important;">{{$event->title}}</h1>
-                            <p class="mt-2" style="font-weight: 300 !important;font-size: 25px !important;">Held on: {{\Carbon\Carbon::parse($event->start_date)->format('d M Y')}}</p>
-                            <p class="mt-2" style="font-weight: 300 !important;font-size: 25px !important;"><i class="fas fa fa-map-marker pl-3 pr-2 " aria-hidden="true"></i> {{$event->location}}</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- end banner -->
-
-    <!-- about -->
     <!-- Article  -->
 
     <section id="about">
-        <div class="about" style="margin-top: 0 !important; padding-top: 0 !important;">
+        <div class="about" style="margin-top: 0 !important; padding-top: 150px !important;">
             <div class="container" id="about">
                 <div class="row d_flex">
                     <div class="col-md-2"></div>
@@ -36,7 +12,9 @@
                         <div class="titlepage mx-auto my-5">
                             <h4 style="text-decoration: underline !important;"></h4>
                             <h2 style="text-align: left;">{{ $event->title }}</h2>
-                            <p style="text-align: left;">
+                            <p class="mt-2" style="font-weight: 300 !important; font-size: 14px !important; padding-bottom: 0 !important; margin-bottom: 0 !important;">Held on: {{\Carbon\Carbon::parse($event->start_date)->format('d M Y')}}</p>
+                            <p style="font-weight: 300 !important; font-size: 13px !important; padding-top: 0 !important; margin-top: 0 !important;"><i class="fas fa fa-map-marker pl-3 pr-2 " aria-hidden="true"></i> {{$event->location}}</p>
+                            <p style="text-align: left !important;">
                                 {{ $event->description }}
                             </p>
                         </div>
@@ -56,7 +34,7 @@
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <div class="img-gradient">
-                                        <img src="{{asset('events/gallery/'.$event->title.'/'.$gallery[0])}}" class="d-block" style="max-height: 400px !important; text-align: center !important; margin: 10px auto !important;" alt="...">
+                                        <img src="{{asset('events/'.$event->title.'/'.$event->filepath)}}" class="d-block" style="max-height: 400px !important; text-align: center !important; margin: 10px auto !important;" alt="...">
                                     </div>
                                 </div>
                                 @for ($i = 1; $i < count($gallery); $i++)

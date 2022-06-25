@@ -25,6 +25,7 @@ use App\Http\Controllers\MailingListController;
 Route::get('/', [PageController::class, 'index'])->name('index');
 Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/event', [PageController::class, 'event'])->name('event');
+Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 
 Route::get('/archive', [EventController::class, 'list'])->name('archive');
 Route::get('/detail/{id}', [EventController::class, 'show'])->name('detail');

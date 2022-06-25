@@ -33,6 +33,9 @@
                         <li class="nav-item">
                            <a class="nav-link" href="{{ route('archive') }}">Events</a>
                         </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="{{ route('contact') }}">Get in Touch</a>
+                        </li>
                      </ul>
                   </div>
                </nav>

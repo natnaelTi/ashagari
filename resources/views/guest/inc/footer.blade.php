@@ -2,8 +2,8 @@
 <footer class="text-left text-lg-start text-white" style="background-color: #23272B ">
    <div class="container py-4 pb-0">
       <section class="">
-         <div class="row">
-            <div class="col-md-3 col-lg-2 col-xl-3 mx-auto align-self-center">
+         <div class="row mt-5">
+            <div class="col-md-6 col-lg-3 col-xl-3 mx-auto align-self-top">
                <img src="{{ asset('images/logo-.svg') }}" width="60%" style="display: block; margin: auto auto 16px auto !important; text-align: center !important;"
                   class="filter-green" />
 
@@ -29,7 +29,41 @@
 
             <hr class="w-100 clearfix d-md-none" />
 
-            <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mt-5">
+            <div class="col-md-6 col-lg-3 col-xl-3 mx-auto align-self-top">
+               <h5 class="text-uppercase mb-4 font-weight-bold text-white">About Us</h5>
+               <a href="#who" class="my-1" style="display:block !important; font-weight: 300 !important; text-decoration: none !important; color: white !important;">
+                  <i class="fa fa-chevron-right" aria-hidden="true"></i> Who We Are
+               </a>
+               <a href="#upcoming" class="my-1" style="display:block !important; font-weight: 300 !important; text-decoration: none !important; color: white !important;">
+                  <i class="fa fa-chevron-right" aria-hidden="true"></i> Upcoming Activities
+               </a>
+               <a href="#partners" class="my-1" style="display:block !important; font-weight: 300 !important; text-decoration: none !important; color: white !important;">
+                  <i class="fa fa-chevron-right" aria-hidden="true"></i> Trusted Partners
+               </a>
+            </div>
+
+            <hr class="w-100 clearfix d-md-none" />
+
+            <div class="col-md-6 col-lg-3 col-xl-3 mx-auto align-self-top">
+               <h5 class="text-uppercase mb-4 font-weight-bold text-white">Useful Links</h5>
+               <a href="{{route('index')}}" class="my-1" style="display:block !important; font-weight: 300 !important; text-decoration: none !important; color: white !important;">
+                  <i class="fa fa-chevron-right" aria-hidden="true"></i> Home
+               </a>
+               <a href="{{route('about')}}" class="my-1" style="display:block !important; font-weight: 300 !important; text-decoration: none !important; color: white !important;">
+                  <i class="fa fa-chevron-right" aria-hidden="true"></i> About Us
+               </a>
+               <a href="{{route('event')}}" class="my-1" style="display:block !important; font-weight: 300 !important; text-decoration: none !important; color: white !important;">
+                  <i class="fa fa-chevron-right" aria-hidden="true"></i> Conference
+               </a>
+               <a href="{{route('archive')}}" class="my-1" style="display:block !important; font-weight: 300 !important; text-decoration: none !important; color: white !important;">
+                  <i class="fa fa-chevron-right" aria-hidden="true"></i> Events
+               </a>
+               <a href="{{route('contact')}}" class="my-1" style="display:block !important; font-weight: 300 !important; text-decoration: none !important; color: white !important;">
+                  <i class="fa fa-chevron-right" aria-hidden="true"></i> Contact
+               </a>
+            </div>
+
+            <div class="col-md-6 col-lg-3 col-xl-3 mx-auto align-self-top">
                <h5 class="text-uppercase mb-4 font-weight-bold text-white">Contact</h5>
                <p class="my-1" style="font-weight: 300 !important;"><i class="fas fa fa-map-marker mr-3" aria-hidden="true"></i> Addis Ababa, Bole, Friendship</p>
 

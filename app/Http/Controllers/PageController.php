@@ -42,6 +42,11 @@ class PageController extends Controller
         }
     }
 
+    public function contact()
+    {
+        return view('guest.contact');
+    }
+
     public function event()
     {
         $organisation = Organisation::find(1);

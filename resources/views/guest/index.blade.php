@@ -39,34 +39,28 @@
                 <div class="container h-100 d-md-block">
                     <div id="landing-header">
                         <div class="row align-items-center h-100">
-                            <div class="col-sm-12 col-md-12 col-lg-7 col-xl-6" style="text-align: center !important;">
+                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" style="text-align: center !important;">
                                 <div class="test_box">
                                     <div class="text-bg">
-                                        <h1 class="" style="margin: 25vh 0 0 0 !important;"><span
-                                                style="font-size: 68px !important;">ashagari</span> <span
+                                        <h1 class="" style="margin: 35vh auto 0 auto !important;"><span
+                                                style="font-size: 72px !important;">ashagari</span> <span
                                                 style="display: block !important; font-size: 28px !important; font-weight: 400 !important; color: white !important;">Learning
                                                 and Development Company</span></h1>
-                                        <p class="mt-5" style="font-weight: 300 !important;">Ashagari is an Amharic
-                                            word meaning
-                                            <i id="info-cards">"the one who helps transform"</i>, and with this spirit of transformation we
-                                            equip
-                                            youth, women, and leaders to unleash their maximum potential
-                                        </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-12 col-lg-5 col-xl-6 align-self-center" style="vertical-align: center !important;">
+                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 align-self-center" style="vertical-align: center !important;">
                                 <div class="test_box" style="vertical-align: center !important;">
                                     <div class="text-bg" style="vertical-align: center !important;">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <a class="read_more   about-btn hero-btn shadow p-3 mx-2" href="#info-cards">Get To Know
+                                        <div class="row" style="padding: 6% 0 0 0 !important;">
+                                            <div class="col-12">
+                                                <a class="read_more   about-btn hero-btn shadow p-3 mx-2" style="border-radius: 25px !important;" href="#who">Get To Know
                                             Us</a>
                                             </div>
-                                            <div class="col-6">
+                                            {{-- <div class="col-6">
                                                 <a class="Donate-btn-outline   contact-btn shadow p-3 mb-5 mx-2 hero_btn"
                                             href="#contact_section">Contact</a>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                         
                                         
@@ -87,12 +81,24 @@
         </div>
     </div>
     <!-- End Banner -->
+
+    <section id="who">
+        <div class="titlepage text-center p-3 ">
+            <h2 class="p-2 mt-5">Who We Are</h2>
+        </div>
+        <p class="mt-5" style="font-weight: 300 !important; width: 60% !important; text-align:center !important; margin: 0 auto 5% auto !important;">Ashagari is an Amharic
+            word meaning
+            <i id="info-cards">"the one who helps transform"</i>, and with this spirit of transformation we
+            equip
+            youth, women, and leaders to unleash their maximum potential
+        </p>
+    </section>
     
     <!-- Catalog Cards -->
-    <div class="card_one catalog-cards">
+    <section>
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 mb-4 margin_top_lil">
+                <div class="col-lg-4 mb-4">
                     <div class="card d-inline-flex  shadow p-3 mb-5 bg-white rounded card_zoom">
                         <div class="card-body">
                             <a href="{{ route('strategy_youth') }}" class="stretched-link">
@@ -105,7 +111,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 mb-4 margin_top_lil">
+                <div class="col-lg-4 mb-4">
                     <div class="card d-inline-flex  shadow p-3 mb-5 bg-white rounded card_zoom">
                         <div class="card-body">
                             <a href="{{ route('strategy_women') }}">
@@ -118,7 +124,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 mb-4 mt-n10px margin_top_lil">
+                <div class="col-lg-4 mb-4 mt-n10px">
                     <div class="card d-inline-flex  shadow p-3 mb-5 bg-white rounded card_zoom">
                         <div class="card-body">
                             <a href="{{ route('strategy_leader') }}">
@@ -132,14 +138,14 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- End Catalog Cards -->
 
     <!----------- End Hero Section ----------->
 
 
     <!----------- Events Section ----------->
-    <section style="background-color: rgb(238, 236, 236) !important;">
+    <section style="background-color: rgb(238, 236, 236) !important;" id="upcoming">
         <div class="titlepage text-center p-3 ">
             <h2 class="p-2 mt-5">Upcoming Activities</h2>
         </div>
@@ -288,12 +294,12 @@
 
 
     <!----------- Clients Section ----------->
-    <div class="container clients-section">
+    <div class="container clients-section" id="partners">
         <div class="titlepage text-center p-3 ">
             <h2 class="p-2 mt-5">Trusted Partners</h2>
         </div>
 
-        <section class="logo-list">
+        <section class="logo-list" style="padding-bottom: 30px !important;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-6">
@@ -327,7 +333,7 @@
     <!--                </div>-->
 
                     <!-- <h6 class="titlepage p-5" style="font-weight: 200 !important; text-transform: lowercase !important;">No
-    <!--                        blogs have been posted yet</h6> -->-->
+                          blogs have been posted yet</h6> -->
 
     <!--                <div class="row">-->
     <!--                    <div class="col-lg-4 col-md-12 col-sm-12 text-center">-->
@@ -360,97 +366,13 @@
     <!--    </div>-->
     <!--</div>-->
     <!----------- End Social Media Section ----------->
-
-
-    <!----------- Contact Section ----------->
-    <div id="contact_section" class="contact_section bg-white">
-        <div class="row justify-content-center">
-            <div class=" col-md-12 contact_form">
-                <div class="wrapper">
-                    <div class="row no-gutters">
-                        <div class="col-md-6 d-flex align-items-center align-self-center">
-                            <div class="contact-wrap w-100 p-md-5 p-10">
-                                <h1 class="mb-4 font-weight-bold">Contact Us</h1>
-                                <div id="form-message-warning" class="mb-4"></div>
-                                <div id="form-message-success" class="mb-4">
-                                    <!-- Your message was sent, thank you! -->
-                                </div>
-                                <form method="POST" id="contactForm" name="contactForm" action="{{route('feedback')}}">
-                                    @csrf
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <input type="tel" class="form-control" name="phone" id="phone"
-                                                    placeholder="Phone number">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <input type="email" class="form-control" name="email" id="email"
-                                                    placeholder="Email">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" name="firstname" id="fname"
-                                                    placeholder="First Name">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" name="lastname" id="lname"
-                                                    placeholder="Last Name">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <input type="submit" value="Send Message"
-                                                    class="read_more shadow p-3 mb-5 btn">
-
-                                                <div class="submitting"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-md-6 d-flex align-items-stretch contact_banner">
-                            <div class=" mx-auto my-4">
-                                <div class="p-3 m-5 rounded">
-                                    <div class="card-body card_spacing" style="background-size: contain !important;">
-                                        <h6 class="card-title card_title_spacing" style="font-size: 26px !important;">If an
-                                            egg is
-                                            broken by an
-                                            outside force, life ends. If broken
-                                            by an inside force, life begins. Great things always begin from the inside.</h1>
-
-                                            <p class=""
-                                                style="color: whitesmoke; font-size: 24px; ; text-align: right; ">
-                                                Jim Kwik
-                                            </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!----------- End Contact Section ----------->
     
     <script type="text/javascript">
-    window.onload = function () {
-        OpenBootstrapPopup();
-    };
-    function OpenBootstrapPopup() {
-        $("#simpleModal").modal('show');
-    }
-</script>
+        window.onload = function () {
+            OpenBootstrapPopup();
+        };
+        function OpenBootstrapPopup() {
+            $("#simpleModal").modal('show');
+        }
+    </script>
 @endsection
