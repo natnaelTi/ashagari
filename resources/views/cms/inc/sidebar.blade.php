@@ -24,7 +24,7 @@
         <li>
             <a href="{{ route('cms_list_events') }}">
                 <svg>
-                    <use xlink:href="#trends"></use>
+                    <use xlink:href="#users"></use>
                 </svg>
                 <span>Events</span>
             </a>
@@ -33,14 +33,19 @@
         <li>
             <a href="{{ route('cms_show_feedback') }}">
                 <svg>
-                    <use xlink:href="#users"></use>
+                    <use xlink:href="#comments"></use>
                 </svg>
                 <span>Feedback</span>
             </a>
         </li>
 
-        <li class="menu-heading">
-            <h3>Settings</h3>
+        <li>
+            <a href="{{ route('cms_list_mails') }}">
+                <svg>
+                    <use xlink:href="#collection"></use>
+                </svg>
+                <span>Mailing List</span>
+            </a>
         </li>
 
         <li>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Attendee;
 use App\Models\Event;
+use App\Models\MailingList;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -88,7 +89,14 @@ class AttendeeController extends Controller
 
                 if($request->has('email')){
                     $attendee->email = $i_attend['email'];
+                    
+                    if(MailingList::where('email', $i_attend['email'])->exists() == false){
+                        $mail = new MailingList();
+                        $mail->email = $i_attend['email'];
+                        $mail->save();    
+                    }
                 }
+
                 $attendee->occupation = $i_attend['occupation'];
                 $attendee->age_group = $i_attend['age'];
 

@@ -72,6 +72,8 @@ Route::post('/cms_delete_organisation/{org_id}', [OrganisationController::class,
 Route::get('/cms_show_feedback', [FeedbackController::class, 'index'])->middleware('auth')->name('cms_show_feedback');
 Route::get('/cms_change_feedback_status/{id}', [FeedbackController::class, 'change_status'])->middleware('auth')->name('cms_change_feedback_status');
 
+Route::get('/cms_list_mails', [MailingListController::class, 'index'])->middleware('auth')->name('cms_list_mails');
+
 Route::get('/cms_archive_event/{id}', [EventController::class, 'archive'])->middleware('auth')->name('cms_archive_event');
 Route::post('/cms_store_archive/{id}', [EventController::class, 'store_archive'])->middleware('auth')->name('cms_store_archive');
 
