@@ -2,36 +2,22 @@
 
 @section('content')
     <!-- banner -->
-    @if ($l_event)
+    {{-- @if ($l_event) --}}
         <section class="upcoming_banner_main">
             <div class="container">
                 <div class="row">
                     <div class="col-12"
                         style="text-align: right !important; padding-right: 0 !important; margin-right: 0 !important; right: 0 !important;">
                         <div class="test_box">
-                            <div class="text-bg margin_top_hero">
-                                <h1>{{ $l_event->title }}</h1>
-                                <h4
-                                    style="margin: 20px !important; padding-left: 6px !important; font-size: 28px !important; font-weight: 500 !important; color: white;">
-                                    {{ \Carbon\Carbon::parse($l_event->start_date)->format('d M Y') }}
-                                </h4>
-                                <h6 class="text-center"
-                                    style="margin: 20px !important; padding-left: 6px !important; font-size: 22px !important; font-weight: 400 !important; color: white;">
-                                    <i class="fas fa fa-map-marker pl-3 pr-2 " aria-hidden="true"></i> {{ $l_event->location }}
-                                </h6>
-                                <!-- <p>English Seminar  will be distracted by the this week readable content of a page when looking at its layout. t</p> -->
-                                <a class="read_more shadow hero_btn p-3  "
-                                    href="{{ route('rsvp', [$l_event->id]) }}">Register Now <i
-                                        class="fa fa-chevron-circle-right" aria-hidden="true"></i>
-                                </a>
-                                <!-- <a class="Donate-btn-outline  shadow p-3 mb-5" href="#contact_section">Contact Us</a> -->
+                            <div class="text-bg margin_top_hero text-center">
+                                <h1>Upcoming Conferences</h1>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-    @endif
+    {{-- @endif --}}
     <!-- end banner -->
 
 
@@ -41,7 +27,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2 style="margin-top: 70px !important; padding-bottom: 30px !important;">Upcoming Event</h2>
+                        {{-- <h2 style="margin-top: 70px !important; padding-bottom: 30px !important;">Upcoming Event</h2> --}}
                         <!-- <h6 class="pt-5 mt-5" style="font-weight: 200 !important; text-transform: lowercase !important;">
                                No upcoming events in record yet</h6> -->
                         @if (count($events) > 0)

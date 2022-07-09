@@ -1,13 +1,28 @@
 @extends('layouts.guest')
 
 @section('content')
+
+<section class="upcoming_banner_main">
+    <div class="container">
+        <div class="row">
+            <div class="col-12"
+                style="text-align: right !important; padding-right: 0 !important; margin-right: 0 !important; right: 0 !important;">
+                <div class="test_box">
+                    <div class="text-bg margin_top_hero text-center">
+                        <h1>Our Archives</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     <!-- Our Latest news -->
     <div class="juices ">
         <div class="container ">
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2 style="margin-top: 70px !important; padding-bottom: 30px !important;">Our Archives</h2>
+                        {{-- <h2 style="margin-top: 70px !important; padding-bottom: 30px !important;">Our Archives</h2> --}}
                         <!-- <h6 class="pt-5 mt-5" style="font-weight: 200 !important; text-transform: lowercase !important;">
                                No upcoming events in record yet</h6> -->
                         @if (count($pes) > 0)

@@ -22,8 +22,12 @@ class EventController extends Controller
     public function list()
     {
         $events = Event::where('end_date', '<=', Carbon::now())->orderBy('end_date', 'desc')->get();
-        
-        return view('guest.pe', ['pes' => $events]);
+        $u_events = Event::where('reg_end', '>=', Carbon::now())->orderBy('reg_end', 'asc')->get();
+        $new = false;
+        if(count($u_events) > 0){
+            $new = true;
+        }
+        return view('guest.pe', ['pes' => $events, 'new' => $new]);
     }
 
     public function index()

@@ -69,61 +69,14 @@
  </div>
  <!----------- End Hero Section ----------->
 
- <!-- Catalog Cards -->
- <div class="card_one catalog-cards">
-    <div class="container">
-        <div class="row ">
-            <div class="col-lg-4 mb-4 margin_top_lil">
-                <div class="card d-inline-flex  shadow p-3 mb-5 bg-white rounded card_zoom">
-                    <div class="card-body">
-                        <a href="{{ route('strategy_youth') }}" class="stretched-link">
-                            <h1 class="card-title" style="font-weight: bold;">Ashagari Youth</h1>
-                            <p class="card-text">
-                                Building conscious, skilled and empowered youth community
-                            </p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 mb-4 margin_top_lil">
-                <div class="card d-inline-flex  shadow p-3 mb-5 bg-white rounded card_zoom">
-                    <div class="card-body">
-                        <a href="{{ route('strategy_women') }}">
-                            <h1 class="card-title" style="font-weight: bold;">Ashagari Women</h1>
-                            <p class="card-text">
-                                Developing women of value and influence
-                            </p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 mb-4 mt-n10px margin_top_lil">
-                <div class="card d-inline-flex  shadow p-3 mb-5 bg-white rounded card_zoom">
-                    <div class="card-body">
-                        <a href="{{ route('strategy_leader') }}">
-                            <h1 class="card-title" style="font-weight: bold;">Ashagari Leader</h1>
-                            <p class="card-text">
-                                Promoting emotional intelligence to equip leaders lead authentically
-                            </p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Catalog Cards -->
-
  <!-- about -->
- <div class="about">
-    <div class="container">
-       <div class="row d_flex">
-          <div class="col-lg-7 col-md-6 col-sm-12">
+ <div class="about" style="min-height: 100vh !important;">
+    <div class="container align-center">
+       <div class="row d_flex align-center" style="vertical-align: center !important; padding-top: 8% !important;">
+          <div class="col-lg-12 col-md-12 col-sm-12">
              <div class="titlepage mx-auto my-5">
                 {{-- <h4>About Us</h4> --}}
-                <h2 style="text-align: left;">Who We Are</h2>
+                <h2 style="text-align: center !important;">Who We Are</h2>
                 <p>
                    Ashagari Charitable Organization (ACO) is a non for profit organization founded and recognised as a
                    Civil Society Organisation in Ethiopia We are mainly focused on Skill Development, Leadership
@@ -220,4 +173,72 @@
     </div>
  </section>
  <!----------- End Values Section ----------->
+
+ <div class="about" style="padding-bottom: 40px !important;">
+   <div class="container align-center">
+      <div class="row d_flex align-center" style="vertical-align: center !important; padding-top: 3% !important;">
+         <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="titlepage mx-auto">
+               {{-- <h4>About Us</h4> --}}
+               <h2 style="text-align: center !important; padding-bottom: 30px !important;">Program Areas</h2>
+               <!-- Catalog Cards -->
+               <section>
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-lg-4 mb-4">
+                              <div class="card d-inline-flex p-3 bg-white rounded card_zoom" style="min-height: 300px !important; margin: auto 0 !important;">
+                                 <div class="card-body">
+                                    <a href="{{ route('strategy_youth') }}" class="stretched-link">
+                                          <h1 class="card-title" style="font-weight: bold;">Ashagari Youth</h1>
+                                          <p class="card-text">
+                                             Building conscious, skilled and empowered youth community
+                                          </p>
+                                    </a>
+                                    <div class="text-center">
+                                       <a role="button" href="{{ route('strategy_youth') }}" class="btn btn-outline-secondary">Read More</a>
+                                    </div>
+                                 </div>
+                              </div>
+                        </div>
+
+                        <div class="col-lg-4 mb-4">
+                              <div class="card d-inline-flex p-3 mb-5 bg-white rounded card_zoom" style="min-height: 300px !important;">
+                                 <div class="card-body">
+                                    <a href="{{ route('strategy_women') }}">
+                                          <h1 class="card-title" style="font-weight: bold;">Ashagari Women</h1>
+                                          <p class="card-text">
+                                             Developing women of value and influence
+                                          </p>
+                                    </a>
+                                    <div class="text-center">
+                                       <a role="button" href="{{ route('strategy_women') }}" class="btn btn-outline-secondary">Read More</a>
+                                    </div>
+                                 </div>
+                              </div>
+                        </div>
+
+                        <div class="col-lg-4 mb-4 mt-n10px">
+                              <div class="card d-inline-flex p-3 mb-5 bg-white rounded card_zoom" style="min-height: 300px !important;">
+                                 <div class="card-body">
+                                    <a href="{{ route('strategy_leader') }}">
+                                          <h1 class="card-title" style="font-weight: bold;">Ashagari Leader</h1>
+                                          <p class="card-text">
+                                             Promoting emotional intelligence to equip leaders
+                                          </p>
+                                    </a>
+                                    <div class="text-center">
+                                       <a role="button" href="{{ route('strategy_leader') }}" class="btn btn-outline-secondary">Read More</a>
+                                    </div>
+                                 </div>
+                              </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <!-- End Catalog Cards -->
+            </div>
+         </div>
+      </div>
+   </div>
+ </div>
 @endsection

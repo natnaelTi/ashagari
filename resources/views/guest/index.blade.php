@@ -43,7 +43,7 @@
                                 <div class="test_box">
                                     <div class="text-bg">
                                         <h1 class="" style="margin: 35vh auto 0 auto !important;"><span
-                                                style="font-size: 72px !important;">ashagari</span> <span
+                                                style="font-size: 72px !important; font-family: Calibri !important;">ashagari</span> <span
                                                 style="display: block !important; font-size: 28px !important; font-weight: 400 !important; color: white !important;">Learning
                                                 and Development Company</span></h1>
                                     </div>
@@ -54,7 +54,7 @@
                                     <div class="text-bg" style="vertical-align: center !important;">
                                         <div class="row" style="padding: 6% 0 0 0 !important;">
                                             <div class="col-12">
-                                                <a class="read_more   about-btn hero-btn shadow p-3 mx-2" style="border-radius: 25px !important;" href="#who">Get To Know
+                                                <a class="read_more about-btn hero-btn p-3 mx-2" style="border-radius: 25px !important;" href="{{route('about')}}">About
                                             Us</a>
                                             </div>
                                             {{-- <div class="col-6">
@@ -74,7 +74,7 @@
                         <li></li>
                         <li></li>
                         <li></li>
-                        <li></li>
+                        {{-- <li></li> --}}
                     </ul>
                 </div>
             </div>
@@ -84,9 +84,9 @@
 
     <section id="who">
         <div class="titlepage text-center p-3 ">
-            <h2 class="p-2 mt-5">Who We Are</h2>
+            <h2 class="p-2 mt-5">Ashagari is</h2>
         </div>
-        <p class="mt-5" style="font-weight: 300 !important; width: 60% !important; text-align:center !important; margin: 0 auto 5% auto !important;">Ashagari is an Amharic
+        <p class="mt-5" style="font-weight: 300 !important; width: 60% !important; text-align:center !important; margin: 0 auto 5% auto !important;">an Amharic
             word meaning
             <i id="info-cards">"the one who helps transform"</i>, and with this spirit of transformation we
             equip
@@ -99,7 +99,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4">
-                    <div class="card d-inline-flex  shadow p-3 mb-5 bg-white rounded card_zoom">
+                    <div class="card d-inline-flex p-3 mb-5 bg-white rounded card_zoom">
                         <div class="card-body">
                             <a href="{{ route('strategy_youth') }}" class="stretched-link">
                                 <h1 class="card-title" style="font-weight: bold;">Ashagari Youth</h1>
@@ -112,7 +112,7 @@
                 </div>
 
                 <div class="col-lg-4 mb-4">
-                    <div class="card d-inline-flex  shadow p-3 mb-5 bg-white rounded card_zoom">
+                    <div class="card d-inline-flex p-3 mb-5 bg-white rounded card_zoom">
                         <div class="card-body">
                             <a href="{{ route('strategy_women') }}">
                                 <h1 class="card-title" style="font-weight: bold;">Ashagari Women</h1>
@@ -125,7 +125,7 @@
                 </div>
 
                 <div class="col-lg-4 mb-4 mt-n10px">
-                    <div class="card d-inline-flex  shadow p-3 mb-5 bg-white rounded card_zoom">
+                    <div class="card d-inline-flex p-3 mb-5 bg-white rounded card_zoom">
                         <div class="card-body">
                             <a href="{{ route('strategy_leader') }}">
                                 <h1 class="card-title" style="font-weight: bold;">Ashagari Leader</h1>
@@ -255,37 +255,32 @@
     <section id="counter" class="stat_bg wow fadeIn animated p-5 counter-section"
         style="background-color: #090807; visibility: visible; animation-name: fadeIn;">
         <div class="container">
-            <div class="row">
+            <div class="row" style="color: white !important;">
                 <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten animated"
-                    data-wow-duration="300ms"
+                    
                     style="visibility: visible; animation-duration: 300ms; animation-name: fadeInUp;">
-                    <i class="fa fa-beer medium-icon"></i>
-                    <span id="anim-number-pizza" class="counter-number"></span>
-                    <span class="timer counter alt-font appear" data-to="980" data-speed="7000">130000</span>
-                    <p class="counter-title">Trainees</p>
+                    <h1 style="font-size: 48px !important; padding-bottom: 15px !important; font-weight: 700 !important; color: #fff !important;" class="alt-font appear text-center">130000</h1>
+                    <h4 style="font-size: 14px !important; font-weight: 400 !important; color: #fff !important;" class="counter-title d-block text-center">Trainees</p>
                 </div>
 
                 <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten animated"
-                    data-wow-duration="600ms"
+                    
                     style="visibility: visible; animation-duration: 600ms; animation-name: fadeInUp;">
-                    <i class="fa fa-heart medium-icon"></i>
-                    <span class="timer counter alt-font appear" data-to="980" data-speed="7000">160</span>
-                    <span class="counter-title">Volunteers</span>
+                    <h1 style="font-size: 48px !important; padding-bottom: 15px !important; font-weight: 700 !important; color: #fff !important;" class="alt-font appear text-center">160</h1>
+                    <h4 style="font-size: 14px !important; font-weight: 400 !important; color: #fff !important;" class="counter-title d-block text-center">Volunteers</p>
                 </div>
 
                 <div class="col-md-3 col-sm-6 bottom-margin-small text-center counter-section wow fadeInUp xs-margin-bottom-ten animated"
-                    data-wow-duration="900ms"
+                    
                     style="visibility: visible; animation-duration: 900ms; animation-name: fadeInUp;">
-                    <i class="fa fa-anchor medium-icon"></i>
-                    <span class="timer counter alt-font appear" data-to="810" data-speed="7000">6</span>
-                    <span class="counter-title">Dedicated Staff</span>
+                    <h1 style="font-size: 48px !important; padding-bottom: 15px !important; font-weight: 700 !important; color: #fff !important;" class="alt-font appear text-center">6</h1>
+                    <h4 style="font-size: 14px !important; font-weight: 400 !important; color: #fff !important;" class="counter-title d-block text-center">Dedicated Staff</p>
                 </div>
 
-                <div class="col-md-3 col-sm-6 text-center counter-section wow fadeInUp animated" data-wow-duration="1200ms"
+                <div class="col-md-3 col-sm-6 text-center counter-section wow fadeInUp animated"
                     style="visibility: visible; animation-duration: 1200ms; animation-name: fadeInUp;">
-                    <i class="fa fa-user medium-icon"></i>
-                    <span class="timer counter alt-font appear" data-to="600" data-speed="7000">3</span>
-                    <span class="counter-title">Partners</span>
+                    <h1 style="font-size: 48px !important; padding-bottom: 15px !important; font-weight: 700 !important; color: #fff !important;" class="alt-font appear text-center">3</h1>
+                    <h4 style="font-size: 14px !important; font-weight: 400 !important; color: #fff !important;" class="counter-title d-block text-center">Partners</p>
                 </div>
             </div>
         </div>
@@ -304,15 +299,15 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-6">
                         <a href="#"><img src="./images/clients/client3.png" class="img-fluid" data-toggle="tooltip" data-placement="top" title="Ministry of Women and Social Affairs, FDRE"
-                                style="height: 120px !important;" alt="Ministry of Women and Social Affairs, FDRE"></a>
+                                style="height: 180px !important;" alt="Ministry of Women and Social Affairs, FDRE"></a>
                     </div>
                     <div class="col-lg-4 col-md-4 col-6">
                         <a href="#"><img src="./images/clients/client2.png" class="img-fluid" data-toggle="tooltip" data-placement="top" title="Addis Ababa City Administration: Feeding Agency"
-                                style="height: 120px !important;" alt="Addis Ababa City Administration: Feeding Agency"></a>
+                                style="height: 180px !important;" alt="Addis Ababa City Administration: Feeding Agency"></a>
                     </div>
                     <div class="col-lg-4 col-md-4 col-6">
                         <a href="#"><img src="./images/clients/client9.png" class="img-fluid" data-toggle="tooltip" data-placement="top" title="Ministry of Labor and Skills, FDRE"
-                                style="height: 120px !important;" alt="Ministry of Labor and Skills, FDRE"></a>
+                                style="height: 180px !important;" alt="Ministry of Labor and Skills, FDRE"></a>
                     </div>
                 </div>
             </div>

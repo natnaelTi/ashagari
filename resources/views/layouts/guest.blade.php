@@ -44,11 +44,10 @@
 
     <!-- Page Load Spinner -->
 
-    {{-- @include('guest.inc.loader') --}}
+    @include('guest.inc.loader')
 
     <!-- End Page Load Spinner -->
-
-
+    
     <!-- Navigation Bar -->
     <header>
 
@@ -57,7 +56,6 @@
     </header>
     <!-- End Navigation Bar -->
 
-
     <!-- Message Display -->
     <div class="message">
 
@@ -65,7 +63,6 @@
 
     </div>
     <!-- End Message Dispplay -->
-
 
     <main>
 

@@ -17,11 +17,15 @@ class PageController extends Controller
     {
         $organisation = Organisation::find(1);
         $events = Event::where('reg_end', '>=', Carbon::now())->orderBy('reg_end', 'asc')->get();
-
+        $new = false;
+        if(count($events) > 0){
+            $new = true;
+        }
         if($organisation){
             return view('guest.index', [
                 'organisation' => $organisation,
-                'events' => $events
+                'events' => $events,
+                'new' => $new
             ]);
         }
         else{
@@ -32,9 +36,15 @@ class PageController extends Controller
     public function about()
     {
         $organisation = Organisation::find(1);
+        $u_events = Event::where('reg_end', '>=', Carbon::now())->orderBy('reg_end', 'asc')->get();
+        $new = false;
+        if(count($u_events) > 0){
+            $new = true;
+        }
         if($organisation){
             return view('guest.about', [
-                'organisation' => $organisation
+                'organisation' => $organisation,
+                'new' => $new
             ]);
         }
         else{
@@ -44,7 +54,12 @@ class PageController extends Controller
 
     public function contact()
     {
-        return view('guest.contact');
+        $u_events = Event::where('reg_end', '>=', Carbon::now())->orderBy('reg_end', 'asc')->get();
+        $new = false;
+        if(count($u_events) > 0){
+            $new = true;
+        }
+        return view('guest.contact', ['new' => $new]);
     }
 
     public function event()
@@ -53,11 +68,15 @@ class PageController extends Controller
         // $past_events = Event::where('end_date', '<', Carbon::today())->orderBy('end_date', 'desc')->get();
         // $ongoing_events = Event::where('start_date', '<=', Carbon::today())->where('end_date', '<', Carbon::today())->orderBy('start_date', 'asc')->get();
         // $upcoming_events = Event::where('start_date', '>=', Carbon::today())->where('reg_end', '>=', Carbon::today())->orderBy('reg_end', 'asc')->get();
-
+        $u_events = Event::where('reg_end', '>=', Carbon::now())->orderBy('reg_end', 'asc')->get();
         $l_event = Event::where('start_date', '>=', Carbon::today())->orderBy('start_date', 'desc')->first();
         $events = Event::where('start_date', '>=', Carbon::today())->orderBy('end_date', 'desc')->get();
+        $new = false;
+        if(count($u_events) > 0){
+            $new = true;
+        }
         if($organisation){
-            return view('guest.event', ['events' => $events, 'l_event' => $l_event]);
+            return view('guest.event', ['events' => $events, 'l_event' => $l_event, 'new' => $new]);
         }
         else{
             return redirect()->route('four-o-four');
@@ -77,33 +96,62 @@ class PageController extends Controller
 
     public function youth()
     {
-        return view('guest.youth');
+        $u_events = Event::where('reg_end', '>=', Carbon::now())->orderBy('reg_end', 'asc')->get();
+        $new = false;
+        if(count($u_events) > 0){
+            $new = true;
+        }
+        return view('guest.youth', ['new' => $new]);
     }
 
     public function women()
     {
-        return view('guest.women');
+        $u_events = Event::where('reg_end', '>=', Carbon::now())->orderBy('reg_end', 'asc')->get();
+        $new = false;
+        if(count($u_events) > 0){
+            $new = true;
+        }
+        return view('guest.women', ['new' => $new]);
     }
 
     public function leaders()
     {
-        return view('guest.leaders');
+        $u_events = Event::where('reg_end', '>=', Carbon::now())->orderBy('reg_end', 'asc')->get();
+        $new = false;
+        if(count($u_events) > 0){
+            $new = true;
+        }
+        return view('guest.leaders', ['new' => $new]);
     }
 
     public function gsc()
     {
-        return view('guest.gsc');
+        $u_events = Event::where('reg_end', '>=', Carbon::now())->orderBy('reg_end', 'asc')->get();
+        $new = false;
+        if(count($u_events) > 0){
+            $new = true;
+        }
+        return view('guest.gsc', ['new' => $new]);
     }
 
     public function rsvp($id)
     {
+        $u_events = Event::where('reg_end', '>=', Carbon::now())->orderBy('reg_end', 'asc')->get();
         $event = Event::find($id);
-
-        return view('guest.register', ['event' => $event]);
+        $new = false;
+        if(count($u_events) > 0){
+            $new = true;
+        }
+        return view('guest.register', ['event' => $event, 'new' => $new]);
     }
 
     public function register(Request $request)
     {
+        $u_events = Event::where('reg_end', '>=', Carbon::now())->orderBy('reg_end', 'asc')->get();
+        $new = false;
+        if(count($u_events) > 0){
+            $new = true;
+        }
         $i_attend = $request->validate([
             'firstname' => ['required', 'string'],
             'lastname' => ['required', 'string'],
@@ -150,10 +198,10 @@ class PageController extends Controller
                 $stat = $attendee->save();
 
                 if($stat){
-                    return redirect()->route('event')->with('name', $name)->with('success', 'You have successfully registered for the event. We will confrim you once we process your payment invoice. Thank you.');
+                    return redirect()->route('event')->with('new', $new)->with('name', $name)->with('success', 'You have successfully registered for the event. We will confrim you once we process your payment invoice. Thank you.');
                 }
                 else{
-                    return redirect()->back()->with('name', $name)->with('errors', ['Process Aborted', 'Oops! Your registration for the event has not gone through successfully. Try again later.']);
+                    return redirect()->back()->with('name', $name)->with('new', $new)->with('errors', ['Process Aborted', 'Oops! Your registration for the event has not gone through successfully. Try again later.']);
                 }
             }
             else if($event->price == 0){
@@ -190,18 +238,18 @@ class PageController extends Controller
                 $stat = $attendee->save();
 
                 if($stat){
-                    return redirect()->route('event')->with('name', $name)->with('success', 'You have successfully registered for the event. We look forward to seeing you then. Thank you.');
+                    return redirect()->route('event')->with('new', $new)->with('name', $name)->with('success', 'You have successfully registered for the event. We look forward to seeing you then. Thank you.');
                 }
                 else{
-                    return redirect()->back()->with('name', $name)->with('errors', ['Process Aborted', 'Oops! Your registration for the event has not gone through successfully. Try again later.']);
+                    return redirect()->back()->with('name', $name)->with('new', $new)->with('errors', ['Process Aborted', 'Oops! Your registration for the event has not gone through successfully. Try again later.']);
                 }
             }
         }
         else if($event == null){
-            return redirect()->back()->with('name', $name)->with('errors', ['Process Aborted', 'Oops! The event you are trying to register for is not recorded. How did you find it?']);
+            return redirect()->back()->with('name', $name)->with('new', $new)->with('errors', ['Process Aborted', 'Oops! The event you are trying to register for is not recorded. How did you find it?']);
         }
         else if($p_attend){
-            return redirect()->back()->with('name', $name)->with('errors', ['Process Aborted', 'Oops! You have already signed up for this event. We look forward to seeing you then.']);
+            return redirect()->back()->with('name', $name)->with('new', $new)->with('errors', ['Process Aborted', 'Oops! You have already signed up for this event. We look forward to seeing you then.']);
         }
     }
 }

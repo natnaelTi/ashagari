@@ -28,7 +28,11 @@
                            <a class="nav-link" href="{{ route('about') }}">About</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="{{ route('event') }}">Conferences</a>
+                           <a class="nav-link" href="{{ route('event') }}">Conferences
+                              @if ($new)
+                                 <span class="badge badge-pill badge-warning ml-2 align-top" style="font-size: 7px !important; font-weight: 700 !important;"><small>NEW</small></span>
+                              @endif
+                           </a>
                         </li>
                         <li class="nav-item">
                            <a class="nav-link" href="{{ route('archive') }}">Events</a>
