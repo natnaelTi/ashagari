@@ -1636,15 +1636,15 @@ img {
     background-repeat: no-repeat;
     opacity: 0;
     z-index: 0;
-    /* transform: translateX(1280px); */
-    animation: imageAnimation 10s linear infinite;
+    animation: imageAnimation 8s linear infinite;
+    transform: translate(2280px, 0);
 }
 
 @media(max-width:390px) {
     .slideshow li {
         background-size: cover !important;
         width: 100vw !important;
-        /* transform: translateX(1280px); */
+        transform: translate(1280px, 0);
         /*height: auto !important;*/
     }
 }
@@ -1659,43 +1659,33 @@ img {
 
 .slideshow li:nth-child(1) {
     background-image: linear-gradient(to bottom, rgba(30, 46, 44, 0.329), rgba(19, 37, 35, 0.73)), url("../../images/home/1.jpg");
-    /* transform: translateX(1280px); */
-    /* translate: scale-x(); */
+    animation-delay: 8s;
+    transform: translate(2280px, 0);
 }
 
 .slideshow li:nth-child(2) {
     background-image: linear-gradient(to bottom, rgba(30, 46, 44, 0.329), rgba(19, 37, 35, 0.73)), url("../../images/home/3.jpg");
-    /* transform: translateX(1280px); */
-    animation-delay: 3s;
+    animation-delay: 4s;
+    transform: translate(2280px, 0);
 }
 
 .slideshow li:nth-child(3) {
     background-image: linear-gradient(to bottom, rgba(30, 46, 44, 0.329), rgba(19, 37, 35, 0.73)), url("../../images/home/4.jpg");
-    /* transform: translateX(1280px); */
-    animation-delay: 6s;
+    animation-delay: 2s;
+    transform: translate(3280px, 0);
 }
-
-/* .slideshow li:nth-child(4) {
-    background-image: linear-gradient(to bottom, rgba(30, 46, 44, 0.329), rgba(19, 37, 35, 0.73)), url("../../images/home/5.jpg");
-    animation-delay: 9s;
-} */
-
-/* .slideshow li:nth-child(5) {
-    background-image: linear-gradient(to bottom, rgba(213, 255, 249, 0.15), rgba(19, 37, 35, 0.73)), url("../../images/home/6.jpg");
-    animation-delay: 12s;
-} */
 
 @keyframes imageAnimation {
     0% {
         opacity: 1;
-        /* transform: translateX(250px); */
+        transform: translate(0, 0);
         transform: scale(1);
         animation-timing-function: ease-in;
     }
 
     50% {
         opacity: 1;
-        /* transform: translateX(600px); */
+        transform: translate(2280px, 0);
         transform: scale(1.1);
         animation-timing-function: ease-out;
     }
