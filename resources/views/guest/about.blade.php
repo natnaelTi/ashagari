@@ -186,8 +186,9 @@
                   <div class="container">
                      <div class="row">
                         <div class="col-lg-4 mb-4">
-                              <div class="card d-inline-flex p-3 bg-white rounded card_zoom" style="min-height: 300px !important; margin: auto 0 !important;">
-                                 <div class="card-body">
+                              <div class="card d-inline-flex bg-white rounded card_zoom" style="min-height: 300px !important; margin: auto 0 !important;">
+                                 <img src="{{ asset('images/pa/youth.jpg') }}" style="height: 150px !important; overflow: hidden !important;" height="150px">
+                                 <div class="card-body p-3">
                                     <a href="{{ route('strategy_youth') }}" class="stretched-link">
                                           <h1 class="card-title" style="font-weight: bold;">Ashagari Youth</h1>
                                           <p class="card-text">
@@ -202,8 +203,9 @@
                         </div>
 
                         <div class="col-lg-4 mb-4">
-                              <div class="card d-inline-flex p-3 mb-5 bg-white rounded card_zoom" style="min-height: 300px !important;">
-                                 <div class="card-body">
+                              <div class="card d-inline-flex mb-5 bg-white rounded card_zoom" style="min-height: 300px !important;">
+                                 <img src="{{ asset('images/pa/women.jpg') }}" style="height: 150px !important; overflow: hidden !important;" height="150px">
+                                 <div class="card-body p-3">
                                     <a href="{{ route('strategy_women') }}">
                                           <h1 class="card-title" style="font-weight: bold;">Ashagari Women</h1>
                                           <p class="card-text">
@@ -218,8 +220,9 @@
                         </div>
 
                         <div class="col-lg-4 mb-4 mt-n10px">
-                              <div class="card d-inline-flex p-3 mb-5 bg-white rounded card_zoom" style="min-height: 300px !important;">
-                                 <div class="card-body">
+                              <div class="card d-inline-flex mb-5 bg-white rounded card_zoom" style="min-height: 300px !important;">
+                                 <img src="{{ asset('images/pa/leader.jpg') }}" height="150px">
+                                 <div class="card-body p-3">
                                     <a href="{{ route('strategy_leader') }}">
                                           <h1 class="card-title" style="font-weight: bold;">Ashagari Leader</h1>
                                           <p class="card-text">

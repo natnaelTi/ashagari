@@ -119,12 +119,19 @@ class EventController extends Controller
             array_push($gallery, $event->gallery5);
         }
 
+        $u_events = Event::where('reg_end', '>=', Carbon::now())->orderBy('reg_end', 'asc')->get();
+        $new = false;
+        if(count($u_events) > 0){
+            $new = true;
+        }
+
         if($event){
             
                 return view('guest.detail', [
                     'event' => $event,
                     'cover' => $cover,
-                    'gallery' => $gallery
+                    'gallery' => $gallery,
+                    'new' => $new
                 ]);
         }
         else{
