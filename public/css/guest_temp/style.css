@@ -1444,6 +1444,11 @@ ul {
 
 }
 
+.about-ashagari {
+    background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(19, 37, 35, 0.73)),
+        url('../../images/about/ashagari.jpg') !important;
+}
+
 .about-youth {
     background-image: linear-gradient(to bottom, rgba(143, 253, 237, 0.26), rgba(19, 37, 35, 0.73)),
         url('../../images/about/youth.jpg') !important;

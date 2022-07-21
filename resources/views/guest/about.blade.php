@@ -9,7 +9,24 @@
        <li data-target="#carousel" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner" role="listbox">
-       <div class="carousel-item active about-youth">
+      <div class="carousel-item active about-ashagari">
+         <div class="container h-100 d-block">
+            <div class="row align-items-center h-100">
+               <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                  <div class="caption animated fadeIn" style="background: none !important;">
+                     <div class="test_box">
+                        <div class="text-bg">
+                           <h1 class="animated fadeInLeft">Ashagari</h1>
+                           {{-- <a class="Donate-btn-outline  shadow mb-5 hero_btn" href="{{route('contact')}}">Contact Us</a> --}}
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+       
+      <div class="carousel-item active about-youth">
           <div class="container h-100 d-block">
              <div class="row align-items-center h-100">
                 <div class="col-12 col-md-9 col-lg-7 col-xl-6">
@@ -186,22 +203,19 @@
                   <div class="container">
                      <div class="row">
                         <div class="col-lg-4 mb-4">
-                              <div class="card d-inline-flex bg-white rounded card_zoom" style="min-height: 300px !important; margin: auto 0 !important;">
-                                 <img src="{{ asset('images/pa/youth.jpg') }}" style="height: 150px !important; overflow: hidden !important;" height="150px">
-                                 <div class="card-body p-3">
-                                    <a href="{{ route('strategy_youth') }}" class="stretched-link">
-                                          <h1 class="card-title" style="font-weight: bold;">Ashagari Youth</h1>
-                                          <p class="card-text">
-                                             Building conscious, skilled and empowered youth community
-                                          </p>
-                                    </a>
-                                    <div class="text-center">
-                                       <a role="button" href="{{ route('strategy_youth') }}" class="btn btn-outline-secondary">Read More</a>
-                                    </div>
+                           <div class="card d-inline-flex bg-white rounded card_zoom" style="min-height: 300px !important; margin: auto 0 !important;">
+                              <img src="{{ asset('images/pa/youth.jpg') }}" style="height: 150px !important; overflow: hidden !important;" height="150px">
+                              <div class="card-body p-3">
+                                 <a href="#" class="stretched-link">
+                                       <h1 class="card-title" style="font-weight: bold;">Ashagari</h1>
+                                 </a>
+                                 <div class="text-center">
+                                    <a role="button" href="{{ route('strategy_youth') }}" class="btn btn-outline-secondary">Read More</a>
                                  </div>
                               </div>
+                           </div>
                         </div>
-
+                        
                         <div class="col-lg-4 mb-4">
                               <div class="card d-inline-flex mb-5 bg-white rounded card_zoom" style="min-height: 300px !important;">
                                  <img src="{{ asset('images/pa/women.jpg') }}" style="height: 150px !important; overflow: hidden !important;" height="150px">
